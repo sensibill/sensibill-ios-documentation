@@ -10,7 +10,7 @@
 * Usage
 	* [Authentication](Documentation/Authentication.md) - [Token Authentication](Documentation/Authentication.md#token-authentication), [Password Authentication](Documentation/Authentication.md#password-authentication)
 	* [UI Presentation](Documentation/UI.md) - [Receipt List](Documentation/UI.md#receipt-list), [Receipt Capture](Documentation/UI.md#receipt-capture), [Receipt Detail](Documentation/UI.md#receipt-detail), [Receipt Export](Documentation/UI.md#receipt-export)
-	* Transaction Matching - Linking, Matching
+	* [Transaction Matching](Documentation/Transaction-Matching.md) - [Linking](Documentation/Transaction-Matching.md#linking), [Matching](Documentation/Transaction-Matching.md#matching)
 	* Configuration
 	* Example Code
 * [License](LICENSE.md)
