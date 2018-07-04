@@ -4,11 +4,11 @@
 
 * [Overview](#overview)
 * [Data Protection](#data-protection)
-* [Supported Platforms](#supported-platforms)
+* [Requirements](#requirements)
 * [Installation](#installation)
 * [Quick Start](#quick-start)
 * Usage
-	* Authentication - Token Authentication, Password Authentication
+	* [Authentication](Documentation/Authentication.md) - [Token Authentication](Documentation/Authentication.md#token-authentication), [Password Authentication](Documentation/Authentication.md#password-authentication)
 	* UI Presentation - Receipt List, Receipt Capture, Receipt Detail, Receipt Exports
 	* Transaction Matching - Linking, Matching
 	* Configuration
@@ -21,7 +21,8 @@ Sensibill is a iOS library that converts paper and email receipts into a digital
 ## Data Protection
 **Important**: The library makes the assumption that Data Protection is enabled and working. For this reason, data cached locally (using NSFileManager) does not use secondary encryption on top of Data Protection. The library leaves this work up to iOS assuming that Data Protection is functioning.
 
-## Supported Platforms
+## Requirements
+* Xcode 9.4.1 - Build for iOS 11.4
 * iOS 9.3+
 
 ## Installation
@@ -38,7 +39,7 @@ Sensibill is a iOS library that converts paper and email receipts into a digital
 Import **SensibillUI** into the file that will present the Receipt List. Our example assumes that you have registered a user and that you are using Password Authentication. You can dig deeper into documentation for authentication and UIView presentation.
 
 ### Swift
-```
+```swift
 import SensibillUI
 
 ...
@@ -54,7 +55,7 @@ PasswordAuthenticator().login(accessId: "accessId", password: "password") { erro
 
 ### Objective-C
 
-```
+```objective-c
 @import SensibillUI;
 
 ...
