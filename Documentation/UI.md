@@ -82,5 +82,11 @@ class ViewController: UIViewController, SBViewControllerDelegate {
   }
 
 }
+```
 
 ## Receipt Export
+To see receipts that were exported in the last 2 weeks, you can initialize an `SBRecentExportController` and present it.
+
+```swift
+self.present(SBRecentExportController(nibName: "SBRecentExportController", bundle: SBSDKBundle.uiBundle(), animated: true, completion: nil)
+```
