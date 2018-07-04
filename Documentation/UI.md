@@ -1,5 +1,5 @@
 # UI Presentation
 ## Receipt List
-## Capture
+## Receipt Capture
 ## Receipt Detail
-## Transaction Matching
+## Receipt Export
