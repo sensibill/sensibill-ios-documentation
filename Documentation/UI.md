@@ -47,13 +47,14 @@ To present our capture controller to leverage rectangle detection to automatical
 ```swift
 class ViewController: UIViewController, SBViewControllerDelegate {
 
-  func presentReceiptCapture(_ sender: Any) {
+  func presentReceiptCapture() {
       let captureController = SensibillCaptureNavigationController()
       captureController.dismissDelegate = self
       self.present(captureController, animated: true, completion: nil)
   }
 
   //MARK: SBViewControllerDelegate
+
   func dismissSensibillViewController(_ controller: UIViewController!) {
       controller.dismiss(animated: true, completion: nil)
   }
@@ -62,6 +63,24 @@ class ViewController: UIViewController, SBViewControllerDelegate {
 ```
 
 ## Receipt Detail
+To present the details of a receipt, you can initialize an `SensibillReceiptViewController` with a `receiptId` and present it after setting your `UIViewController` as the delegate that conforms to `SBViewControllerDelegate`.
 
+```swift
+class ViewController: UIViewController, SBViewControllerDelegate {
+
+  func presentReceiptDetail() {
+        if let viewController = SensibillReceiptViewController(receiptId: "receiptId") {
+            viewController.dismissDelegate = self
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+
+  //MARK: SBViewControllerDelegate
+
+  func dismissSensibillViewController(_ controller: UIViewController!) {
+      controller.dismiss(animated: true, completion: nil)
+  }
+
+}
 
 ## Receipt Export
