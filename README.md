@@ -13,7 +13,7 @@
 	* Transaction Matching - Linking, Matching
 	* Configuration
 	* Examples Code
-* [License](#license)
+* [License](License.md)
 
 ## Overview
 Sensibill is a iOS library that converts paper and email receipts into a digital format, extracting a number of data points such as merchant information, amounts, dates, and line item data.
@@ -69,6 +69,3 @@ PasswordAuthenticator *authenticator = [PasswordAuthenticator new];
     }
 }];
 ```
-
-## License
-*Add blurb about License and point to file*
