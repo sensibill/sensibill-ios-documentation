@@ -22,7 +22,7 @@ Sensibill is a iOS library that converts paper and email receipts into a digital
 **Important**: The library makes the assumption that Data Protection is enabled and working. For this reason, data cached locally (using NSFileManager) does not use secondary encryption on top of Data Protection. The library leaves this work up to iOS assuming that Data Protection is functioning.
 
 ## Requirements
-* Xcode 9.4.1 - Build for iOS 11.4
+* Xcode 9.4.1 - Dynamic Framework built for iOS 11.4
 * iOS 9.3+
 
 ## Installation

@@ -1,23 +1,10 @@
 # Authentication
-We support Password and Token authentication. Password authentication relies on accessId and password, where as Token authentication assumes you implement your own TokenProvider that provides valid tokens.
+Our APIs follow [OAuth 2.0](https://oauth.net/2/). We support two interfaces for authentication, **Token** and **Password**. Token authentication is used when you plan on interfacing directly with our backend APIs for token creation and refreshing. In this case you would implement your own custom token provider which conforms to our `TokenProvider` protocol, and make your own network requests to the backend.  Alternatively, you can use password authentication to authenticate using a username and password. In this case, our SDK will handle all token management.
 
-### Password Authentication
-```
-import SensibillUI
+## Token Authentication
+Token authentication assumes that your custom token provider will handle creating and refreshing tokens. The `restore` method for the `Authenticator` class will setup the SDK with all necessary data, and will internally request for tokens from the custom token provider.
 
-...
-
-PasswordAuthenticator().login(accessId: "accessId", password: "password") { error in
-    if error == .none {
-        self.present(ReceiptListViewController(), animated: true, completion: nil)
-    } else {
-        // Handle error condition
-    }
-}
-```
-
-### Token Authentication
-```
+```swift
 import SensibillUI
 
 ...
@@ -32,39 +19,39 @@ class CustomTokenProvider: TokenProvider {
 
 let tokenProvider = CustomTokenProvider()
 Authenticator(tokenProvider: tokenProvider).restore(cacheIdentifier: "accessId") { error in
-    if error == .none {
-        self.present(ReceiptListViewController(), animated: true, completion: nil)
-    } else {
-        // Handle error condition
-    }
+    // Handle error condition
 }
 ```
 
-### Auto Login
-We support auto login the last authenticated user, provided that the tokens are still valid. To leverage this feature you simply call authentication methods using with default parameters values.
+## Password Authentication
+Password authentication uses username and password for authentication. As such, a user must be registered using `PasswordAuthenticator().register(...)`. See our API reference documentation for details on registration, accessId availability, and password strength.
 
-#### Password Authentication
-```
-PasswordAuthenticator().login { error in
-    if error == .none {
-        self.present(ReceiptListViewController(), animated: true, completion: nil)
-    } else {
-        // Handle error condition
-    }
+```swift
+import SensibillUI
+
+...
+
+PasswordAuthenticator().login(accessId: "accessId", password: "password") { error in
+    // Handle error condition
 }
 ```
 
-#### Token Authentication
-```
+## Auto Login
+We provide a convenient interface to login as the last authenticated user, assuming that the tokens are still valid. To leverage this feature you simply call authentication methods using with default parameters values.
+
+### Token Authentication
+```swift
 let tokenProvider = CustomTokenProvider()
 Authenticator(tokenProvider: tokenProvider).restore { error in
-    if error == .none {
-        self.present(ReceiptListViewController(), animated: true, completion: nil)
-    } else {
-        // Handle error condition
-    }
+    // Handle error condition
 }
 ```
 
-## Token Provider Example
-*//TODO: Fill in here with example*
+### Password Authentication
+If there is an error attempting to auto login with password authentication, the user is required to authenticate again with username and password as the tokens have expired.
+
+```swift
+PasswordAuthenticator().login { error in
+    // Handle error condition
+}
+```
