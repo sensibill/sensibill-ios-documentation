@@ -1,4 +1,4 @@
-<Sensibill Logo>
+![Sensibill](Sensibill-Logo.png)
 
 **Version: 1.15.0**
 
