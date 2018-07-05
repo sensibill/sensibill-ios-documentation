@@ -7,7 +7,9 @@ self.present(ReceiptListViewController(), animated: true, completion: nil)
 ```
 
 ### Custom Bottom Bar and Left UIBarButtonItem
-We allow you to override the default bottom bar with you own custom `UIView`. You can also customize the left `UIBarButtonItem` to use a custom icon, and handle what happens when the button is tapped. This is done by having your `UIViewController` conform to `ReceiptListViewControllerDataSource`.
+We allow you to override the default bottom bar with your own custom `UIView`. You can also customize the left `UIBarButtonItem` to use a custom icon, and handle what happens when the button is tapped. This is done by having your class conform to `ReceiptListViewControllerDataSource`. When initializing the Receipt List you will pass in your class as the `dataSource`.s
+
+*Note:* One caveat of overriding the bottom bar, is that you will always have the responsibility for presenting the [Receipt Exports](#receipt-export) screen.
 
 ```swift
 class ViewController: UIViewController, ReceiptListViewControllerDataSource {
@@ -29,20 +31,18 @@ class ViewController: UIViewController, ReceiptListViewControllerDataSource {
     }
 
     func bottomView(in viewController: UIViewController) -> UIView {
-        let bottomView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
-        bottomView.backgroundColor = UIColor.blue
-        return bottomView
+        // Return your bottomView
     }
 
     func bottomViewHeight(in viewController: UIViewController) -> CGFloat {
-        return 40
+        // Return bottomView height
     }
 
 }
 ```
 
 ## Receipt Capture
-To present our capture controller to leverage rectangle detection to automatically capture and crop receipt images, you can present it after setting your `UIViewController` as the delegate that conforms to `SBViewControllerDelegate`.
+Our receipt capture controller provides a convenient interface that leverages rectangle detection to automatically capture and crop receipt images. You can present it after setting your class as the delegate that conforms to `SBViewControllerDelegate`.
 
 ```swift
 class ViewController: UIViewController, SBViewControllerDelegate {
@@ -61,9 +61,10 @@ class ViewController: UIViewController, SBViewControllerDelegate {
 
 }
 ```
+*Note:* Receipt Capture can also be used to link a bank account transaction to a receipt. See [Transaction Linking](../Transactions.md#transaction-linking) for  details.
 
 ## Receipt Detail
-To present the details of a receipt, you can initialize an `SensibillReceiptViewController` with a `receiptId` and present it after setting your `UIViewController` as the delegate that conforms to `SBViewControllerDelegate`.
+To present the details of a receipt, you can initialize an `SensibillReceiptViewController` with a `receiptId` and present it after setting your class as the delegate that conforms to `SBViewControllerDelegate`.
 
 ```swift
 class ViewController: UIViewController, SBViewControllerDelegate {
@@ -85,8 +86,9 @@ class ViewController: UIViewController, SBViewControllerDelegate {
 ```
 
 ## Receipt Export
-To see receipts that were exported in the last 2 weeks, you can initialize an `SBRecentExportController` and present it.
+To see receipts that were recently exported, you can initialize an `SBRecentExportController` and present it.
 
 ```swift
-self.present(SBRecentExportController(nibName: "SBRecentExportController", bundle: SBSDKBundle.uiBundle(), animated: true, completion: nil)
+let controller = SBRecentExportController(nibName: "SBRecentExportController", bundle: SBSDKBundle.uiBundle())
+self.present(controller, animated: true, completion: nil)
 ```
