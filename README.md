@@ -12,7 +12,7 @@
 	* [UI Presentation](Documentation/UI.md) - [Receipt List](Documentation/UI.md#receipt-list), [Receipt Capture](Documentation/UI.md#receipt-capture), [Receipt Detail](Documentation/UI.md#receipt-detail), [Receipt Export](Documentation/UI.md#receipt-export)
 	* [Transactions](Documentation/Transactions.md) - [Linking](Documentation/Transactions.md#transaction-linking), [Matching](Documentation/Transactions.md#transaction-matching)
 	* [Configuration](Documentation/Configuration.md)
-	* Example Code
+	* [Example Code](Documentation/Examples.md)
 * [License](LICENSE.md)
 
 ## Overview
