@@ -3,7 +3,7 @@
 ## Transaction Linking
 **Transaction Linking** allows you to capture a paper receipt passing in a `transactionID`. This allows us to create a link on the receipt to the transaction id, and is particularly helpful to banking clients who want to link their account transactions to receipts.
 
-To achieve this, first initialize an `SBTransaction` and set the `externalAccountTransactionID` in it's private metadata. When initializing the `SensibillCaptureNavigationController` pass the uploadTransaction.
+To achieve this, first initialize an `SBTransaction` and set the `externalAccountTransactionID` in its private metadata. When initializing the `SensibillCaptureNavigationController` pass the transaction.
 
 ```swift
 func presentReceiptCaptureWithTransasctionId() {
@@ -27,8 +27,8 @@ func matchTransactions() {
     let transaction1 = Transaction(identifier: "transactionID", date: dateFormatter.date(from: "2018-05-22"), amount: 2.93, currencyCode: "CAD", merchant: "Tim Hortons")
     let transaction2 = Transaction(identifier: nil, date: dateFormatter.date(from: "2018-05-22"), amount: 26.10, currencyCode: "CAD", merchant: nil)
 
-    ReceiptCollection.shared.match(transactions: [transaction]) { (matches, error) in
-        if error == .success {
+    ReceiptCollection.shared.match(transactions: [transaction]) { (matches, status) in
+        if status == .success {
             let receipt = matches[transaction1]!.first!
             // Do something with receipt.identifier
         }
