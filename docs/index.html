@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Amount.html">Amount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ContactInformation.html">ContactInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Merchant.html">Merchant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptSummary.html">ReceiptSummary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Sensibill.html">Sensibill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Tax.html">Tax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Tender.html">Tender</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Transaction.html">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/ExpenseType.html">ExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MatchingError.html">MatchingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MerchantChannel.html">MerchantChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PasswordStrength.html">PasswordStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PaymentMethod.html">PaymentMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ReceiptError.html">ReceiptError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ReceiptStatus.html">ReceiptStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ReceiptType.html">ReceiptType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><strong>Version: 1.15.0</strong></p>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>Sensibill is a iOS library that converts paper and email receipts into a digital format, extracting a number of data points such as merchant information, amounts, dates, and line item data.</p>
+<h2 id='data-protection' class='heading'>Data Protection</h2>
+
+<p><strong>Important</strong>: The library makes the assumption that Data Protection is enabled and working. For this reason, data cached locally (using NSFileManager) does not use secondary encryption on top of Data Protection. The library leaves this work up to iOS assuming that Data Protection is functioning.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>Xcode 9.4.1 - Dynamic Framework built for iOS 11.4</li>
+<li>iOS 9.3+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<ul>
+<li>Download and Import <code>SensibillUI.framework</code> into your project, and ensure that it is included in <strong>Embedded Binaries</strong> and <strong>Linked Frameworks and Libraries</strong></li>
+<li>Create and Import <code>Sensibill.plist</code> into the main bundle of your target. Configure the plist with the following values:
+
+<ul>
+<li>API_KEY: String</li>
+<li>API_SECRET: String</li>
+<li>CREDENTIAL_TYPE: String</li>
+<li>REDIRECT_URL: String</li>
+<li>ENVIRONMENT: String</li>
+<li>CERTIFICATE_PINNING_FILES (optional): Array of Strings</li>
+</ul></li>
+</ul>
+<h2 id='quick-start' class='heading'>Quick Start</h2>
+
+<p>Import <strong>SensibillUI</strong> into the file that will present the Receipt List. Our example assumes that you have registered a user and that you are using Password Authentication. You can dig deeper into documentation for authentication and UIView presentation.</p>
+<h3 id='swift' class='heading'>Swift</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SensibillUI</span>
+
+<span class="o">...</span>
+
+<span class="kt">PasswordAuthenticator</span><span class="p">()</span><span class="o">.</span><span class="nf">login</span><span class="p">(</span><span class="nv">accessId</span><span class="p">:</span> <span class="s">"accessId"</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="s">"password"</span><span class="p">)</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="k">none</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="kt">ReceiptListViewController</span><span class="p">(),</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Handle error condition</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='objective-c' class='heading'>Objective-C</h3>
+<pre class="highlight plaintext"><code>@import SensibillUI;
+
+...
+
+PasswordAuthenticator *authenticator = [PasswordAuthenticator new];
+[authenticator loginWithAccessId:@"accessId" password:@"password" completion:^(enum SensibillError error) {
+    if (error == SensibillErrorNone) {
+        [self presentViewController:[ReceiptListViewController new] animated:YES completion:nil];
+    } else {
+        // Handle error condition
+    }
+}];
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
