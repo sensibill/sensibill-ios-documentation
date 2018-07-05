@@ -1,4 +1,5 @@
-## Local Notification Example
+# Examples
+## Local Notifications
 
 Here is some sample code if you would like to implement local notifications to set Reminder. You will need to modify `AppDelegate.h`, `AppDelegate.m`, similar to what is found below.
 
@@ -93,7 +94,7 @@ Please note that if this notification is received while your app was not recentl
 @end
 ```
 
-## Inbox Sync Integration Example
+## Inbox Sync Integration
 
 Here is some sample code for integrating the Inbox Sync feature into your app. You will need to modify `AppDelegate.m` to forward the `openURL` calls into our SDK in order for the OAuth SDKs from our Mail providers to work correctly.
 
