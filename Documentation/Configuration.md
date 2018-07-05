@@ -38,6 +38,15 @@ Since you are setting these properties on the singleton configuration object, th
 
 The second way of setting these values (which could be used together with the first method) is to override the underlying properties which those initial properties map to. The only reason you would want to use this method was if you wanted an individual element on one screen to appear differently than a similar element on another screen. Usually these two elements would have the same appearance (they'd both use the child property of `colors`, as shown above), but in this case you may want to have more granularity:
 
+### Swift
+```swift
+let configuration = SBSDKConfiguration.sharedInstance()
+
+configuration?.loadingViewConfiguration.loadingBackgroundColor = .black
+configuration?.loadingViewConfiguration.loadingSpinnerColor = .white
+```
+
+### Objective-C
 ```objective-c
 SBSDKConfiguration *configuration = [SBSDKConfiguration sharedInstance];
 
