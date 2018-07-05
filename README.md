@@ -13,6 +13,7 @@
 	* [Transactions](Documentation/Transactions.md) - [Linking](Documentation/Transactions.md#transaction-linking), [Matching](Documentation/Transactions.md#transaction-matching)
 	* [Configuration](Documentation/Configuration.md)
 	* [Example Code](Documentation/Examples.md)
+* [API Reference Documentation](https://sensibill.github.io/sensibill-ios-distribution/index.html)
 * [License](LICENSE.md)
 
 ## Overview

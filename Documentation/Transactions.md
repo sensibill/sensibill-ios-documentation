@@ -17,7 +17,7 @@ func presentReceiptCaptureWithTransasctionId() {
 ```
 
 ## Transaction Matching
-**Transaction Matching** allows you to pass a list of `Transaction` objects that represent bank transactions, and we will attempt to match them to receipts. The more fields that are set on a transaction the more likely we are to find make a unique match, but the bare minimum is a date and amount. See the SDK reference documentation for details on `Transaction` and `ReceiptSummary` objects. If you have transactions that have already been linked using [Transaction Linking](#transaction-linking), you can set the `transactionID` on transaction's `identifier` to help the matcher filter out matched receipts.
+**Transaction Matching** allows you to pass a list of `Transaction` objects that represent bank transactions, and we will attempt to match them to receipts. The more fields that are set on a transaction the more likely we are to find make a unique match, but the bare minimum is a date and amount. See the [API reference documentation](https://sensibill.github.io/sensibill-ios-distribution/index.html) for details on `Transaction` and `ReceiptSummary` objects. If you have transactions that have already been linked using [Transaction Linking](#transaction-linking), you can set the `transactionID` on transaction's `identifier` to help the matcher filter out matched receipts.
 
 ```swift
 func matchTransactions() {

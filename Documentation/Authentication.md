@@ -26,7 +26,7 @@ Authenticator(tokenProvider: tokenProvider).restore(cacheIdentifier: "accessId")
 ```
 
 ## Password Authentication
-Password authentication uses username and password for authentication. As such, a user must be registered using `PasswordAuthenticator().register(...)`. See our API reference documentation for details on registration, accessId availability, and password strength. Password authentication also requires `API_KEY`, `API_SECRET`, and `CREDENTIAL_TYPE` in your **Sensibill.plist**.
+Password authentication uses username and password for authentication. As such, a user must be registered using `PasswordAuthenticator().register(...)`. See our [API reference documentation](https://sensibill.github.io/sensibill-ios-distribution/index.html) for details on registration, accessId availability, and password strength. Password authentication also requires `API_KEY`, `API_SECRET`, and `CREDENTIAL_TYPE` in your **Sensibill.plist**.
 
 ```swift
 import SensibillUI
