@@ -7,7 +7,7 @@ self.present(ReceiptListViewController(), animated: true, completion: nil)
 ```
 
 ### Custom Bottom Bar and Left UIBarButtonItem
-We allow you to override the default bottom bar with your own custom `UIView`. You can also customize the left `UIBarButtonItem` to use a custom icon, and handle what happens when the button is tapped. This is done by having your class conform to `ReceiptListViewControllerDataSource`. When initializing the Receipt List you will pass in your class as the `dataSource`.s
+We allow you to override the default bottom bar with your own custom `UIView`. You can also customize the left `UIBarButtonItem` to use a custom icon, and handle what happens when the button is tapped. This is done by having your class conform to `ReceiptListViewControllerDataSource`. When initializing the Receipt List you will pass in your class as the `dataSource`.
 
 *Note:* One caveat of overriding the bottom bar, is that you will always have the responsibility for presenting the [Receipt Exports](#receipt-export) screen.
 
@@ -61,7 +61,7 @@ class ViewController: UIViewController, SBViewControllerDelegate {
 
 }
 ```
-*Note:* Receipt Capture can also be used to link a bank account transaction to a receipt. See [Transaction Linking](../Transactions.md#transaction-linking) for  details.
+*Note:* Receipt Capture can also be used to link a bank account transaction to a receipt. See [Transaction Linking](Transactions.md#transaction-linking) for  details.
 
 ## Receipt Detail
 To present the details of a receipt, you can initialize an `SensibillReceiptViewController` with a `receiptId` and present it after setting your class as the delegate that conforms to `SBViewControllerDelegate`.
