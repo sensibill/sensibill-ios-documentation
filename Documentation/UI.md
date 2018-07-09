@@ -64,24 +64,17 @@ class ViewController: UIViewController, SBViewControllerDelegate {
 *Note:* Receipt Capture can also be used to link a bank account transaction to a receipt. See [Transaction Linking](Transactions.md#transaction-linking) for  details.
 
 ## Receipt Detail
-To present the details of a receipt, you can initialize an `SensibillReceiptViewController` with a `receiptId` and present it after setting your class as the delegate that conforms to `SBViewControllerDelegate`.
+To display the details of a receipt, you can initialize an `SensibillReceiptViewController` with a `receiptId` and push it with your navigation controller.
 
 ```swift
 class ViewController: UIViewController, SBViewControllerDelegate {
 
-  func presentReceiptDetail() {
+    func presentReceiptDetail() {
         if let viewController = SensibillReceiptViewController(receiptId: "receiptId") {
-            viewController.dismissDelegate = self
-            self.present(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
-
-  //MARK: SBViewControllerDelegate
-
-  func dismissSensibillViewController(_ controller: UIViewController!) {
-      controller.dismiss(animated: true, completion: nil)
-  }
-
+    
 }
 ```
 
