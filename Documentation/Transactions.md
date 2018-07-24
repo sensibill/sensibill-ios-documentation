@@ -53,15 +53,14 @@ func presentReceiptCaptureWithTransasctionId() {
 func matchTransactions() {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
+    
+    let transaction1 = SBExternalAccountTransaction(amount: 2.93, currencyCode: .CAD, date: dateFormatter.date(from: "2018-05-22"), transactionID: "transactionID", postedDate: dateFormatter.date(from: "2018-05-22"), summary: "", maskedAccountNumber: "", merchantName: "Tim Hortons")
+    let transaction2 = SBExternalAccountTransaction(amount: 26.10, currencyCode: .CAD, date: dateFormatter.date(from: "2018-05-22"), transactionID: "", postedDate: dateFormatter.date(from: "2018-05-22"), summary: "", maskedAccountNumber: "", merchantName: "")
 
-    let transaction1 = Transaction(identifier: "transactionID", date: dateFormatter.date(from: "2018-05-22"), amount: 2.93, currencyCode: "CAD", merchant: "Tim Hortons")
-    let transaction2 = Transaction(identifier: nil, date: dateFormatter.date(from: "2018-05-22"), amount: 26.10, currencyCode: "CAD", merchant: nil)
-
-    ReceiptCollection.shared.match(transactions: [transaction]) { (matches, status) in
-        if status == .success {
-            let receipt = matches[transaction1]!.first!
-            // Do something with receipt.identifier
-        }
+    SensibillSDK.matchReceipts(to: [transaction1, transaction2], withSuccessCallback: { (matchedTransactions) in
+        self.receiptId = matchedTransactions?.first?.receiptID //transaction1 receiptID
+    }) { (error) in
+        // Handle SBError
     }
 }
 ```
