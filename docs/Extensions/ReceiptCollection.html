@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MatchingError Enumeration Reference</title>
+    <title>ReceiptCollection Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/MatchingError" class="dashAnchor"></a>
-    <a title="MatchingError Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Extension/ReceiptCollection" class="dashAnchor"></a>
+    <a title="ReceiptCollection Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        MatchingError Enumeration Reference
+        ReceiptCollection Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -46,9 +46,6 @@
                 <a href="../Classes/Sensibill.html">Sensibill</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Transaction.html">Transaction</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/User.html">User</a>
               </li>
             </ul>
@@ -57,13 +54,18 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/MatchingError.html">MatchingError</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/PasswordStrength.html">PasswordStrength</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ReceiptCollection.html">ReceiptCollection</a>
               </li>
             </ul>
           </li>
@@ -80,16 +82,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>MatchingError</h1>
+            <h1>ReceiptCollection</h1>
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MatchingError</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
+<span class="kd">internal</span> <span class="kd">class</span> <span class="kt">ReceiptCollection</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Error codes that can be occur when matching transactions to receipts</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -97,9 +98,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Sensibill@E@MatchingError@MatchingErrorSuccess"></a>
-                    <a name="//apple_ref/swift/Element/success" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Sensibill@E@MatchingError@MatchingErrorSuccess">success</a>
+                    <a name="/c:@CM@Sensibill@objc(cs)ReceiptCollection(im)matchWithTransactions:completion:"></a>
+                    <a name="//apple_ref/swift/Method/match(transactions:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Sensibill@objc(cs)ReceiptCollection(im)matchWithTransactions:completion:">match(transactions:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -107,70 +108,48 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Matched successfully</p>
+                        <p>Finds receipts matching an array of bank transactions</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">success</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">match</span><span class="p">(</span><span class="nv">transactions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Transaction</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">matches</span><span class="p">:</span> <span class="p">[</span><span class="kt">Transaction</span><span class="p">:</span> <span class="p">[</span><span class="kt">ReceiptSummary</span><span class="p">]],</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">MatchingError</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Sensibill@E@MatchingError@MatchingErrorNetworkError"></a>
-                    <a name="//apple_ref/swift/Element/networkError" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Sensibill@E@MatchingError@MatchingErrorNetworkError">networkError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Network error occurred</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">networkError</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Sensibill@E@MatchingError@MatchingErrorUnknownError"></a>
-                    <a name="//apple_ref/swift/Element/unknownError" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Sensibill@E@MatchingError@MatchingErrorUnknownError">unknownError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Could not match for an unknown reason</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unknownError</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transactions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of Transaction objects that represent bank transactions</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block executed when the request is complete. Passes an optional error block and a Hash. The Hash uses Transaction objects as keys, and an array of receipts (empty if there are no matches, one ore more ReceiptSummary objects depending on isMultipleMatchesEnabled and successful matches)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

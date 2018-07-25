@@ -5,7 +5,37 @@
 
 To achieve this, first initialize an `SBTransaction` and set the `externalAccountTransactionID` in its private metadata. When initializing the `SensibillCaptureNavigationController` pass the transaction.
 
+It is recommended, that you register an observer on the transaction so that you can react to different transaction states. 
+
 ```swift
+func registerTransactionObserver() {
+    SBDataEvent.sharedManager().addTransactionObserver(self) { (type, transaction) in
+        guard let transaction = transaction else {
+            return
+        }
+
+        if transaction.privateMetaData?.externalAccountTransactionID == transactionCopy.identifier {
+            switch transaction.status {
+            case .needsSynchronization:
+                // Uploading receipt image
+                break
+            case .processing:
+                // Image uploaded successfully and processing started
+                break
+            case .uploaded:
+                // Receipt processed successfully
+                if !transaction.receiptID.isEmpty {
+                    // Store transaction.receiptID
+                }
+                break
+            case .failed, .stopped: 
+                // Image upload failed or was stopped externally
+                break
+            }
+        }
+    }
+}
+
 func presentReceiptCaptureWithTransasctionId() {
     let uploadTransaction = SBTransaction(imageData: nil)
     uploadTransaction.privateMetaData?.externalAccountTransactionID = "transactionID"
@@ -24,13 +54,16 @@ func matchTransactions() {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
 
-    let transaction1 = Transaction(identifier: "transactionID", date: dateFormatter.date(from: "2018-05-22"), amount: 2.93, currencyCode: "CAD", merchant: "Tim Hortons")
-    let transaction2 = Transaction(identifier: nil, date: dateFormatter.date(from: "2018-05-22"), amount: 26.10, currencyCode: "CAD", merchant: nil)
+    guard let transaction1 = SBExternalAccountTransaction(amount: 2.93, currencyCode: .CAD, date: dateFormatter.date(from: "2018-05-22"), transactionID: "transactionID", postedDate: dateFormatter.date(from: "2018-05-22"), summary: "", maskedAccountNumber: "", merchantName: "Tim Hortons"),
+        let transaction2 = SBExternalAccountTransaction(amount: 26.10, currencyCode: .CAD, date: dateFormatter.date(from: "2018-05-22"), transactionID: "", postedDate: dateFormatter.date(from: "2018-05-22"), summary: "", maskedAccountNumber: "", merchantName: "") else {
+            return
+    }
 
-    ReceiptCollection.shared.match(transactions: [transaction]) { (matches, status) in
-        if status == .success {
-            let receipt = matches[transaction1]!.first!
-            // Do something with receipt.identifier
+    SensibillTransactionMatcher.sharedInstance().receipts(for: [transaction1, transaction2]) { (matches, error) in
+        if let matches = matches, error == nil {
+            if let receipt = matches[transaction1] as? SBReceipt {
+                self.receiptId = receipt.id
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ![Sensibill](Sensibill-Logo.png)
 
-**Version: 1.15.0**
+**Version: 1.15.1**
 
 * [Overview](#overview)
 * [Data Protection](#data-protection)

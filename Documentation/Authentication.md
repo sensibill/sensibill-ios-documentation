@@ -20,7 +20,7 @@ class CustomTokenProvider: TokenProvider {
 ...
 
 let tokenProvider = CustomTokenProvider()
-Authenticator(tokenProvider: tokenProvider).restore(cacheIdentifier: "accessId") { error in
+Authenticator(tokenProvider: tokenProvider).start(identifier: "accessId") { error in
     // Handle error condition
 }
 ```
@@ -44,7 +44,7 @@ We provide a convenient interface to login as the last authenticated user, assum
 ### Token Authentication
 ```swift
 let tokenProvider = CustomTokenProvider()
-Authenticator(tokenProvider: tokenProvider).restore { error in
+Authenticator(tokenProvider: tokenProvider).start { error in
     // Handle error condition
 }
 ```
