@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Examples  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Examples  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Examples  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="examples.html">Examples</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ui.html">UI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Sensibill.html">Sensibill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PasswordStrength.html">PasswordStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='examples' class='heading'>Examples</h1>
+<h2 id='local-notifications' class='heading'>Local Notifications</h2>
+
+<p>Here is some sample code if you would like to implement local notifications to set Reminder. You will need to modify <code>AppDelegate.h</code>, <code>AppDelegate.m</code>, similar to what is found below.</p>
+
+<p>It is recommended that you since you may have other notifications being received by your application, that you check if each notification originated from the Sensibill SDK. To do this, you can look into the <code>userInfo</code> field on a given notification. See the code below for a demonstration.</p>
+
+<p>Please note that the UINavigationController variable <code>DESIRED_NAVIGATION_CONTROLLER</code> is not instantiated in this sample code and is meant for you to substitute some navigation controller which you would like our SDK to push views upon (much like how you would pass in a controller for presenting a receipt view).</p>
+<h3 id='important-note-about-integration' class='heading'>Important note about integration</h3>
+
+<p>Please note that if this notification is received while your app was not recently just active, you&rsquo;ll need to ensure that the Sensibill SDK is initialized properly and the appropriate user has been authenticated before calling any of our Notification Handler methods. In the sample code below, that is the purpose of <code>[someClass initializeSensibillSDK];</code>, as this class doesn&rsquo;t really exist and is merely a placeholder which is meant to demonstrate the point at which you should be initializing the Sensibill SDK using the methods described at the beginning of this document.</p>
+<pre class="highlight plaintext"><code>//
+//  AppDelegate.h
+//
+//
+
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;UserNotifications/UserNotifications.h&gt;
+
+@interface AppDelegate : UIApplication &lt;UIApplicationDelegate, UNUserNotificationCenterDelegate&gt;
+
+@property (strong, nonatomic) UIWindow *window;
+
+@end
+
+//
+//  AppDelegate.m
+//
+//
+
+#import "AppDelegate.h"
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+#import "SensibillSDK.h"
+#import "SBReminderNotificationHandler.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+// Override point for customization after application launch.
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")) {
+        [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+    } else {
+        [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    }
+    return YES;
+}
+
+//...
+
+#pragma mark -
+#pragma mark - UILocalNotification Method (iOS 8,9)
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [[UIApplication sharedApplication] cancelLocalNotification:notification] ;
+
+    BOOL fromSensibillSDK = notification.userInfo[@"isSensibillNotification"];
+
+    if (fromSensibillSDK) {
+        [someClass initializeSensibillSDK];
+        [[SBReminderNotificationHandler sharedHandler] setNavigationControllerToUse:[self visibleViewController:self.window.rootViewController].navigationController];
+        [[SBReminderNotificationHandler sharedHandler] application:application didReceiveLocalNotification:notification];
+    } else {
+        // Non-Sensibill notification, proceed as normal
+    }
+}
+
+#pragma mark -
+#pragma mark - UNUserNotificationCenterDelegate Method (iOS 10+)
+
+//Called when a notification is delivered to a foreground app.
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+        completionHandler(UNAuthorizationOptionSound | UNAuthorizationOptionAlert);
+}
+
+//Called to let your app know which action was selected by the user for a given notification.
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler {
+    BOOL fromSensibillSDK = response.notification.request.content.userInfo[@"isSensibillNotification"];
+
+    if (fromSensibillSDK) {
+        [someClass initializeSensibillSDK];
+        [[SBReminderNotificationHandler sharedHandler] setNavigationControllerToUse:[self visibleViewController:self.window.rootViewController].navigationController];
+        [[SBReminderNotificationHandler sharedHandler] userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+    } else {
+        // Non-Sensibill notification, proceed as normal
+    }
+}
+
+@end
+</code></pre>
+<h2 id='inbox-sync-integration' class='heading'>Inbox Sync Integration</h2>
+
+<p>Here is some sample code for integrating the Inbox Sync feature into your app. You will need to modify <code>AppDelegate.m</code> to forward the <code>openURL</code> calls into our SDK in order for the OAuth SDKs from our Mail providers to work correctly.</p>
+<pre class="highlight plaintext"><code>- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options {
+    return [SensibillSDK application:app openURL:url options:options];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [SensibillSDK application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-08-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

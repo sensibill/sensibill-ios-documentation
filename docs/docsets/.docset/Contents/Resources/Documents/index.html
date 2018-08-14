@@ -27,6 +27,26 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="examples.html">Examples</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ui.html">UI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -40,6 +60,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Sensibill.html">Sensibill</a>
@@ -56,6 +85,9 @@
                 <a href="Enums/PasswordStrength.html">PasswordStrength</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/SensibillError.html">SensibillError</a>
               </li>
             </ul>
@@ -63,6 +95,9 @@
           <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
               </li>
@@ -74,10 +109,30 @@
         <section>
           <section class="section">
             
-            <p><strong>Version: 1.15.2</strong></p>
+            <p><img src="https://github.com/sensibill/sensibill-ios-documentation/raw/master/Sensibill-Logo.png" alt="Sensibill"></p>
+
+<p><strong>Version: 1.16.0</strong></p>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#data-protection">Data Protection</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#quick-start">Quick Start</a></li>
+<li>Guides
+
+<ul>
+<li><a href="authentication.html">Authentication</a> - <a href="authentication.html#token-authentication">Token Authentication</a>, <a href="authentication.html#password-authentication">Password Authentication</a></li>
+<li><a href="ui.html">UI Presentation</a> - <a href="ui.html#receipt-list">Receipt List</a>, <a href="ui.html#receipt-capture">Receipt Capture</a>, <a href="ui.html#receipt-detail">Receipt Detail</a>, <a href="ui.html#receipt-export">Receipt Export</a></li>
+<li><a href="transactions.html">Transactions</a> - <a href="transactions.html#transaction-linking">Linking</a>, <a href="transactions.html#transaction-matching">Matching</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="examples.html">Example Code</a></li>
+</ul></li>
+<li><a href="https://github.com/sensibill/sensibill-ios-documentation/blob/master/LICENSE.md">License</a></li>
+</ul>
 <h2 id='overview' class='heading'>Overview</h2>
 
-<p>Sensibill is a iOS library that converts paper and email receipts into a digital format, extracting a number of data points such as merchant information, amounts, dates, and line item data.</p>
+<p>Sensibill is an iOS library that converts paper and email receipts into a digital format, extracting a number of data points such as merchant information, amounts, dates, and line item data.</p>
 <h2 id='data-protection' class='heading'>Data Protection</h2>
 
 <p><strong>Important</strong>: The library makes the assumption that Data Protection is enabled and working. For this reason, data cached locally (using NSFileManager) does not use secondary encryption on top of Data Protection. The library leaves this work up to iOS assuming that Data Protection is functioning.</p>
@@ -136,7 +191,7 @@ PasswordAuthenticator *authenticator = [PasswordAuthenticator new];
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-31)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-08-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
