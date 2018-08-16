@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UI  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="UI  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        UI  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="examples.html">Examples</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ui.html">UI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Sensibill.html">Sensibill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PasswordStrength.html">PasswordStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='ui-presentation' class='heading'>UI Presentation</h1>
+<h2 id='receipt-list' class='heading'>Receipt List</h2>
+
+<p>To simply use the default Receipt List you can initialize the controller with default values and present it.</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="kt">ReceiptListViewController</span><span class="p">(),</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</code></pre>
+<h3 id='custom-bottom-bar-and-left-uibarbuttonitem' class='heading'>Custom Bottom Bar and Left UIBarButtonItem</h3>
+
+<p>We allow you to override the default bottom bar with your own custom <code>UIView</code>. You can also customize the left <code>UIBarButtonItem</code> to use a custom icon, and handle what happens when the button is tapped. This is done by having your class conform to <code><a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a></code>. When initializing the Receipt List you will pass in your class as the <code>dataSource</code>.</p>
+
+<p><em>Note:</em> One caveat of overriding the bottom bar, is that you will always have the responsibility for presenting the <a href="#receipt-export">Receipt Exports</a> screen.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ReceiptListViewControllerDataSource</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">receiptListViewController</span><span class="p">:</span> <span class="kt">ReceiptListViewController</span><span class="p">?</span>
+
+    <span class="kd">func</span> <span class="nf">presentReceiptList</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">receiptListViewController</span> <span class="o">=</span> <span class="kt">ReceiptListViewController</span><span class="p">(</span><span class="nv">dataSource</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">receiptListViewController</span><span class="o">!</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="c1">//MARK: ReceiptListViewControllerDataSource</span>
+
+    <span class="kd">func</span> <span class="nf">leftBarButtonItem</span><span class="p">(</span><span class="k">in</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIBarButtonItem</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"close"</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="kt">SBSDKBundle</span><span class="o">.</span><span class="nf">uiBundle</span><span class="p">(),</span> <span class="nv">compatibleWith</span><span class="p">:</span> <span class="kc">nil</span><span class="p">),</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">plain</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">didTapDismissReceiptList</span><span class="kd">)</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">didTapDismissReceiptList</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">receiptListViewController</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">bottomView</span><span class="p">(</span><span class="k">in</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span> <span class="p">{</span>
+        <span class="c1">// Return your bottomView</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">bottomViewHeight</span><span class="p">(</span><span class="k">in</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span> <span class="p">{</span>
+        <span class="c1">// Return bottomView height</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h2 id='receipt-capture' class='heading'>Receipt Capture</h2>
+
+<p>Our receipt capture controller provides a convenient interface that leverages rectangle detection to automatically capture and crop receipt images. You can present it after setting your class as the delegate that conforms to <code>SBViewControllerDelegate</code>.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">SBViewControllerDelegate</span> <span class="p">{</span>
+
+  <span class="kd">func</span> <span class="nf">presentReceiptCapture</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">let</span> <span class="nv">captureController</span> <span class="o">=</span> <span class="kt">SensibillCaptureNavigationController</span><span class="p">()</span>
+      <span class="n">captureController</span><span class="o">.</span><span class="n">dismissDelegate</span> <span class="o">=</span> <span class="k">self</span>
+      <span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">captureController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="c1">//MARK: SBViewControllerDelegate</span>
+
+  <span class="kd">func</span> <span class="nf">dismissSensibillViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">controller</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+
+<p><em>Note:</em> Receipt Capture can also be used to link a bank account transaction to a receipt. See <a href="Transactions.md#transaction-linking">Transaction Linking</a> for  details.</p>
+<h2 id='receipt-detail' class='heading'>Receipt Detail</h2>
+
+<p>To display the details of a receipt, you can initialize an <code>SensibillReceiptViewController</code> with a <code>receiptId</code> and push it with your navigation controller. You can register a receipt observer if you want to be able to respond to when the receipt is edited or deleted.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">SBViewControllerDelegate</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="kt">SBDataEvent</span><span class="o">.</span><span class="nf">sharedManager</span><span class="p">()</span><span class="o">.</span><span class="nf">addReceiptObserver</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">receipt</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">receipt</span> <span class="o">=</span> <span class="n">receipt</span><span class="p">,</span> <span class="k">let</span> <span class="nv">receiptId</span> <span class="o">=</span> <span class="n">receipt</span><span class="o">.</span><span class="n">id</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+
+            <span class="k">switch</span> <span class="n">type</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="kt">SBDataEventTypeEdit</span><span class="p">:</span>
+                <span class="c1">// Receipt was edited</span>
+                <span class="k">break</span>
+            <span class="k">case</span> <span class="kt">SBDataEventTypeDeletion</span><span class="p">:</span>
+                <span class="c1">// Receipt was deleted</span>
+                <span class="k">break</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">presentReceiptDetail</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">SensibillReceiptViewController</span><span class="p">(</span><span class="nv">receiptId</span><span class="p">:</span> <span class="s">"receiptId"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h2 id='receipt-export' class='heading'>Receipt Export</h2>
+
+<p>To see receipts that were recently exported, you can initialize a <code><a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a></code> and present it.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">controller</span> <span class="o">=</span> <span class="kt">RecentExportsViewController</span><span class="o">.</span><span class="nf">instantiate</span><span class="p">()</span>
+<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">controller</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-08-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

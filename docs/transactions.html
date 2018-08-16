@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transactions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Transactions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Transactions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="examples.html">Examples</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ui.html">UI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Sensibill.html">Sensibill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PasswordStrength.html">PasswordStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='transactions' class='heading'>Transactions</h1>
+<h2 id='transaction-linking' class='heading'>Transaction Linking</h2>
+
+<p><strong>Transaction Linking</strong> allows you to capture a paper receipt passing in a <code>transactionID</code>. This allows us to create a link on the receipt to the transaction id, and is particularly helpful to banking clients who want to link their account transactions to receipts.</p>
+
+<p>To achieve this, first initialize an <code>SBTransaction</code> and set the <code>externalAccountTransactionID</code> in its private metadata. When initializing the <code>SensibillCaptureNavigationController</code> pass the transaction.</p>
+
+<p>It is recommended, that you register an observer on the transaction so that you can react to different transaction states. </p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">registerTransactionObserver</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">SBDataEvent</span><span class="o">.</span><span class="nf">sharedManager</span><span class="p">()</span><span class="o">.</span><span class="nf">addTransactionObserver</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">transaction</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">transaction</span> <span class="o">=</span> <span class="n">transaction</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">privateMetaData</span><span class="p">?</span><span class="o">.</span><span class="n">externalAccountTransactionID</span> <span class="o">==</span> <span class="n">transactionCopy</span><span class="o">.</span><span class="n">identifier</span> <span class="p">{</span>
+            <span class="k">switch</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nv">needsSynchronization</span><span class="p">:</span>
+                <span class="c1">// Uploading receipt image</span>
+                <span class="k">break</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nv">processing</span><span class="p">:</span>
+                <span class="c1">// Image uploaded successfully and processing started</span>
+                <span class="k">break</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nv">uploaded</span><span class="p">:</span>
+                <span class="c1">// Receipt processed successfully</span>
+                <span class="k">if</span> <span class="o">!</span><span class="n">transaction</span><span class="o">.</span><span class="n">receiptID</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+                    <span class="c1">// Store transaction.receiptID</span>
+                <span class="p">}</span>
+                <span class="k">break</span>
+            <span class="k">case</span> <span class="o">.</span><span class="n">failed</span><span class="p">,</span> <span class="o">.</span><span class="nv">stopped</span><span class="p">:</span> 
+                <span class="c1">// Image upload failed or was stopped externally</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">presentReceiptCaptureWithTransasctionId</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">uploadTransaction</span> <span class="o">=</span> <span class="kt">SBTransaction</span><span class="p">(</span><span class="nv">imageData</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="n">uploadTransaction</span><span class="o">.</span><span class="n">privateMetaData</span><span class="p">?</span><span class="o">.</span><span class="n">externalAccountTransactionID</span> <span class="o">=</span> <span class="s">"transactionID"</span>
+
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">SensibillCaptureNavigationController</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span> <span class="n">uploadTransaction</span><span class="p">,</span> <span class="nv">exitAfterCapture</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='transaction-matching' class='heading'>Transaction Matching</h2>
+
+<p><strong>Transaction Matching</strong> allows you to pass a list of <code>Transaction</code> objects that represent bank transactions, and we will attempt to match them to receipts. The more fields that are set on a transaction the more likely we are to find make a unique match, but the bare minimum is a date and amount. See the <a href="https://sensibill.github.io/sensibill-ios-distribution/index.html">API reference documentation</a> for details on <code>Transaction</code> and <code>ReceiptSummary</code> objects. If you have transactions that have already been linked using <a href="#transaction-linking">Transaction Linking</a>, you can set the <code>transactionID</code> on transaction&rsquo;s <code>identifier</code> to help the matcher filter out matched receipts.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">matchTransactions</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">dateFormatter</span> <span class="o">=</span> <span class="kt">DateFormatter</span><span class="p">()</span>
+    <span class="n">dateFormatter</span><span class="o">.</span><span class="n">dateFormat</span> <span class="o">=</span> <span class="s">"yyyy-MM-dd"</span>
+
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">transaction1</span> <span class="o">=</span> <span class="kt">SBExternalAccountTransaction</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="mf">2.93</span><span class="p">,</span> <span class="nv">currencyCode</span><span class="p">:</span> <span class="o">.</span><span class="kt">CAD</span><span class="p">,</span> <span class="nv">date</span><span class="p">:</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"2018-05-22"</span><span class="p">),</span> <span class="nv">transactionID</span><span class="p">:</span> <span class="s">"transactionID"</span><span class="p">,</span> <span class="nv">postedDate</span><span class="p">:</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"2018-05-22"</span><span class="p">),</span> <span class="nv">summary</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">maskedAccountNumber</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">merchantName</span><span class="p">:</span> <span class="s">"Tim Hortons"</span><span class="p">),</span>
+        <span class="k">let</span> <span class="nv">transaction2</span> <span class="o">=</span> <span class="kt">SBExternalAccountTransaction</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="mf">26.10</span><span class="p">,</span> <span class="nv">currencyCode</span><span class="p">:</span> <span class="o">.</span><span class="kt">CAD</span><span class="p">,</span> <span class="nv">date</span><span class="p">:</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"2018-05-22"</span><span class="p">),</span> <span class="nv">transactionID</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">postedDate</span><span class="p">:</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"2018-05-22"</span><span class="p">),</span> <span class="nv">summary</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">maskedAccountNumber</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">merchantName</span><span class="p">:</span> <span class="s">""</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="kt">SensibillTransactionMatcher</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span><span class="o">.</span><span class="nf">receipts</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="p">[</span><span class="n">transaction1</span><span class="p">,</span> <span class="n">transaction2</span><span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">matches</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">matches</span> <span class="o">=</span> <span class="n">matches</span><span class="p">,</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">receipt</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="n">transaction1</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">SBReceipt</span> <span class="p">{</span>
+                <span class="k">self</span><span class="o">.</span><span class="n">receiptId</span> <span class="o">=</span> <span class="n">receipt</span><span class="o">.</span><span class="n">id</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-08-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

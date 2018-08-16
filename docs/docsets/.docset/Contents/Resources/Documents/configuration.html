@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Configuration  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Configuration  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Configuration  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="examples.html">Examples</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ui.html">UI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Sensibill.html">Sensibill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PasswordStrength.html">PasswordStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='configuration' class='heading'>Configuration</h1>
+<h2 id='branding-configuration' class='heading'>Branding Configuration</h2>
+
+<p>There are two layers to branding configuration. The easiest way for most purposes is to use the <code>colors</code> property of the <code>SBSDKConfiguration</code> singleton object. The properties of <code>colors</code> will be used by the SDK to map your branding to all visual elements of the SDK. When the <code>SBSDKConfiguration</code> singleton is first accessed, it will be initialized with a default set of values for the colors of the SDK, but you can override these before starting the SDK:</p>
+<h3 id='swift' class='heading'>Swift</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">SBSDKConfiguration</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span>
+
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">brandBackground</span> <span class="o">=</span> <span class="o">.</span><span class="n">red</span>
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">brandForeground</span> <span class="o">=</span> <span class="o">.</span><span class="n">blue</span>
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">brandForegroundDisabled</span> <span class="o">=</span> <span class="o">.</span><span class="n">gray</span>
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">actionBackground</span> <span class="o">=</span> <span class="o">.</span><span class="n">purple</span>
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">actionForeground</span> <span class="o">=</span> <span class="o">.</span><span class="n">orange</span>
+
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="nf">applyColors</span><span class="p">()</span>
+</code></pre>
+<h3 id='objective-c' class='heading'>Objective-C</h3>
+<pre class="highlight plaintext"><code>SBSDKConfiguration *configuration = [SBSDKConfiguration sharedInstance];
+
+configuration.colors.brandBackground = [UIColor redColor];
+configuration.colors.brandForeground = [UIColor blueColor];
+configuration.colors.brandForegroundDisabled = [UIColor greyColor];
+configuration.colors.actionBackground = [UIColor purpleColor];
+configuration.colors.actionForeground = [UIColor orangeColor];
+
+[configuration applyColors];
+</code></pre>
+
+<p>There are plenty of other colors one can set, but these are just some examples. Using the small number of properties on the <code>color</code> object, you can quickly brand the SDK with minimal work.</p>
+
+<p>Since you are setting these properties on the singleton configuration object, there are no other changes needed (i.e. don&rsquo;t need to pass this object anywhere) as any UI which is created in the SDK next will use the new values. All you need to do is call <code>applyColors</code> when you are done setting your custom colors on the <code>SBSDKConfiguration</code> singleton and these colors will be mapped to their respective settings for you.</p>
+
+<hr>
+
+<p>The second way of setting these values (which could be used together with the first method) is to override the underlying properties which those initial properties map to. The only reason you would want to use this method was if you wanted an individual element on one screen to appear differently than a similar element on another screen. Usually these two elements would have the same appearance (they&rsquo;d both use the child property of <code>colors</code>, as shown above), but in this case you may want to have more granularity:</p>
+<h3 id='swift' class='heading'>Swift</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">SBSDKConfiguration</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span>
+
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">loadingViewConfiguration</span><span class="o">.</span><span class="n">loadingBackgroundColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">black</span>
+<span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">loadingViewConfiguration</span><span class="o">.</span><span class="n">loadingSpinnerColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">white</span>
+</code></pre>
+<h3 id='objective-c' class='heading'>Objective-C</h3>
+<pre class="highlight plaintext"><code>SBSDKConfiguration *configuration = [SBSDKConfiguration sharedInstance];
+
+configuration.loadingViewConfiguration.loadingBackgroundColor = [UIColor blackColor];
+configuration.loadingViewConfiguration.loadingSpinnerColor = [UIColor whiteColor];
+</code></pre>
+
+<p>Above you can see a simple example for overriding the colors of the loading view. If you didn&rsquo;t override the colors like this, they&rsquo;d take on the colors defined in the higher-level configurations (in this example, brandBackground &amp; brandForeground).</p>
+
+<p>This section just outlines the basic way of changing color configurations, but there is more extensive documentation on all the configuration options available in another document, so please refer to the <em>iOS Customization Document</em>.</p>
+<h2 id='image-configuration' class='heading'>Image Configuration</h2>
+
+<p>It is very simple to override what images the SDK uses with your own icons by including a Asset Catalog <code>SensibillAssets.xcassets</code> in the bundle which you set the <code>externalBundle</code> property to.</p>
+
+<p>From there, simply add images with the same name as the ones contained in the internal <code>SensibillAssets.xcassets</code> located in the SDK: <code>Resources/Images/Images.xcassets</code>. For best results, please ensure the assets you provide are the same size as the ones you wish to override.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-08-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
