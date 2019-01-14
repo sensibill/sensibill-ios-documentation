@@ -53,6 +53,9 @@
                 <a href="Classes/Authenticator.html">Authenticator</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CaptureTipsViewController.html">CaptureTipsViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Credentials.html">Credentials</a>
               </li>
               <li class="nav-group-task">
@@ -62,7 +65,13 @@
                 <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptSearchFilter.html">ReceiptSearchFilter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
@@ -82,6 +91,9 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/MatchingError.html">MatchingError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/PasswordStrength.html">PasswordStrength</a>
               </li>
               <li class="nav-group-task">
@@ -96,7 +108,7 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+                <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
@@ -117,10 +129,10 @@
 </code></pre>
 <h3 id='custom-bottom-bar-and-left-uibarbuttonitem' class='heading'>Custom Bottom Bar and Left UIBarButtonItem</h3>
 
-<p>We allow you to override the default bottom bar with your own custom <code>UIView</code>. You can also customize the left <code>UIBarButtonItem</code> to use a custom icon, and handle what happens when the button is tapped. This is done by having your class conform to <code><a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a></code>. When initializing the Receipt List you will pass in your class as the <code>dataSource</code>.</p>
+<p>We allow you to override the default bottom bar with your own custom <code>UIView</code>. You can also customize the left <code>UIBarButtonItem</code> to use a custom icon, and handle what happens when the button is tapped. This is done by having your class conform to <code><a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a></code>. When initializing the Receipt List you will pass in your class as the <code>dataSource</code>.</p>
 
 <p><em>Note:</em> One caveat of overriding the bottom bar, is that you will always have the responsibility for presenting the <a href="#receipt-export">Receipt Exports</a> screen.</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ReceiptListViewControllerDataSource</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">SBLReceiptListViewControllerDataSource</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">receiptListViewController</span><span class="p">:</span> <span class="kt">ReceiptListViewController</span><span class="p">?</span>
 
     <span class="kd">func</span> <span class="nf">presentReceiptList</span><span class="p">()</span> <span class="p">{</span>
@@ -128,7 +140,7 @@
         <span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">receiptListViewController</span><span class="o">!</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="c1">//MARK: ReceiptListViewControllerDataSource</span>
+    <span class="c1">//MARK: SBLReceiptListViewControllerDataSource</span>
 
     <span class="kd">func</span> <span class="nf">leftBarButtonItem</span><span class="p">(</span><span class="k">in</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIBarButtonItem</span><span class="p">?</span> <span class="p">{</span>
         <span class="k">return</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"close"</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="kt">SBSDKBundle</span><span class="o">.</span><span class="nf">uiBundle</span><span class="p">(),</span> <span class="nv">compatibleWith</span><span class="p">:</span> <span class="kc">nil</span><span class="p">),</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">plain</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">didTapDismissReceiptList</span><span class="kd">)</span><span class="p">)</span>
@@ -171,7 +183,7 @@
 <p><em>Note:</em> Receipt Capture can also be used to link a bank account transaction to a receipt. See <a href="Transactions.md#transaction-linking">Transaction Linking</a> for  details.</p>
 <h2 id='receipt-detail' class='heading'>Receipt Detail</h2>
 
-<p>To display the details of a receipt, you can initialize an <code>SensibillReceiptViewController</code> with a <code>receiptId</code> and push it with your navigation controller. You can register a receipt observer if you want to be able to respond to when the receipt is edited or deleted.</p>
+<p>To display the details of a receipt, you can initialize a <code>SensibillReceiptViewController</code> with a <code>receiptId</code> and push it with your navigation controller. You can register a receipt observer if you want to be able to respond to when the receipt is edited or deleted.</p>
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">SBViewControllerDelegate</span> <span class="p">{</span>
 
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
@@ -213,7 +225,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-11)</p>
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -54,6 +54,9 @@
                 <a href="Classes/Authenticator.html">Authenticator</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CaptureTipsViewController.html">CaptureTipsViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Credentials.html">Credentials</a>
               </li>
               <li class="nav-group-task">
@@ -63,7 +66,13 @@
                 <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptSearchFilter.html">ReceiptSearchFilter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
@@ -83,6 +92,9 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/MatchingError.html">MatchingError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/PasswordStrength.html">PasswordStrength</a>
               </li>
               <li class="nav-group-task">
@@ -97,7 +109,7 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+                <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
@@ -119,9 +131,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@E@PasswordStrength"></a>
+                    <a name="/c:@M@SensibillUI@E@SBLPasswordStrength"></a>
                     <a name="//apple_ref/swift/Enum/PasswordStrength" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@E@PasswordStrength">PasswordStrength</a>
+                    <a class="token" href="#/c:@M@SensibillUI@E@SBLPasswordStrength">PasswordStrength</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -137,7 +149,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLPasswordStrength)</span>
 <span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PasswordStrength</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
@@ -185,9 +197,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@E@RequestAuthenticationType"></a>
+                    <a name="/c:@M@SensibillUI@E@SBLRequestAuthenticationType"></a>
                     <a name="//apple_ref/swift/Enum/RequestAuthenticationType" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@E@RequestAuthenticationType">RequestAuthenticationType</a>
+                    <a class="token" href="#/c:@M@SensibillUI@E@SBLRequestAuthenticationType">RequestAuthenticationType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -203,8 +215,41 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLRequestAuthenticationType)</span>
 <span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RequestAuthenticationType</span> <span class="p">:</span> <span class="kt">NSInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@E@SBLMatchingError"></a>
+                    <a name="//apple_ref/swift/Enum/MatchingError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@E@SBLMatchingError">MatchingError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error codes that can be occur when matching transactions to receipts</p>
+
+                        <a href="Enums/MatchingError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLMatchingError)</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MatchingError</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>
@@ -216,7 +261,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-11)</p>
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

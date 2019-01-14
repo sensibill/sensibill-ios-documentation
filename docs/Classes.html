@@ -54,6 +54,9 @@
                 <a href="Classes/Authenticator.html">Authenticator</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CaptureTipsViewController.html">CaptureTipsViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Credentials.html">Credentials</a>
               </li>
               <li class="nav-group-task">
@@ -63,7 +66,13 @@
                 <a href="Classes/PasswordEvaluation.html">PasswordEvaluation</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptSearchFilter.html">ReceiptSearchFilter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
@@ -83,6 +92,9 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/MatchingError.html">MatchingError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/PasswordStrength.html">PasswordStrength</a>
               </li>
               <li class="nav-group-task">
@@ -97,7 +109,7 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+                <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
@@ -119,9 +131,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)User"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLUser"></a>
                     <a name="//apple_ref/swift/Class/User" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)User">User</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLUser">User</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -138,8 +150,8 @@ Get the current user</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">User</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLUser)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">User</span> <span class="p">:</span> <span class="kt">CoreDataManaged</span></code></pre>
 
                         </div>
                       </div>
@@ -149,9 +161,9 @@ Get the current user</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)Credentials"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials"></a>
                     <a name="//apple_ref/swift/Class/Credentials" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)Credentials">Credentials</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials">Credentials</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -167,7 +179,7 @@ Get the current user</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLCredentials)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">Credentials</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
 
                         </div>
@@ -178,9 +190,9 @@ Get the current user</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)Authenticator"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLAuthenticator"></a>
                     <a name="//apple_ref/swift/Class/Authenticator" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)Authenticator">Authenticator</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLAuthenticator">Authenticator</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -196,7 +208,7 @@ Get the current user</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objcMembers</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLAuthenticator)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">Authenticator</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
@@ -207,9 +219,9 @@ Get the current user</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)PasswordAuthenticator"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLPasswordAuthenticator"></a>
                     <a name="//apple_ref/swift/Class/PasswordAuthenticator" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)PasswordAuthenticator">PasswordAuthenticator</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLPasswordAuthenticator">PasswordAuthenticator</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -225,7 +237,7 @@ Get the current user</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objcMembers</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLPasswordAuthenticator)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">PasswordAuthenticator</span> <span class="p">:</span> <span class="kt"><a href="Classes/Authenticator.html">Authenticator</a></span></code></pre>
 
                         </div>
@@ -236,9 +248,9 @@ Get the current user</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)PasswordEvaluation"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLPasswordEvaluation"></a>
                     <a name="//apple_ref/swift/Class/PasswordEvaluation" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)PasswordEvaluation">PasswordEvaluation</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLPasswordEvaluation">PasswordEvaluation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -254,7 +266,7 @@ Get the current user</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objcMembers</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLPasswordEvaluation)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">PasswordEvaluation</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
@@ -269,9 +281,71 @@ Get the current user</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)Request"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter"></a>
+                    <a name="//apple_ref/swift/Class/ReceiptSearchFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter">ReceiptSearchFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use a SearchFilter instance to query a specific set of receipts</p>
+
+                        <a href="Classes/ReceiptSearchFilter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLReceiptSearchFilter)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReceiptSearchFilter</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptCollection"></a>
+                    <a name="//apple_ref/swift/Class/ReceiptCollection" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptCollection">ReceiptCollection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use the ReceiptCollection shared instance to query our Receipts database</p>
+
+                        <a href="Classes/ReceiptCollection.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLReceiptCollection)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReceiptCollection</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLRequest"></a>
                     <a name="//apple_ref/swift/Class/Request" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)Request">Request</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLRequest">Request</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -288,7 +362,7 @@ with the Sensibill Web API</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLRequest)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">Request</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
@@ -336,9 +410,43 @@ with the Sensibill Web API</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)RecentExportsViewController"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLCaptureTipsViewController"></a>
+                    <a name="//apple_ref/swift/Class/CaptureTipsViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCaptureTipsViewController">CaptureTipsViewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UIViewController used by Receipt Capture to show information.
+<code>contentViewControllerBlock</code> is the only interface that should currently be used externally.</p>
+
+                        <a href="Classes/CaptureTipsViewController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLCaptureTipsViewController)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CaptureTipsViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLRecentExportsViewController"></a>
                     <a name="//apple_ref/swift/Class/RecentExportsViewController" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)RecentExportsViewController">RecentExportsViewController</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLRecentExportsViewController">RecentExportsViewController</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -354,7 +462,7 @@ with the Sensibill Web API</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLRecentExportsViewController)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">RecentExportsViewController</span> <span class="p">:</span> <span class="kt">UITableViewController</span></code></pre>
 
                         </div>
@@ -369,9 +477,9 @@ with the Sensibill Web API</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)ReceiptListViewController"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptListViewController"></a>
                     <a name="//apple_ref/swift/Class/ReceiptListViewController" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)ReceiptListViewController">ReceiptListViewController</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptListViewController">ReceiptListViewController</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -387,8 +495,8 @@ with the Sensibill Web API</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReceiptListViewController</span> <span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">,</span> <span class="kt"><a href="Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(SBLReceiptListViewController)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReceiptListViewController</span> <span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">,</span> <span class="kt"><a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a></span></code></pre>
 
                         </div>
                       </div>
@@ -400,7 +508,7 @@ with the Sensibill Web API</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-11)</p>
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Authenticator Class Reference</title>
+    <title>CaptureTipsViewController Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Authenticator" class="dashAnchor"></a>
-    <a title="Authenticator Class Reference"></a>
+    <a name="//apple_ref/swift/Class/CaptureTipsViewController" class="dashAnchor"></a>
+    <a title="CaptureTipsViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Authenticator Class Reference
+        CaptureTipsViewController Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -121,15 +121,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Authenticator</h1>
+            <h1>CaptureTipsViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@objc(SBLAuthenticator)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Authenticator</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc(SBLCaptureTipsViewController)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CaptureTipsViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 
                 </div>
               </div>
-            <p>Handles authentication, and tokenProvider registration</p>
+            <p>UIViewController used by Receipt Capture to show information.
+<code>contentViewControllerBlock</code> is the only interface that should currently be used externally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -138,9 +139,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SensibillUI13AuthenticatorCAcA13TokenProvider_p05tokenE0_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(tokenProvider:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SensibillUI13AuthenticatorCAcA13TokenProvider_p05tokenE0_tcfc">init(tokenProvider:)</a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLCaptureTipsViewController(cpy)customContentViewControllerBlock"></a>
+                    <a name="//apple_ref/swift/Variable/customContentViewControllerBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCaptureTipsViewController(cpy)customContentViewControllerBlock">customContentViewControllerBlock</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -148,53 +149,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize the Authenticator with Token Provider</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tokenProvider</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TokenProvider.html">TokenProvider</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>tokenProvider</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Custom implementation of TokenProvider</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLAuthenticator(im)startWithIdentifier:completion:"></a>
-                    <a name="//apple_ref/swift/Method/start(identifier:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLAuthenticator(im)startWithIdentifier:completion:">start(identifier:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Use this method to start the SDK</p>
+                        <p>Block that will be called when the capture tips view is about to be shown for
+a specific <code>CaptureMode</code>. The <code>UIViewController</code> returned will be shown as
+the tip content.</p>
 
                       </div>
                       <div class="declaration">
@@ -202,40 +159,9 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/SensibillError.html">SensibillError</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">customContentViewControllerBlock</span><span class="p">:</span> <span class="p">((</span><span class="kt">CaptureMode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span><span class="p">)?</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>identifier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Unique identifier. (If nil, the SDK will attempt to start with the last authenticated user)</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>this code will be executed when the SDK is started. May return an error (e.g.: unknown user, etc.)</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>

@@ -54,6 +54,9 @@
                 <a href="../Classes/Authenticator.html">Authenticator</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/CaptureTipsViewController.html">CaptureTipsViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Credentials.html">Credentials</a>
               </li>
               <li class="nav-group-task">
@@ -63,7 +66,13 @@
                 <a href="../Classes/PasswordEvaluation.html">PasswordEvaluation</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptSearchFilter.html">ReceiptSearchFilter</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/RecentExportsViewController.html">RecentExportsViewController</a>
@@ -83,6 +92,9 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/MatchingError.html">MatchingError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/PasswordStrength.html">PasswordStrength</a>
               </li>
               <li class="nav-group-task">
@@ -97,7 +109,7 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a>
+                <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/TokenProvider.html">TokenProvider</a>
@@ -112,8 +124,8 @@
             <h1>ReceiptListViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReceiptListViewController</span> <span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc(SBLReceiptListViewController)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReceiptListViewController</span> <span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a></span></code></pre>
 
                 </div>
               </div>
@@ -126,9 +138,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)ReceiptListViewController(im)initWithDataSource:"></a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptListViewController(im)initWithDataSource:"></a>
                     <a name="//apple_ref/swift/Method/init(dataSource:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)ReceiptListViewController(im)initWithDataSource:">init(dataSource:)</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptListViewController(im)initWithDataSource:">init(dataSource:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,7 +156,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dataSource</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a></span><span class="p">?)</span></code></pre>
+<span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dataSource</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -160,7 +172,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The object to be used for controlling receipt list functionality through the <code><a href="../Protocols/ReceiptListViewControllerDataSource.html">ReceiptListViewControllerDataSource</a></code> protocol.</p>
+                                  <p>The object to be used for controlling receipt list functionality through the <code>ReceiptListViewControllerDataSource</code> protocol.</p>
                                 </div>
                               </td>
                             </tr>
@@ -177,9 +189,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(pl)ReceiptListViewControllerDataSource(im)leftBarButtonItemIn:"></a>
+                    <a name="/c:@M@SensibillUI@objc(pl)SBLReceiptListViewControllerDataSource(im)leftBarButtonItemIn:"></a>
                     <a name="//apple_ref/swift/Method/leftBarButtonItem(in:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(pl)ReceiptListViewControllerDataSource(im)leftBarButtonItemIn:">leftBarButtonItem(in:)</a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(pl)SBLReceiptListViewControllerDataSource(im)leftBarButtonItemIn:">leftBarButtonItem(in:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -205,7 +217,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-11)</p>
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

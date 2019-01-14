@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Credentials Class Reference</title>
+    <title>ReceiptSearchFilter Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Credentials" class="dashAnchor"></a>
-    <a title="Credentials Class Reference"></a>
+    <a name="//apple_ref/swift/Class/ReceiptSearchFilter" class="dashAnchor"></a>
+    <a title="ReceiptSearchFilter Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Credentials Class Reference
+        ReceiptSearchFilter Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -121,15 +121,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Credentials</h1>
+            <h1>ReceiptSearchFilter</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@objc(SBLCredentials)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Credentials</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc(SBLReceiptSearchFilter)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReceiptSearchFilter</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Structure that holds all necessary credential information for a user</p>
+            <p>Use a SearchFilter instance to query a specific set of receipts</p>
 
           </section>
           <section class="section task-group-section">
@@ -138,9 +138,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(im)initWithTokenId:accessToken:refreshToken:"></a>
-                    <a name="//apple_ref/swift/Method/init(tokenId:accessToken:refreshToken:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(im)initWithTokenId:accessToken:refreshToken:">init(tokenId:accessToken:refreshToken:)</a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)currencyCodes"></a>
+                    <a name="//apple_ref/swift/Property/currencyCodes" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)currencyCodes">currencyCodes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -148,7 +148,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize Credentials with tokenId, accessToken, and refreshToken</p>
+                        <p>List of currency ISO codes to filter by</p>
 
                       </div>
                       <div class="declaration">
@@ -156,78 +156,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tokenId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>tokenId</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Token identifier</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>accessToken</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Access token</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>refreshToken</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Refresh token is optional</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(py)accessToken"></a>
-                    <a name="//apple_ref/swift/Property/accessToken" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(py)accessToken">accessToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>OAuth 2.0 Access Token</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">currencyCodes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -237,9 +166,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(py)refreshToken"></a>
-                    <a name="//apple_ref/swift/Property/refreshToken" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(py)refreshToken">refreshToken</a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)categories"></a>
+                    <a name="//apple_ref/swift/Property/categories" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)categories">categories</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -247,7 +176,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>OAuth 2.0 Refresh Token</p>
+                        <p>List of categories to filter by</p>
 
                       </div>
                       <div class="declaration">
@@ -255,7 +184,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">categories</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">ReceiptCategory</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -265,9 +194,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(py)tokenId"></a>
-                    <a name="//apple_ref/swift/Property/tokenId" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(py)tokenId">tokenId</a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)from"></a>
+                    <a name="//apple_ref/swift/Property/from" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)from">from</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -275,7 +204,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>OAuth 2.0 Token ID</p>
+                        <p>If set, only receipts from transactions after that date will be returned</p>
 
                       </div>
                       <div class="declaration">
@@ -283,7 +212,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">tokenId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -293,9 +222,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(cpy)current"></a>
-                    <a name="//apple_ref/swift/Variable/current" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(cpy)current">current</a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)to"></a>
+                    <a name="//apple_ref/swift/Property/to" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)to">to</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -303,7 +232,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Currently used credentials</p>
+                        <p>If set, only receipts from transactions before that date will be returned</p>
 
                       </div>
                       <div class="declaration">
@@ -311,7 +240,147 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">internal(set)</span> <span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">current</span><span class="p">:</span> <span class="kt">Credentials</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)expenseTypes"></a>
+                    <a name="//apple_ref/swift/Property/expenseTypes" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)expenseTypes">expenseTypes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>List of expense types to filter by (business, personal)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">expenseTypes</span><span class="p">:</span> <span class="kt">ExpenseTypeFilter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)pendingValidation"></a>
+                    <a name="//apple_ref/swift/Property/pendingValidation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)pendingValidation">pendingValidation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set to true, only receipts pending validation will be returned (Defaults to false)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">pendingValidation</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)favorite"></a>
+                    <a name="//apple_ref/swift/Property/favorite" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)favorite">favorite</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set to true, only receipts that are favorited will be returned (Defaults to false)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">favorite</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)folder"></a>
+                    <a name="//apple_ref/swift/Property/folder" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)folder">folder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set, only receipts that belong to that folder will be returned</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">folder</span><span class="p">:</span> <span class="kt">Folder</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)excludingFolder"></a>
+                    <a name="//apple_ref/swift/Property/excludingFolder" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLReceiptSearchFilter(py)excludingFolder">excludingFolder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set, only receipts that do not belong to that folder will be returned</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">excludingFolder</span><span class="p">:</span> <span class="kt">Folder</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
