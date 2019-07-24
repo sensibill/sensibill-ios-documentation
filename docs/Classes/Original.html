@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Credentials Class Reference</title>
+    <title>Original Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Credentials" class="dashAnchor"></a>
-    <a title="Credentials Class Reference"></a>
+    <a name="//apple_ref/swift/Class/Original" class="dashAnchor"></a>
+    <a title="Original Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Credentials Class Reference
+        Original Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -148,15 +148,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Credentials</h1>
+            <h1>Original</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@objc(SBLCredentials)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Credentials</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc(SBLOriginal)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Original</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Structure that holds all necessary credential information for a user</p>
+            <p>Original receipt document</p>
 
           </section>
           <section class="section task-group-section">
@@ -165,9 +165,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(im)initWithTokenId:accessToken:refreshToken:"></a>
-                    <a name="//apple_ref/swift/Method/init(tokenId:accessToken:refreshToken:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(im)initWithTokenId:accessToken:refreshToken:">init(tokenId:accessToken:refreshToken:)</a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLOriginal(py)format"></a>
+                    <a name="//apple_ref/swift/Property/format" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLOriginal(py)format">format</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -175,7 +175,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize Credentials with tokenId, accessToken, and refreshToken</p>
+                        <p>Format of the receipt document (html, image, pdf&hellip;)</p>
 
                       </div>
                       <div class="declaration">
@@ -183,78 +183,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tokenId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>tokenId</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Token identifier</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>accessToken</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Access token</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>refreshToken</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Refresh token is optional</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(py)accessToken"></a>
-                    <a name="//apple_ref/swift/Property/accessToken" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(py)accessToken">accessToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>OAuth 2.0 Access Token</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">OriginalFormat</span></code></pre>
 
                         </div>
                       </div>
@@ -264,9 +193,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(py)refreshToken"></a>
-                    <a name="//apple_ref/swift/Property/refreshToken" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(py)refreshToken">refreshToken</a>
+                    <a name="/c:@M@SensibillUI@objc(cs)SBLOriginal(py)url"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLOriginal(py)url">url</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -274,7 +203,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>OAuth 2.0 Refresh Token</p>
+                        <p>Url of the receipt document</p>
 
                       </div>
                       <div class="declaration">
@@ -282,63 +211,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(py)tokenId"></a>
-                    <a name="//apple_ref/swift/Property/tokenId" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(py)tokenId">tokenId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>OAuth 2.0 Token ID</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">tokenId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@SensibillUI@objc(cs)SBLCredentials(cpy)current"></a>
-                    <a name="//apple_ref/swift/Variable/current" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SensibillUI@objc(cs)SBLCredentials(cpy)current">current</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Currently used credentials</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">internal(set)</span> <span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">current</span><span class="p">:</span> <span class="kt">Credentials</span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
