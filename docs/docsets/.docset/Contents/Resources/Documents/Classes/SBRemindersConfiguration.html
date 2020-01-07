@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SBRemindersConfiguration Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SBRemindersConfiguration" class="dashAnchor"></a>
+    <a title="SBRemindersConfiguration Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (89% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SBRemindersConfiguration Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../caching.html">Caching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../examples.html">Examples</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ui.html">UI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/CaptureOnboardingViewController">CaptureOnboardingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/CaptureTipsViewController">CaptureTipsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Discount.html">Discount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Fee.html">Fee</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemProperty.html">ItemProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Original.html">Original</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptSearchFilter.html">ReceiptSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reward.html">Reward</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalytics.html">SBAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalyticsDimension.html">SBAnalyticsDimension</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBDataEvent.html">SBDataEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportPopupConfiguration.html">SBExportPopupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationCentreConfiguration.html">SBNotificationCentreConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptValidationControllerConfiguration.html">SBReceiptValidationControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRecentExportsConfiguration.html">SBRecentExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReminderPopupConfiguration.html">SBReminderPopupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKColors.html">SBSDKColors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKConfiguration.html">SBSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKSearchBarSet.html">SBSDKSearchBarSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTrackingEvent.html">SBTrackingEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTransaction.html">SBTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sensibill.html">Sensibill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DiscountType.html">DiscountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FeeType.html">FeeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PasswordStrength.html">PasswordStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionStatus.html">SBTransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionType.html">SBTransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBTransactionDelegate.html">SBTransactionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SBDataEventType.html">SBDataEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SBRemindersConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBRemindersConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Interface that defines the configurations for reminders</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)returnsRemindersEnabled"></a>
+                    <a name="//apple_ref/swift/Property/returnsRemindersEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)returnsRemindersEnabled">returnsRemindersEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The boolean value that determines if return reminders feature will be enabled. Default to True/YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">returnsRemindersEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">returnsRemindersEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)warrantyRemindersEnabled"></a>
+                    <a name="//apple_ref/swift/Property/warrantyRemindersEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)warrantyRemindersEnabled">warrantyRemindersEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The boolean value that determines if warranty reminders feature will be enabled. Defaults to True/YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">warrantyRemindersEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">warrantyRemindersEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderListBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderListBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderListBackgroundColor">reminderListBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderListBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderListBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderListHeaderColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderListHeaderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderListHeaderColor">reminderListHeaderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderListHeaderColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderListHeaderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderListItemBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderListItemBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderListItemBackgroundColor">reminderListItemBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to  background color of the reminders list item</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderListItemBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderListItemBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderListItemTextColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderListItemTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderListItemTextColor">reminderListItemTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the reminders list item label</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderListItemTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderListItemTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderListItemDurationTextColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderListItemDurationTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderListItemDurationTextColor">reminderListItemDurationTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the reminder list item&rsquo;s duration label</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderListItemDurationTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderListItemDurationTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)highlightedReminderListItemDurationTextColor"></a>
+                    <a name="//apple_ref/swift/Property/highlightedReminderListItemDurationTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)highlightedReminderListItemDurationTextColor">highlightedReminderListItemDurationTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to reminder list item labels when reminder item is to be highlighted (ie, when expired)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">highlightedReminderListItemDurationTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">highlightedReminderListItemDurationTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderListSeparatorColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderListSeparatorColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderListSeparatorColor">reminderListSeparatorColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderListSeparatorColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderListSeparatorColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)tableFooterTextColor"></a>
+                    <a name="//apple_ref/swift/Property/tableFooterTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)tableFooterTextColor">tableFooterTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">tableFooterTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tableFooterTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)highlightedButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/highlightedButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)highlightedButtonBackgroundColor">highlightedButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">highlightedButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">highlightedButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)timePeriodButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/timePeriodButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)timePeriodButtonBackgroundColor">timePeriodButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">timePeriodButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">timePeriodButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)returnExchangeMessageHeaderTextColor"></a>
+                    <a name="//apple_ref/swift/Property/returnExchangeMessageHeaderTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)returnExchangeMessageHeaderTextColor">returnExchangeMessageHeaderTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to NSForegroundColorAttributeName in the Create Reminder/Warranty screens</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">returnExchangeMessageHeaderTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">returnExchangeMessageHeaderTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)returnExchangeHeaderTextColor"></a>
+                    <a name="//apple_ref/swift/Property/returnExchangeHeaderTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)returnExchangeHeaderTextColor">returnExchangeHeaderTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">returnExchangeHeaderTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">returnExchangeHeaderTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)nextButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/nextButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)nextButtonBackgroundColor">nextButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the Next button on the Create Reminder/Warranty screens. Defaults to actionBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">nextButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nextButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)nextButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/nextButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)nextButtonTextColor">nextButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the Next button on the Create Reminder/Warranty screens. Defaults to actionForegorund</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">nextButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nextButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)nextButtonDisabledBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/nextButtonDisabledBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)nextButtonDisabledBackgroundColor">nextButtonDisabledBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the Next button on the Create Reminder/Warranty screens in disabled state. Defaults to disabledBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">nextButtonDisabledBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nextButtonDisabledBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)nextButtonDisabledTextColor"></a>
+                    <a name="//apple_ref/swift/Property/nextButtonDisabledTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)nextButtonDisabledTextColor">nextButtonDisabledTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the Next button on the Create Reminder/Warranty screens in disabled state. Defaults to disabledForeground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">nextButtonDisabledTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nextButtonDisabledTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)returnDurationTextColor"></a>
+                    <a name="//apple_ref/swift/Property/returnDurationTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)returnDurationTextColor">returnDurationTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the buttons on the Create Reminder/Warranty screens. Defaults to primaryForeground2</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">returnDurationTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">returnDurationTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)exchangeReturnDaysTextColor"></a>
+                    <a name="//apple_ref/swift/Property/exchangeReturnDaysTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)exchangeReturnDaysTextColor">exchangeReturnDaysTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">exchangeReturnDaysTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">exchangeReturnDaysTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)returnDurationTextSeparatorColor"></a>
+                    <a name="//apple_ref/swift/Property/returnDurationTextSeparatorColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)returnDurationTextSeparatorColor">returnDurationTextSeparatorColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">returnDurationTextSeparatorColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">returnDurationTextSeparatorColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setDaysButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/setDaysButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)setDaysButtonTextColor">setDaysButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">setDaysButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setDaysButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setDaysButtonSeparatorColor"></a>
+                    <a name="//apple_ref/swift/Property/setDaysButtonSeparatorColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)setDaysButtonSeparatorColor">setDaysButtonSeparatorColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The  color to be applied to background of Exchange / Warranty selection cells. Defaults to primaryForeground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">setDaysButtonSeparatorColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setDaysButtonSeparatorColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setReminderBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/setReminderBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)setReminderBackgroundColor">setReminderBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">setReminderBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setReminderBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setReturnReminderHeaderTextColor"></a>
+                    <a name="//apple_ref/swift/Property/setReturnReminderHeaderTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)setReturnReminderHeaderTextColor">setReturnReminderHeaderTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">setReturnReminderHeaderTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setReturnReminderHeaderTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setWarrantyReminderHeaderTextColor"></a>
+                    <a name="//apple_ref/swift/Property/setWarrantyReminderHeaderTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)setWarrantyReminderHeaderTextColor">setWarrantyReminderHeaderTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">setWarrantyReminderHeaderTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setWarrantyReminderHeaderTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)notNowButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/notNowButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)notNowButtonBackgroundColor">notNowButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the <code>Not Now</code> button on the Create warranty/reminder page. Defaults to offPrimaryBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">notNowButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">notNowButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)notNowButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/notNowButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)notNowButtonTextColor">notNowButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the <code>Not Now</code> button on the Create warranty/reminder page. Defaults to primaryForeground2</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">notNowButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">notNowButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/remindMeButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonBackgroundColor">remindMeButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the <code>Remind Me</code> button on the Create Warranty/reminder page. Defaults to actionBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">remindMeButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">remindMeButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/remindMeButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonTextColor">remindMeButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the <code>Remind Me</code> button on the Create Warranty/reminder page. Defaults to actionForeground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">remindMeButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">remindMeButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonDisabledBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/remindMeButtonDisabledBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonDisabledBackgroundColor">remindMeButtonDisabledBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the disabled <code>Remind Me</code> button on the Create Warranty/reminder page. Defaults to actionBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">remindMeButtonDisabledBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">remindMeButtonDisabledBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonDisabledTextColor"></a>
+                    <a name="//apple_ref/swift/Property/remindMeButtonDisabledTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)remindMeButtonDisabledTextColor">remindMeButtonDisabledTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the disabled <code>Remind Me</code> button on the Create Warranty/reminder page. Defaults to actionForeground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">remindMeButtonDisabledTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">remindMeButtonDisabledTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonBorderColor"></a>
+                    <a name="//apple_ref/swift/Property/dontRemindMeButtonBorderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonBorderColor">dontRemindMeButtonBorderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied of the background of the <code>Don&#39;t Remind Me</code> holder view on the Create Warranty/Reminder page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">dontRemindMeButtonBorderColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dontRemindMeButtonBorderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/dontRemindMeButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonTextColor">dontRemindMeButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the <code>Don&#39;t Remind Me</code> button on the Create Warranty/Reminder page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">dontRemindMeButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dontRemindMeButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonBorderDisabledColor"></a>
+                    <a name="//apple_ref/swift/Property/dontRemindMeButtonBorderDisabledColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonBorderDisabledColor">dontRemindMeButtonBorderDisabledColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied of the background of the disabled <code>Don&#39;t Remind Me</code> holder view on the Create Warranty/Reminder page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">dontRemindMeButtonBorderDisabledColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dontRemindMeButtonBorderDisabledColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonDisabledTextColor"></a>
+                    <a name="//apple_ref/swift/Property/dontRemindMeButtonDisabledTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)dontRemindMeButtonDisabledTextColor">dontRemindMeButtonDisabledTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the disabled <code>Don&#39;t Remind Me</code> button on the Create Warranty/Reminder page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">dontRemindMeButtonDisabledTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dontRemindMeButtonDisabledTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setReminderTimeAmountTextColor"></a>
+                    <a name="//apple_ref/swift/Property/setReminderTimeAmountTextColor" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBRemindersConfiguration(py)setReminderTimeAmountTextColor">setReminderTimeAmountTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">setReminderTimeAmountTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setReminderTimeAmountTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setReminderTimeUnitTextColor"></a>
+                    <a name="//apple_ref/swift/Property/setReminderTimeUnitTextColor" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBRemindersConfiguration(py)setReminderTimeUnitTextColor">setReminderTimeUnitTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">setReminderTimeUnitTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setReminderTimeUnitTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)saveButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/saveButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)saveButtonBackgroundColor">saveButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the <code>Save</code> button on the Create Warranty/Reminder page. Defaults to actionBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">saveButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">saveButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)saveButtonDisabledBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/saveButtonDisabledBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)saveButtonDisabledBackgroundColor">saveButtonDisabledBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the disabled <code>Save</code> button on the Create Warranty/Reminder page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">saveButtonDisabledBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">saveButtonDisabledBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)saveButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/saveButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)saveButtonTextColor">saveButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the text of the <code>Save</code> button on the Create Warranty/Reminder page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">saveButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">saveButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)saveButtonDisabledTextColor"></a>
+                    <a name="//apple_ref/swift/Property/saveButtonDisabledTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)saveButtonDisabledTextColor">saveButtonDisabledTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the <code>Save</code> button on the Create Warranty/Reminder page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">saveButtonDisabledTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">saveButtonDisabledTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setWeekButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/setWeekButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)setWeekButtonTextColor">setWeekButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">setWeekButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setWeekButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)setWeekButtonSeparatorColor"></a>
+                    <a name="//apple_ref/swift/Property/setWeekButtonSeparatorColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)setWeekButtonSeparatorColor">setWeekButtonSeparatorColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">setWeekButtonSeparatorColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">setWeekButtonSeparatorColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)beforePolicyLabelTextColor"></a>
+                    <a name="//apple_ref/swift/Property/beforePolicyLabelTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)beforePolicyLabelTextColor">beforePolicyLabelTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the Before Policy Label on the Create Warranty/Reminder page. Defaults to primaryForeground3</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">beforePolicyLabelTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">beforePolicyLabelTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)notificationListBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/notificationListBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)notificationListBackgroundColor">notificationListBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the background of the Reminders List Table View. Defaults to primaryBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">notificationListBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">notificationListBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderDateTextColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderDateTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderDateTextColor">reminderDateTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the Date label in a Reminder Cell in the Reminders List. Defaults to primaryForeground3</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderDateTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderDateTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)reminderMessageTextColor"></a>
+                    <a name="//apple_ref/swift/Property/reminderMessageTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)reminderMessageTextColor">reminderMessageTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the Notification label in a Reminder Cell in the Reminders List. Defaults to primaryForeground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">reminderMessageTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderMessageTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)clearOptionInSwipeColor"></a>
+                    <a name="//apple_ref/swift/Property/clearOptionInSwipeColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)clearOptionInSwipeColor">clearOptionInSwipeColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the <code>Clear</code> swipe button in the Reminders List. Defaults to errorBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">clearOptionInSwipeColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">clearOptionInSwipeColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)remindMeOptionInSwipeColor"></a>
+                    <a name="//apple_ref/swift/Property/remindMeOptionInSwipeColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)remindMeOptionInSwipeColor">remindMeOptionInSwipeColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the <code>Remind Me</code> swipe button in the Reminders List. Defaults to actionBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">remindMeOptionInSwipeColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">remindMeOptionInSwipeColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBRemindersConfiguration(py)notificationListSeperatorColor"></a>
+                    <a name="//apple_ref/swift/Property/notificationListSeperatorColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBRemindersConfiguration(py)notificationListSeperatorColor">notificationListSeperatorColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the Reminder List separator in the Reminders List. Defaults to primaryForeground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">notificationListSeperatorColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">notificationListSeperatorColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-01-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SBSDKConfiguration Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SBSDKConfiguration" class="dashAnchor"></a>
+    <a title="SBSDKConfiguration Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (89% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SBSDKConfiguration Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../caching.html">Caching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../examples.html">Examples</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ui.html">UI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/CaptureOnboardingViewController">CaptureOnboardingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/CaptureTipsViewController">CaptureTipsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Discount.html">Discount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Fee.html">Fee</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemProperty.html">ItemProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Original.html">Original</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordEvaluation.html">PasswordEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptSearchFilter.html">ReceiptSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reward.html">Reward</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalytics.html">SBAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalyticsDimension.html">SBAnalyticsDimension</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBDataEvent.html">SBDataEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportPopupConfiguration.html">SBExportPopupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationCentreConfiguration.html">SBNotificationCentreConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptValidationControllerConfiguration.html">SBReceiptValidationControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRecentExportsConfiguration.html">SBRecentExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReminderPopupConfiguration.html">SBReminderPopupConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKColors.html">SBSDKColors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKConfiguration.html">SBSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKSearchBarSet.html">SBSDKSearchBarSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTrackingEvent.html">SBTrackingEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTransaction.html">SBTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sensibill.html">Sensibill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DiscountType.html">DiscountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FeeType.html">FeeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PasswordStrength.html">PasswordStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionStatus.html">SBTransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionType.html">SBTransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBTransactionDelegate.html">SBTransactionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/SBDataEventType.html">SBDataEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SBSDKConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBSDKConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Interface that defines the complete set of SDK configurations</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)enableAchievementFeedback"></a>
+                    <a name="//apple_ref/swift/Property/enableAchievementFeedback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)enableAchievementFeedback">enableAchievementFeedback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The boolean that will determine if user achievement feedback will be enabled. Defaults to YES/True</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableAchievementFeedback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableAchievementFeedback</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)launchWithCapture"></a>
+                    <a name="//apple_ref/swift/Property/launchWithCapture" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)launchWithCapture">launchWithCapture</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">launchWithCapture</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">launchWithCapture</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)tagsEnabled"></a>
+                    <a name="//apple_ref/swift/Property/tagsEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)tagsEnabled">tagsEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">tagsEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tagsEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)tipsEnabled"></a>
+                    <a name="//apple_ref/swift/Property/tipsEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)tipsEnabled">tipsEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">tipsEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tipsEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)processingEstimatesEnabled"></a>
+                    <a name="//apple_ref/swift/Property/processingEstimatesEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)processingEstimatesEnabled">processingEstimatesEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">processingEstimatesEnabled</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">processingEstimatesEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)notesEnabled"></a>
+                    <a name="//apple_ref/swift/Property/notesEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)notesEnabled">notesEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">notesEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">notesEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)foldersEnabled"></a>
+                    <a name="//apple_ref/swift/Property/foldersEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)foldersEnabled">foldersEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">foldersEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">foldersEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)categoriesEnabled"></a>
+                    <a name="//apple_ref/swift/Property/categoriesEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)categoriesEnabled">categoriesEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">categoriesEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">categoriesEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)expenseTypeEnabled"></a>
+                    <a name="//apple_ref/swift/Property/expenseTypeEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)expenseTypeEnabled">expenseTypeEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">expenseTypeEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">expenseTypeEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)allowCrashReporting"></a>
+                    <a name="//apple_ref/swift/Property/allowCrashReporting" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)allowCrashReporting">allowCrashReporting</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allowCrashReporting</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">allowCrashReporting</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)offlineSupportEnabled"></a>
+                    <a name="//apple_ref/swift/Property/offlineSupportEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)offlineSupportEnabled">offlineSupportEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">offlineSupportEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">offlineSupportEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)notificationCenterEnabled"></a>
+                    <a name="//apple_ref/swift/Property/notificationCenterEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)notificationCenterEnabled">notificationCenterEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">notificationCenterEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">notificationCenterEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)locale"></a>
+                    <a name="//apple_ref/swift/Property/locale" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)locale">locale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">getLocale</span><span class="p">,</span> <span class="n">setter</span><span class="o">=</span><span class="n">setLocale</span><span class="o">:</span><span class="p">)</span> <span class="n">NSLocale</span> <span class="o">*</span><span class="n">locale</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">locale</span><span class="p">:</span> <span class="kt">Locale</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)externalBundle"></a>
+                    <a name="//apple_ref/swift/Property/externalBundle" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)externalBundle">externalBundle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NSBundle that holds custom assets to override strings/images</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="n">externalBundle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">externalBundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)nonReceiptEmailsEnabled"></a>
+                    <a name="//apple_ref/swift/Property/nonReceiptEmailsEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)nonReceiptEmailsEnabled">nonReceiptEmailsEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">nonReceiptEmailsEnabled</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nonReceiptEmailsEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)barcodesEnabled"></a>
+                    <a name="//apple_ref/swift/Property/barcodesEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)barcodesEnabled">barcodesEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">barcodesEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">barcodesEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)remindersEnabled"></a>
+                    <a name="//apple_ref/swift/Property/remindersEnabled" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)remindersEnabled">remindersEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">remindersEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">remindersEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)certificatePinningEnabled"></a>
+                    <a name="//apple_ref/swift/Property/certificatePinningEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)certificatePinningEnabled">certificatePinningEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The boolean that will determine if certificate pinning will be set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">certificatePinningEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">certificatePinningEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)automaticNavigationFromNotificationHandlingEnabled"></a>
+                    <a name="//apple_ref/swift/Property/automaticNavigationFromNotificationHandlingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)automaticNavigationFromNotificationHandlingEnabled">automaticNavigationFromNotificationHandlingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">automaticNavigationFromNotificationHandlingEnabled</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">automaticNavigationFromNotificationHandlingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)fonts"></a>
+                    <a name="//apple_ref/swift/Property/fonts" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)fonts">fonts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBSDKFontSet that sets the font configurations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a></span> <span class="o">*</span><span class="n">fonts</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fonts</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)colors"></a>
+                    <a name="//apple_ref/swift/Property/colors" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)colors">colors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBSDKColors that sets the color configurations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/SBSDKColors.html">SBSDKColors</a></span> <span class="o">*</span><span class="n">colors</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">colors</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBSDKColors.html">SBSDKColors</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)crashLoggerAppID"></a>
+                    <a name="//apple_ref/swift/Property/crashLoggerAppID" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)crashLoggerAppID">crashLoggerAppID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">crashLoggerAppID</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">crashLoggerAppID</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)gmailClientId"></a>
+                    <a name="//apple_ref/swift/Property/gmailClientId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)gmailClientId">gmailClientId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">gmailClientId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">gmailClientId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)outlookClientId"></a>
+                    <a name="//apple_ref/swift/Property/outlookClientId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)outlookClientId">outlookClientId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">outlookClientId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">outlookClientId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptEmailDisplayDomain"></a>
+                    <a name="//apple_ref/swift/Property/receiptEmailDisplayDomain" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptEmailDisplayDomain">receiptEmailDisplayDomain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The String that defines the email domain user can register their receipt email under</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">receiptEmailDisplayDomain</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptEmailDisplayDomain</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)loadingViewConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/loadingViewConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)loadingViewConfiguration">loadingViewConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBLoadingViewConfiguration that sets the properties of the Loading View</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a></span> <span class="o">*</span><span class="n">loadingViewConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">loadingViewConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)exportsConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/exportsConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)exportsConfiguration">exportsConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBExportsConfiguration that sets the properties of the Export feature properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a></span> <span class="o">*</span><span class="n">exportsConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">exportsConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)remindersConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/remindersConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)remindersConfiguration">remindersConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBRemindersConfiguration that sets the properties of the Reminders</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a></span> <span class="o">*</span><span class="n">remindersConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">remindersConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)reportIssueConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/reportIssueConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)reportIssueConfiguration">reportIssueConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBReportIssueConfiguration that sets the properties of the Report Issue feature</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">SBReportIssueConfiguration</span> <span class="o">*</span><span class="n">reportIssueConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reportIssueConfiguration</span><span class="p">:</span> <span class="kt">SBReportIssueConfiguration</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)captureViewConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/captureViewConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)captureViewConfiguration">captureViewConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBCaptureViewConfiguration that sets properties the Capture feature</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></span> <span class="o">*</span><span class="n">captureViewConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureViewConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)tableCellConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/tableCellConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)tableCellConfiguration">tableCellConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBReceiptListTableCellConfiguration that sets properties of Receipt List cells</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a></span> <span class="o">*</span><span class="n">tableCellConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tableCellConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptListConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/receiptListConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptListConfiguration">receiptListConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBReceiptListTableViewConfiguration that sets properties the Receipt List</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a></span> <span class="o">*</span><span class="n">receiptListConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptListConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)exportDialogConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/exportDialogConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)exportDialogConfiguration">exportDialogConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBExportPopupConfiguration.html">SBExportPopupConfiguration</a></span> <span class="o">*</span><span class="n">exportDialogConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">exportDialogConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBExportPopupConfiguration.html">SBExportPopupConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)exportListConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/exportListConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)exportListConfiguration">exportListConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBRecentExportsConfiguration.html">SBRecentExportsConfiguration</a></span> <span class="o">*</span><span class="n">exportListConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">exportListConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBRecentExportsConfiguration.html">SBRecentExportsConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)searchFilterConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/searchFilterConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)searchFilterConfiguration">searchFilterConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBReceiptsFilterConfiguration that sets properties the Receipt Search Filter</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a></span> <span class="o">*</span><span class="n">searchFilterConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">searchFilterConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)reminderNoticeConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/reminderNoticeConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)reminderNoticeConfiguration">reminderNoticeConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReminderPopupConfiguration.html">SBReminderPopupConfiguration</a></span> <span class="o">*</span><span class="n">reminderNoticeConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reminderNoticeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReminderPopupConfiguration.html">SBReminderPopupConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)folderListConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/folderListConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)folderListConfiguration">folderListConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBFolderCollectionViewConfiguration that sets properties the folder list configuration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a></span> <span class="o">*</span><span class="n">folderListConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">folderListConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptEditConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/receiptEditConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptEditConfiguration">receiptEditConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBEditReceiptControllerConfiguration that sets properties the Receipt Edit feature</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a></span> <span class="o">*</span><span class="n">receiptEditConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptEditConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)folderEditConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/folderEditConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)folderEditConfiguration">folderEditConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBCreateFolderControllerConfiguration that sets properties the Folder Edit feature</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a></span> <span class="o">*</span><span class="n">folderEditConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">folderEditConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)folderViewConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/folderViewConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)folderViewConfiguration">folderViewConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBFolderReceiptListControllerConfiguration that sets properties of the folder view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a></span> <span class="o">*</span><span class="n">folderViewConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">folderViewConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptProcessingConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/receiptProcessingConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptProcessingConfiguration">receiptProcessingConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBExpenseTypeSelectionConfiguration that sets the properties of the Expense type selection feature</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a></span> <span class="o">*</span><span class="n">receiptProcessingConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptProcessingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptListControllerConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/receiptListControllerConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptListControllerConfiguration">receiptListControllerConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBReceiptListControllerConfiguration that sets the properties of the Receipt List</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a></span> <span class="o">*</span><span class="n">receiptListControllerConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptListControllerConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptValidationConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/receiptValidationConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptValidationConfiguration">receiptValidationConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptValidationControllerConfiguration.html">SBReceiptValidationControllerConfiguration</a></span> <span class="o">*</span><span class="n">receiptValidationConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptValidationConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptValidationControllerConfiguration.html">SBReceiptValidationControllerConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)taxTipsConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/taxTipsConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)taxTipsConfiguration">taxTipsConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a></span> <span class="o">*</span><span class="n">taxTipsConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">taxTipsConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)sdkMoreMenuConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/sdkMoreMenuConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)sdkMoreMenuConfiguration">sdkMoreMenuConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBSDKMoreMenuConfiguration that sets the properties of the More Menu view in the Receipt List</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a></span> <span class="o">*</span><span class="n">sdkMoreMenuConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sdkMoreMenuConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)navigationTopColor"></a>
+                    <a name="//apple_ref/swift/Property/navigationTopColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)navigationTopColor">navigationTopColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to the navigation bar, barTint. Defaults to brandBackground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">navigationTopColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">navigationTopColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)navigationBottomColor"></a>
+                    <a name="//apple_ref/swift/Property/navigationBottomColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)navigationBottomColor">navigationBottomColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">navigationBottomColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">navigationBottomColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)navigationTopTitleColor"></a>
+                    <a name="//apple_ref/swift/Property/navigationTopTitleColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)navigationTopTitleColor">navigationTopTitleColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to text in navigation bar. Defaults to brandForeground</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">navigationTopTitleColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">navigationTopTitleColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryTextColor"></a>
+                    <a name="//apple_ref/swift/Property/keyboardAccessoryTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryTextColor">keyboardAccessoryTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">keyboardAccessoryTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">keyboardAccessoryTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryDisabledTextColor"></a>
+                    <a name="//apple_ref/swift/Property/keyboardAccessoryDisabledTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryDisabledTextColor">keyboardAccessoryDisabledTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">keyboardAccessoryDisabledTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">keyboardAccessoryDisabledTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/keyboardAccessoryBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryBackgroundColor">keyboardAccessoryBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to toolbar, barTint in Reminder/Warranty/Exchange screens</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">UIColor</span> <span class="o">*</span><span class="n">keyboardAccessoryBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">keyboardAccessoryBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)tabBarConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/tabBarConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)tabBarConfiguration">tabBarConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBTabBarConfiguration that sets the properties of the Tab Bar</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a></span> <span class="o">*</span><span class="n">tabBarConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tabBarConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptsSelectControllerConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/receiptsSelectControllerConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptsSelectControllerConfiguration">receiptsSelectControllerConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBReceiptsListSelectionControllerConfiguration that sets the properties of the Select Receipt List</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a></span>
+        <span class="o">*</span><span class="n">receiptsSelectControllerConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptsSelectControllerConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)autoCompleteSuggestionBarConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/autoCompleteSuggestionBarConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)autoCompleteSuggestionBarConfiguration">autoCompleteSuggestionBarConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DEPRECATED. No longer used</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">SBAutocompletionBarConfiguration</span> <span class="o">*</span><span class="n">autoCompleteSuggestionBarConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">autoCompleteSuggestionBarConfiguration</span><span class="p">:</span> <span class="kt">SBAutocompletionBarConfiguration</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)nonReceiptConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/nonReceiptConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)nonReceiptConfiguration">nonReceiptConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBNonReceiptEmailConfiguration that sets the properties of Non-Receipt email view list</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a></span> <span class="o">*</span><span class="n">nonReceiptConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nonReceiptConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)barcodeConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/barcodeConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)barcodeConfiguration">barcodeConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBBarcodeConfiguration that sets the properties of Receipt Barcode views</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a></span> <span class="o">*</span><span class="n">barcodeConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">barcodeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(py)receiptDetailConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/receiptDetailConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(py)receiptDetailConfiguration">receiptDetailConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SBReceiptDetailConfiguration that sets the properties of the Receipt Detail screens</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a></span> <span class="o">*</span><span class="n">receiptDetailConfiguration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">receiptDetailConfiguration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(cm)sharedInstance"></a>
+                    <a name="//apple_ref/swift/Method/+sharedInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(cm)sharedInstance">+sharedInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">sharedInstance</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedInstance</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(im)applyColors"></a>
+                    <a name="//apple_ref/swift/Method/-applyColors" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBSDKConfiguration(im)applyColors">-applyColors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies the color configurations set in the SBSDKColors</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">applyColors</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">applyColors</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBSDKConfiguration(im)setRemindersEnabledNonSetter:"></a>
+                    <a name="//apple_ref/swift/Method/-setRemindersEnabledNonSetter:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(im)setRemindersEnabledNonSetter:">-setRemindersEnabledNonSetter:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>@deprecated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRemindersEnabledNonSetter</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">remindersEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRemindersEnabledNonSetter</span><span class="p">(</span><span class="n">_</span> <span class="nv">remindersEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-01-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
