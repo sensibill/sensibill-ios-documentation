@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (100% documented)</p>
+        <p><a href="index.html"> Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -27,31 +27,11 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Guides.html">Guides</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="authentication.html">Authentication</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="caching.html">Caching</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="configuration.html">Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="examples.html">Examples</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="transactions.html">Transactions</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="ui.html">UI</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AchievementFeedbackModalManager.html">AchievementFeedbackModalManager</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/Authenticator.html">Authenticator</a>
               </li>
@@ -104,6 +84,12 @@
                 <a href="Classes/Sensibill.html">Sensibill</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/TagSynchronizer.html">TagSynchronizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TaxesHelper.html">TaxesHelper</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/User.html">User</a>
               </li>
             </ul>
@@ -111,6 +97,12 @@
           <li class="nav-group-name">
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AchievementFeedbackModalType.html">AchievementFeedbackModalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AchievementFeedbackSDKFeature.html">AchievementFeedbackSDKFeature</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Enums/DiscountType.html">DiscountType</a>
               </li>
@@ -132,8 +124,19 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AchievementFeedbackModalDelegate.html">AchievementFeedbackModalDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
               </li>
@@ -150,7 +153,7 @@
             
             <p><img src="https://github.com/sensibill/sensibill-ios-documentation/raw/master/Sensibill-Logo.png" alt="Sensibill"></p>
 
-<p><strong>Version: 1.21.2</strong></p>
+<p><strong>Version: 1.22.2</strong></p>
 
 <ul>
 <li><a href="#overview">Overview</a></li>
@@ -163,9 +166,9 @@
 
 <ul>
 <li><a href="authentication.html">Authentication</a> - <a href="authentication.html#token-authentication">Token Authentication</a>, <a href="authentication.html#password-authentication">Password Authentication</a></li>
-<li><a href="ui.html">UI Presentation</a> - <a href="ui.html#receipt-list">Receipt List</a>, <a href="ui.html#receipt-capture">Receipt Capture</a>, <a href="ui.html#receipt-detail">Receipt Detail</a>, <a href="ui.html#receipt-export">Receipt Export</a></li>
+<li><a href="ui.html">UI Presentation</a> - <a href="ui.html#receipt-list">Receipt List</a>, <a href="ui.html#receipt-capture">Receipt Capture</a>, <a href="ui.html#receipt-detail">Receipt Detail</a>, <a href="ui.html#receipt-export">Receipt Export</a>, <a href="ui.html#receipt-search">Receipt Search</a></li>
 <li><a href="transactions.html">Transactions</a> - <a href="transactions.html#transaction-linking">Linking</a>, <a href="transactions.html#transaction-matching">Matching</a></li>
-<li><a href="configuration.html">Configuration</a></li>
+<li><a href="configuration.html">Configuration</a> - <a href="configuration.html#branding-configuration">Color Configuration</a>, <a href="configuration.html#font-configuration">Font Configuration</a>, <a href="configuration.html#asset-configuration">Asset Configuration</a>, <a href="configuration.html#image-configuration">Image Configuration</a>, <a href="configuration.html#string-configuration">String Configuration</a></li>
 <li><a href="examples.html">Example Code</a></li>
 </ul></li>
 <li><a href="https://github.com/sensibill/sensibill-ios-documentation/blob/master/LICENSE.md">License</a></li>
@@ -183,13 +186,28 @@
 <li>iOS 9.0+</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
+<h3 id='installation-via-cocoapods' class='heading'>Installation via CocoaPods</h3>
+
+<p>CocoaPods provides a quick way to download external dependencies for an iOS project. The Sensibill SDK can be downloaded and access using CocoaPods as well. The following are the steps on how to do so:</p>
+
+<ol>
+<li><p>If your project isn&rsquo;t using CocoaPods already, follow the set up guide  from the official CocoaPods website <a href="https://guides.cocoapods.org/using/getting-started.html">here</a></p></li>
+<li><p>Once your project is set up to use CocoaPods, add the Sensibill dependency to your project&rsquo;s Podfile, by adding line pointing Sensibill repository. Add <code>pod &#39;Sensibill&#39;, :hg =&gt; &#39;ssh://hg@bitbucket.org/sensibill/sensibill-ios-sdk&#39;, :tag =&gt; &#39;vX.Y.Z&#39;</code> to Podfile where <code>vX.Y.Z</code> represents to version of the SDK you want to use</p></li>
+<li><p>In your terminal, navigate to the folder holding your Application project</p></li>
+<li><p>Run <code>pod install</code> command to install the SDK</p></li>
+</ol>
+<h3 id='direct-download' class='heading'>Direct Download</h3>
+
+<p>To download the Sensibill SDK directly, contact our Delivery/Support team to get access to portal to get the <code>SensibillUI.framework</code></p>
+
+<blockquote>
+<p>Download and Import <code>SensibillUI.framework</code> into your project, and ensure that it is included in <strong>Embedded Binaries</strong> and <strong>Linked Frameworks and Libraries</strong>
+Create a new <code>Run Script Phase</code> in your target&rsquo;s <code>Build Phases</code>, underneath the <code>Embed Frameworks</code> phase. Input the following command in the text field of the new phase:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>bash "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/SensibillUI.framework/strip-unused-architectures.sh"
+</code></pre>
 
 <ul>
-<li>Download and Import <code>SensibillUI.framework</code> into your project, and ensure that it is included in <strong>Embedded Binaries</strong> and <strong>Linked Frameworks and Libraries</strong></li>
-<li>Create a new <code>Run Script Phase</code> in your target&rsquo;s <code>Build Phases</code>, underneath the <code>Embed Frameworks</code> phase. Input the following command in the text field of the new phase:
-<code>
-bash &quot;$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/SensibillUI.framework/strip-unused-architectures.sh&quot;
-</code></li>
 <li>Create and Import <code>Sensibill.plist</code> into the main bundle of your target. Configure the plist with the following values:
 
 <ul>
@@ -197,19 +215,16 @@ bash &quot;$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/SensibillUI.framework/str
 <li>API_SECRET: String (optional)</li>
 <li>CREDENTIAL_TYPE: String (optional)</li>
 <li>REDIRECT_URL: String (optional)</li>
-<li>CERTIFICATE_PINNING_FILES (optional): Array of Strings
-
-<ul>
+<li>CERTIFICATE_PINNING_FILES (optional): Array of Strings</li>
 <li>ENVIRONMENT: String
 
 <ul>
 <li><em>Note:</em>  Please ensure the URL provided here does not have a trailing slash.</li>
 </ul></li>
 </ul></li>
-</ul></li>
 </ul>
 
-<p><em>Note:</em> The keys <code>API_KEY</code>, <code>API_SECRET</code>, <code>CREDENTIAL_TYPE</code>, and <code>REDIRECT_URL</code> are only required if using a <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code>. If using a <code>TokenAuthenticator</code>, only the <code>ENVIRONMENT</code> key is required.</p>
+<p><em>Note:</em> All keys must be present. The values for the keys <code>API_KEY</code>, <code>API_SECRET</code>, <code>CREDENTIAL_TYPE</code>, and <code>REDIRECT_URL</code> are only required if using a <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code>. If using a <code>TokenAuthenticator</code>, only the <code>ENVIRONMENT</code> key is required to have a non-null value.</p>
 <h2 id='using-objective-c' class='heading'>Using Objective-C</h2>
 
 <p>If your application plans to use Classes or APIs of the Sensibill SDK from Objective-C code, you may encounter issues with classes not being found. This is because our public <em>Swift</em> classes/enums/protocols are prefixed with <strong>SBL</strong> when exposed to Objective-C. The main reason for this is to prevent namespace collisions with your App&rsquo;s class names. Since classes imported from Swift can be specified with their full namespace, only those imported from Objective-C are prefixed.</p>
@@ -294,8 +309,8 @@ SBLPasswordAuthenticator *authenticator = [SBLPasswordAuthenticator new];
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-11-15)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -1,6 +1,173 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/Sensibill/Source/Tag.swift",
+      "line": 17,
+      "symbol": "TagSynchronizer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/Sensibill/Source/Tag.swift",
+      "line": 19,
+      "symbol": "TagSynchronizer.pull(lastUpdatedAt:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/Sensibill/Source/Tag.swift",
+      "line": 76,
+      "symbol": "TagSynchronizer.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/Sensibill/Source/Tag.swift",
+      "line": 80,
+      "symbol": "TagSynchronizer.resync()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalDelegate.swift",
+      "line": 7,
+      "symbol": "AchievementFeedbackModalDelegate.didPerformPrimaryAction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalDelegate.swift",
+      "line": 8,
+      "symbol": "AchievementFeedbackModalDelegate.didPerformSecondaryAction()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalDelegate.swift",
+      "line": 9,
+      "symbol": "AchievementFeedbackModalDelegate.didDirectDismiss()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalManager.swift",
+      "line": 62,
+      "symbol": "AchievementFeedbackModalManager.generateFirstFolderFromListModalViewController(withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalManager.swift",
+      "line": 83,
+      "symbol": "AchievementFeedbackModalManager.generateFirstFolderFromReceiptModalViewController(withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalManager.swift",
+      "line": 99,
+      "symbol": "AchievementFeedbackModalManager.generateFirstReceiptModalViewController(withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalManager.swift",
+      "line": 114,
+      "symbol": "AchievementFeedbackModalManager.generateEmailCreationModalViewController(withEmail:withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalType.swift",
+      "line": 8,
+      "symbol": "AchievementFeedbackModalType.FIRST_FOLDER_FROM_LIST",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalType.swift",
+      "line": 10,
+      "symbol": "AchievementFeedbackModalType.FIRST_FOLDER_FROM_RECEIPT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalType.swift",
+      "line": 12,
+      "symbol": "AchievementFeedbackModalType.FIRST_RECEIPT_FROM_LIST",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalType.swift",
+      "line": 14,
+      "symbol": "AchievementFeedbackModalType.FIRST_RECEIPT_FROM_EXPORTS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalType.swift",
+      "line": 16,
+      "symbol": "AchievementFeedbackModalType.RECEIPT_EMAIL_CONFIRMATION",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackModalType.swift",
+      "line": 17,
+      "symbol": "AchievementFeedbackModalType.UNKNOWN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackSDKFeature.swift",
+      "line": 9,
+      "symbol": "AchievementFeedbackSDKFeature.RECEIPTS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackSDKFeature.swift",
+      "line": 11,
+      "symbol": "AchievementFeedbackSDKFeature.FOLDERS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackSDKFeature.swift",
+      "line": 13,
+      "symbol": "AchievementFeedbackSDKFeature.EXPORTS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/AchievementFeedback/AchievementFeedbackSDKFeature.swift",
+      "line": 15,
+      "symbol": "AchievementFeedbackSDKFeature.RECEIPT_EMAIL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/Common/Categories/UIColor+Brightness.swift",
+      "line": 13,
+      "symbol": "UIColor.isLight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/Receipts/Edit/TaxesHelper.swift",
+      "line": 11,
+      "symbol": "TaxesHelper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stevenandrews/sensibill-ios/SensibillUI/Source/Receipts/Edit/TaxesHelper.swift",
+      "line": 26,
+      "symbol": "TaxesHelper.label(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/vagrant/git"
+  "source_directory": "/Users/stevenandrews/sensibill-ios"
 }
