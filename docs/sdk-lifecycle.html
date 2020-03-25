@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDK Lifecycle  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDK Lifecycle  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (85% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDK Lifecycle  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Documentation.html">Documentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="compatibility.html">Compatibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="sdk-configuration.html">SDK Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="sdk-lifecycle.html">SDK Lifecycle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="customization.html">Customization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ui-presentation.html">UI Presentation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="application-integrations.html">Application Integrations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="troubleshooting.html">Troubleshooting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="using-objective-c.html">Using Objective-C</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="data-stored-on-device.html">Data Stored on Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="migration-guide.html">Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Authentication%20Reference.html">Authentication Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="SDK%20Lifecycle%20Reference.html">SDK Lifecycle Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Sensibill.html">Sensibill</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Transactions%20Reference.html">Transactions Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/MatchingError.html">MatchingError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="UI%20Presentation.html">UI Presentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Troubleshooting%20Reference.html">Troubleshooting Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AchievementFeedbackModalManager.html">AchievementFeedbackModalManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Classes.html#/c:@M@SensibillUI@objc(cs)SBLCaptureOnboardingViewController">CaptureOnboardingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Classes.html#/c:@M@SensibillUI@objc(cs)SBLCaptureTipsViewController">CaptureTipsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Discount.html">Discount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Fee.html">Fee</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HTTPStatusCode.html">HTTPStatusCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NetworkReachabilityService.html">NetworkReachabilityService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptCollection.html">ReceiptCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptSearchFilter.html">ReceiptSearchFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reward.html">Reward</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TagSynchronizer.html">TagSynchronizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Tax.html">Tax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TaxesHelper.html">TaxesHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AchievementFeedbackModalType.html">AchievementFeedbackModalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AchievementFeedbackSDKFeature.html">AchievementFeedbackSDKFeature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ConnectionState.html">ConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ConnectionType.html">ConnectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DiscountType.html">DiscountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FeeType.html">FeeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NetworkReachabilityStatus.html">NetworkReachabilityStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RequestAuthenticationType.html">RequestAuthenticationType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AchievementFeedbackModalDelegate.html">AchievementFeedbackModalDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='sdk-lifecycle' class='heading'>SDK Lifecycle</h1>
+
+<p>In order to start interacting with the SDK, the host app must call the <code>start</code> function on the <code><a href="Classes/Sensibill.html#/c:@M@SensibillUI@objc(cs)Sensibill(cpy)shared">Sensibill.shared</a></code> singleton object. In order to finish an SDK session and reset the SDK state, the <code>stop</code> function on <code><a href="Classes/Sensibill.html#/c:@M@SensibillUI@objc(cs)Sensibill(cpy)shared">Sensibill.shared</a></code> must be called. Once the SDK is stopped, it can be started again.</p>
+
+<p><em>Note</em>: If your app is using <strong>Password Authentication</strong>, start and stop are handled by <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code> as part of <code>its login</code> and <code>logout</code> functions, and should not be called directly. Follow <a href="authentication.html#password-authentication">Password Authentication</a> instructions instead.</p>
+<h2 id='starting-the-sdk' class='heading'>Starting the SDK</h2>
+
+<p>The start function will first ensure valid authentication exists for the user (it may call token provider to obtain a new token, or use an existing token if it&rsquo;s valid). Once authentication is valid, it will ensure the information required for interaction with SDK is present on device. This information is <a href="data-stored-on-device.html">cached on device</a>, but is verified and updated from Sensibill&rsquo;s backend on every launch.</p>
+<h3 id='prerequisites' class='heading'>Prerequisites</h3>
+
+<ul>
+<li>Your <a href="sdk-configuration.html"><strong>Sensibill.plist</strong></a> must be configured, and a custom token provider must be implemented. See <a href="authentication.html#custom-token-provider-authentication">Custom Token Provider Authentication</a> for more information.</li>
+<li>The <code>start</code> function will not work in offline mode, it requires a network connection to succeed.</li>
+</ul>
+<h3 id='steps' class='heading'>Steps</h3>
+
+<ol>
+<li>Create an instance of your custom token provider, and perform all the steps required to make sure the <code>provideTokenReplacement</code> function is ready to be called. 
+<em>Note:</em> token provider instance can always be accessed using <code>Sensibill.shared.tokenProvider?</code></li>
+<li>Call the <code>start</code> function</li>
+<li><code>start</code> is an asynchronous operation. Caller must wait for the start callback to return and succeed before attempting any further interaction with the SDK.</li>
+</ol>
+<h3 id='example' class='heading'>Example</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SensibillUI</span>
+
+<span class="k">let</span> <span class="nv">tokenProvider</span> <span class="o">=</span> <span class="kt">CustomTokenProvider</span><span class="p">()</span>
+<span class="c1">// Additional operations required to prepare token provider</span>
+
+<span class="kt">Sensibill</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">tokenProvider</span><span class="p">:</span> <span class="n">tokenProvider</span><span class="p">,</span> <span class="nv">cacheIdentifier</span><span class="p">:</span> <span class="s">"cacheIdentifier"</span><span class="p">)</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+
+    <span class="c1">// Check for an error. If an error is returned, interaction with the SDK will not be possible</span>
+    <span class="k">guard</span> <span class="k">case</span> <span class="o">.</span><span class="k">none</span> <span class="o">=</span> <span class="n">error</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Add custom error handling</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Start interacting with the SDK</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='cache-identifier' class='heading'>Cache Identifier</h3>
+
+<p>The cache identifier parameter of the <code>start</code> function allows the SDK to keep a unique cache for the user, and support multiple user identities (for example personal and business accounts) cached on the same device. Hence, the cache identifier should be unique for each user identity. A specific format for identifier depends on hosting application usage of SDK.</p>
+
+<p>Examples of good cache identifiers:</p>
+
+<ul>
+<li>User email, e.g. <code>john.smith@example.com</code></li>
+<li>User email, together with type of account: <code>john.smith@example.com-business</code></li>
+</ul>
+<h2 id='stopping-the-sdk' class='heading'>Stopping the SDK</h2>
+
+<p>The <code>stop</code> function will first attempt to call Sensibill&rsquo;s backend to clear the user session. Whether or not this call was successful, the function will clear local state, and the result of the remote call will be returned in <code>error</code> of <code>stop</code> callback.</p>
+
+<p>Once the <code>stop</code> function is complete, the SDK can be started again. </p>
+<h3 id='prerequisites' class='heading'>Prerequisites</h3>
+
+<ul>
+<li>For the <code>stop</code> function having a network connection is optimal, but the SDK will stop and reset its state locally regardless.</li>
+<li>The stop function cannot run if another <code>stop</code> function is already in progress. Calling stop on already stopped SDK is supported (clears local state only)</li>
+</ul>
+<h3 id='steps' class='heading'>Steps</h3>
+
+<ol>
+<li>Call the <code>stop</code> function</li>
+<li><code>stop</code> is an asynchronous operation. The caller must wait for the stop callback to return before attempting to start the SDK again.</li>
+</ol>
+
+<p><em>Note:</em> although <code>stop</code> may return an error in the case of a failed remote call (e.g. when the app is offline), the local state will still be cleared. Hence handling an error returned in <code>stop</code> callback is optional.</p>
+<h3 id='example' class='heading'>Example</h3>
+<pre class="highlight swift"><code> <span class="kd">import</span> <span class="kt">SensibillUI</span>
+
+ <span class="kt">Sensibill</span><span class="o">.</span><span class="n">stop</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+
+    <span class="c1">// SDK is stopped</span>
+ <span class="p">}</span>
+</code></pre>
+<h2 id='restarting-the-sdk' class='heading'>Restarting the SDK</h2>
+
+<p>If necessary, you can call the <code>start</code> operation again (with the same or different token provider and cache identifier) once the <code>stop</code> operation is complete.
+However, <code>start</code> will fail if you attempt to call <code>start</code> 2 or more times without calling <code>stop</code>.   </p>
+<h2 id='error-codes' class='heading'>Error Codes</h2>
+
+<p>Both <code>start</code> and <code>stop</code> may return the following error codes</p>
+
+<ul>
+<li><code>sdkCannotStart</code> will be returned by the start callback if the <code>start</code> function was called when the SDK was already starting, running, or stopping. If the SDK is starting or running, call <code>stop</code> first. If the SDK is stopping, wait for the stop operation to complete.</li>
+<li><code>sdkStartWasInterrupted</code> will be returned by the start callback, if the <code>stop</code> function was called while the SDK was starting. This result is provided for information only: since the app called stop while the SDK was starting, the result of start callback is presumably no longer important.</li>
+<li><code>sdkIsAlreadyStopping</code> will be returned by the stop callback, if <code>stop</code> is called while another stop operation is already running.</li>
+</ul>
+
+<p><em>Notes:</em></p>
+
+<ul>
+<li>If <code>stop</code> was called while the application is starting, stop may need to wait to be able to interrupt the start.</li>
+<li>Two <code>stop</code> operations cannot run simultaneously, but running <code>stop</code> when the SDK is already stopped will return no error and is supported.</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-25)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
