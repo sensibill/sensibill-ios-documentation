@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SensibillSDK Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SensibillSDK" class="dashAnchor"></a>
+    <a title="SensibillSDK Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (72% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SensibillSDK Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Documentation.html">Documentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../compatibility.html">Compatibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdk-configuration.html">SDK Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdk-lifecycle.html">SDK Lifecycle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../customization.html">Customization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transactions.html">Transactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ui-presentation.html">UI Presentation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../application-integrations.html">Application Integrations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../troubleshooting.html">Troubleshooting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../using-objective-c.html">Using Objective-C</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../data-stored-on-device.html">Data Stored on Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../migration-guide.html">Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Authentication%20Reference.html">Authentication Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../SDK%20Lifecycle%20Reference.html">SDK Lifecycle Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Sensibill.html">Sensibill</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Customization%20Reference.html">Customization Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationCentreConfiguration.html">SBNotificationCentreConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKBundle.html">SBSDKBundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKColors.html">SBSDKColors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKConfiguration.html">SBSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKSearchBarSet.html">SBSDKSearchBarSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Transactions%20Reference.html">Transactions Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MatchingError.html">MatchingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBDataEvent.html">SBDataEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBDataEventType.html">SBDataEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceipt.html">SBReceipt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTransaction.html">SBTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBTransactionDelegate.html">SBTransactionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionStatus.html">SBTransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionType.html">SBTransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../UI%20Presentation.html">UI Presentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalytics.html">SBAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTrackingEvent.html">SBTrackingEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Application%20Integrations%20Reference.html">Application Integrations Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationHandler.html">SBNotificationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Troubleshooting%20Reference.html">Troubleshooting Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SensibillSDK</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SensibillSDK</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cp">#pragma mark - Initialization
+</span>
+<span class="cm">/**
+ *	Configure to have API access by setting the key, secret, credential type and redirect.
+ *	Configuration defaults to DefaultConfiguration if nil passed.
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureWithEnvironment</span><span class="p">:(</span><span class="n">SBEnvironment</span><span class="p">)</span><span class="nv">environment</span>
+                          <span class="nf">apiKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">apiKey</span>
+                          <span class="nf">secret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">secret</span>
+                  <span class="nf">credentialType</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">credentialType</span>
+                     <span class="nf">redirectURI</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">redirectURI</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureEnvironment</span><span class="p">:(</span><span class="n">SBEnvironment</span><span class="p">)</span><span class="nv">environment</span>
+              <span class="nf">credentialType</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">credentialType</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Signs in a user and set's the access token
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initWithUsername</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">username</span>
+             <span class="nf">andPassword</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">password</span>
+     <span class="nf">withSuccessCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">isSuccessful</span><span class="p">))</span><span class="nv">successCallback</span>
+        <span class="nf">andErrorCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="n">error</span><span class="p">))</span><span class="nv">errorCallback</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Set's the access token and refresh token and tokenId directly
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initWithAccessToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accessToken</span>
+            <span class="nf">andRefreshToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">refreshToken</span>
+                 <span class="nf">andTokenID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">tokenID</span>
+        <span class="nf">withSuccessCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">isSuccessful</span><span class="p">))</span><span class="nv">successCallback</span>
+           <span class="nf">andErrorCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="n">error</span><span class="p">))</span><span class="nv">errorCallback</span> <span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Token Ids are no longer needed in the SDK. Use initializer without tokenId"</span><span class="p">);</span>
+
+<span class="cm">/**
+ * Set's the access token and refresh token directly
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initWithAccessToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accessToken</span>
+            <span class="nf">andRefreshToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">refreshToken</span>
+        <span class="nf">withSuccessCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">isSuccessful</span><span class="p">))</span><span class="nv">successCallback</span>
+           <span class="nf">andErrorCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="n">error</span><span class="p">))</span><span class="nv">errorCallback</span><span class="p">;</span>
+
+
+
+<span class="cp">#pragma mark - Navigation and Presentation
+</span>
+<span class="cm">/**
+ *	Load Receipt List Controller with two additional items - Capture and Folders
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentReceiptListControllerInViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span> <span class="nf">withCapture</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesCapture</span> <span class="nf">andExports</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesExports</span> <span class="nf">onViewClosingComplete</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span> <span class="n">onComplete</span> <span class="n">DEPRECATED_MSG_ATTRIBUTE</span><span class="p">(</span><span class="s">"Use ReceiptListViewController directly."</span><span class="p">);</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentReceiptListControllerInViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span> <span class="nf">withCapture</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesCapture</span> <span class="nf">andExports</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesExports</span> <span class="nf">andDismissible</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">dismissible</span> <span class="nf">animated</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">animated</span> <span class="nf">onViewClosingComplete</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span> <span class="n">onComplete</span> <span class="n">DEPRECATED_MSG_ATTRIBUTE</span><span class="p">(</span><span class="s">"Use ReceiptListViewController directly."</span><span class="p">);</span>
+
+<span class="cm">/**
+ * Present the capture view controller over the current view controller
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Present the capture view controller over the current view controller using existing upload transaction
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span> <span class="nf">usingTransaction</span><span class="p">:(</span><span class="n"><a href="../Classes/SBTransaction.html">SBTransaction</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">transaction</span><span class="p">;</span>
+
+<span class="cm">/**
+* Present the capture view controller over the current view controller with a default expense type
+*/</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span> <span class="nf">withExpenseType</span><span class="p">:(</span><span class="n"><a href="../Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a></span><span class="p">)</span><span class="nv">expenseType</span><span class="p">;</span>
+
+<span class="cm">/**
+* Present the capture view controller over the current view controller using existing upload transaction with a default expense type
+*/</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                             <span class="nf">usingTransaction</span><span class="p">:(</span><span class="n"><a href="../Classes/SBTransaction.html">SBTransaction</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">transaction</span>
+                              <span class="nf">withExpenseType</span><span class="p">:(</span><span class="n"><a href="../Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a></span><span class="p">)</span><span class="nv">expenseType</span><span class="p">;</span>
+<span class="cm">/**
+ * Shows the Loading View Controller
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showLoadingViewInViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span> <span class="nf">animated</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">animated</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Hides the Loading View Controller
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">hideLoadingViewInViewController</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Displays the Receipt View in the Current Navigation Controller
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">displayReceiptWithId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">receiptId</span> <span class="nf">inNavigationController</span><span class="p">:(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span><span class="nv">navigationController</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Displays the Edit Receipt View in the Current Navigation Controller
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">displayEditReceiptWithId</span><span class="p">:(</span><span class="n"><a href="../Classes/SBReceipt.html">SBReceipt</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">receipt</span> <span class="nf">inNavigationController</span><span class="p">:(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span><span class="nv">navigationController</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Displays the Export List In the Current Navigations Stack
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushToExportsControllerFromNavigationController</span><span class="p">:(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span><span class="nv">navController</span><span class="p">;</span>
+
+<span class="cm">/**
+ *	Go To Search Receipt Controller
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushToSearchReceiptControllerFromController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span> <span class="nf">andAllowFiltering</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowFilters</span><span class="p">;</span>
+
+<span class="cm">/**
+ *	Embed the receipt list controller
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span><span class="nf">getEmbeddedReceiptListControllerWithCustomBottomBar</span><span class="p">:(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bottomBar</span> <span class="nf">onMenuButtonTapped</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">onMenuButtonTapped</span> <span class="n">DEPRECATED_MSG_ATTRIBUTE</span><span class="p">(</span><span class="s">"Use ReceiptListViewController directly."</span><span class="p">);</span>
+
+<span class="cp">#pragma mark - Transaction Matching
+</span>
+<span class="cm">/**
+ * Matches Receipts to Banking Account Transactions
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">matchReceiptsToTransactions</span><span class="p">:</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">transactions</span>
+                <span class="nf">withSuccessCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">transactions</span><span class="p">))</span><span class="nv">successCallback</span>
+                   <span class="nf">andErrorCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="n">error</span><span class="p">))</span><span class="nv">errorCallback</span> <span class="n">DEPRECATED_MSG_ATTRIBUTE</span><span class="p">(</span><span class="s">"Use SensibillTransactionMatcher directly."</span><span class="p">);</span>
+
+
+
+<span class="cp">#pragma mark - Miscellaneous
+</span>
+<span class="cm">/**
+ * Get Categories &amp; Currencies
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getPrefetchData</span> <span class="n">DEPRECATED_MSG_ATTRIBUTE</span><span class="p">(</span><span class="s">"Use Sensibill.shared.start() to setup necessary data"</span><span class="p">);</span>
+
+<span class="cm">/**
+ * Receive CallBack Errors
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">registerErrorReceivingCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Register analytics event through a listener
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">registerAnalyticsTrackerListener</span><span class="p">:(</span><span class="n"><a href="../UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">listener</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Check if server is reachable for the configured environment
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">checkIfServerReachableForConfigurationWithCompletionHandler</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">bool</span> <span class="n">isServerReachable</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadReceiptsInTableView</span><span class="p">:(</span><span class="n">SBReceiptListTableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">withCheckability</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">checkability</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadFoldersInCollectionView</span><span class="p">:(</span><span class="n">SBReceiptsFolderCollectionView</span> <span class="o">*</span><span class="p">)</span><span class="nv">collectionView</span> <span class="nf">withCheckability</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">checkability</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span>
+
+<span class="cm">/**
+ * AppDelegate Methods
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span> <span class="nf">openURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">localizedStringForKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initialization"></a>
+                  <h3 class="section-name"><p>Initialization</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)configureWithEnvironment:apiKey:secret:credentialType:redirectURI:"></a>
+                    <a name="//apple_ref/swift/Method/+configureWithEnvironment:apiKey:secret:credentialType:redirectURI:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)configureWithEnvironment:apiKey:secret:credentialType:redirectURI:">+configureWithEnvironment:apiKey:secret:credentialType:redirectURI:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Configure to have API access by setting the key, secret, credential type and redirect.
+Configuration defaults to DefaultConfiguration if nil passed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureWithEnvironment</span><span class="p">:(</span><span class="n">SBEnvironment</span><span class="p">)</span><span class="nv">environment</span>
+                          <span class="nf">apiKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">apiKey</span>
+                          <span class="nf">secret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">secret</span>
+                  <span class="nf">credentialType</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">credentialType</span>
+                     <span class="nf">redirectURI</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">redirectURI</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">with</span> <span class="nv">environment</span><span class="p">:</span> <span class="kt">SBEnvironment</span><span class="p">,</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">secret</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">credentialType</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">redirectURI</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)configureEnvironment:credentialType:"></a>
+                    <a name="//apple_ref/swift/Method/+configureEnvironment:credentialType:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)configureEnvironment:credentialType:">+configureEnvironment:credentialType:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureEnvironment</span><span class="p">:(</span><span class="n">SBEnvironment</span><span class="p">)</span><span class="nv">environment</span>
+              <span class="nf">credentialType</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">credentialType</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">configureEnvironment</span><span class="p">(</span><span class="n">_</span> <span class="nv">environment</span><span class="p">:</span> <span class="kt">SBEnvironment</span><span class="p">,</span> <span class="nv">credentialType</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)initWithUsername:andPassword:withSuccessCallback:andErrorCallback:"></a>
+                    <a name="//apple_ref/swift/Method/+initWithUsername:andPassword:withSuccessCallback:andErrorCallback:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)initWithUsername:andPassword:withSuccessCallback:andErrorCallback:">+initWithUsername:andPassword:withSuccessCallback:andErrorCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Signs in a user and set&rsquo;s the access token</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initWithUsername</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">username</span>
+             <span class="nf">andPassword</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">password</span>
+     <span class="nf">withSuccessCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">))</span><span class="nv">successCallback</span>
+        <span class="nf">andErrorCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="p">))</span><span class="nv">errorCallback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">initWithUsername</span><span class="p">(</span><span class="n">_</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">andPassword</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">withSuccessCallback</span> <span class="nv">successCallback</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="n">andErrorCallback</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="p">((</span><span class="kt">SBError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)initWithAccessToken:andRefreshToken:andTokenID:withSuccessCallback:andErrorCallback:"></a>
+                    <a name="//apple_ref/swift/Method/+initWithAccessToken:andRefreshToken:andTokenID:withSuccessCallback:andErrorCallback:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)initWithAccessToken:andRefreshToken:andTokenID:withSuccessCallback:andErrorCallback:">+initWithAccessToken:andRefreshToken:andTokenID:withSuccessCallback:andErrorCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Token Ids are no longer needed in the SDK. Use initializer without tokenId</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>Set&rsquo;s the access token and refresh token and tokenId directly</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initWithAccessToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accessToken</span>
+            <span class="nf">andRefreshToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">refreshToken</span>
+                 <span class="nf">andTokenID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">tokenID</span>
+        <span class="nf">withSuccessCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">))</span><span class="nv">successCallback</span>
+           <span class="nf">andErrorCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="p">))</span><span class="nv">errorCallback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">initWithAccessToken</span><span class="p">(</span><span class="n">_</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">andRefreshToken</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">andTokenID</span> <span class="nv">tokenID</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">withSuccessCallback</span> <span class="nv">successCallback</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="n">andErrorCallback</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="p">((</span><span class="kt">SBError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)initWithAccessToken:andRefreshToken:withSuccessCallback:andErrorCallback:"></a>
+                    <a name="//apple_ref/swift/Method/+initWithAccessToken:andRefreshToken:withSuccessCallback:andErrorCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)initWithAccessToken:andRefreshToken:withSuccessCallback:andErrorCallback:">+initWithAccessToken:andRefreshToken:withSuccessCallback:andErrorCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set&rsquo;s the access token and refresh token directly</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initWithAccessToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accessToken</span>
+            <span class="nf">andRefreshToken</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">refreshToken</span>
+        <span class="nf">withSuccessCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">))</span><span class="nv">successCallback</span>
+           <span class="nf">andErrorCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="p">))</span><span class="nv">errorCallback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">initWithAccessToken</span><span class="p">(</span><span class="n">_</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">andRefreshToken</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">withSuccessCallback</span> <span class="nv">successCallback</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="n">andErrorCallback</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="p">((</span><span class="kt">SBError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Navigation%20and%20Presentation"></a>
+                <a name="//apple_ref/swift/Section/Navigation and Presentation" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Navigation%20and%20Presentation"></a>
+                  <h3 class="section-name"><p>Navigation and Presentation</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)presentReceiptListControllerInViewController:withCapture:andExports:onViewClosingComplete:"></a>
+                    <a name="//apple_ref/swift/Method/+presentReceiptListControllerInViewController:withCapture:andExports:onViewClosingComplete:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)presentReceiptListControllerInViewController:withCapture:andExports:onViewClosingComplete:">+presentReceiptListControllerInViewController:withCapture:andExports:onViewClosingComplete:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use ReceiptListViewController directly.</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>Load Receipt List Controller with two additional items - Capture and Folders</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentReceiptListControllerInViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                                         <span class="nf">withCapture</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesCapture</span>
+                                          <span class="nf">andExports</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesExports</span>
+                               <span class="nf">onViewClosingComplete</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">onComplete</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">presentReceiptListController</span><span class="p">(</span><span class="k">in</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">,</span> <span class="n">withCapture</span> <span class="nv">includesCapture</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">andExports</span> <span class="nv">includesExports</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">onViewClosingComplete</span> <span class="nv">onComplete</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)presentReceiptListControllerInViewController:withCapture:andExports:andDismissible:animated:onViewClosingComplete:"></a>
+                    <a name="//apple_ref/swift/Method/+presentReceiptListControllerInViewController:withCapture:andExports:andDismissible:animated:onViewClosingComplete:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)presentReceiptListControllerInViewController:withCapture:andExports:andDismissible:animated:onViewClosingComplete:">+presentReceiptListControllerInViewController:withCapture:andExports:andDismissible:animated:onViewClosingComplete:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use ReceiptListViewController directly.</p>
+
+                      </div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentReceiptListControllerInViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span> <span class="nf">withCapture</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesCapture</span> <span class="nf">andExports</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">includesExports</span> <span class="nf">andDismissible</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">dismissible</span> <span class="nf">animated</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">animated</span> <span class="nf">onViewClosingComplete</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span> <span class="n">onComplete</span> <span class="n">DEPRECATED_MSG_ATTRIBUTE</span><span class="p">(</span><span class="s">"Use ReceiptListViewController directly."</span><span class="p">);</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">presentReceiptListController</span><span class="p">(</span><span class="k">in</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">,</span> <span class="n">withCapture</span> <span class="nv">includesCapture</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">andExports</span> <span class="nv">includesExports</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">andDismissible</span> <span class="nv">dismissible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">onViewClosingComplete</span> <span class="nv">onComplete</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:"></a>
+                    <a name="//apple_ref/swift/Method/+presentCaptureInCurrentViewController:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:">+presentCaptureInCurrentViewController:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Present the capture view controller over the current view controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">presentCapture</span><span class="p">(</span><span class="n">inCurrentViewController</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:usingTransaction:"></a>
+                    <a name="//apple_ref/swift/Method/+presentCaptureInCurrentViewController:usingTransaction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:usingTransaction:">+presentCaptureInCurrentViewController:usingTransaction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Present the capture view controller over the current view controller using existing upload transaction</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                             <span class="nf">usingTransaction</span><span class="p">:(</span><span class="n"><a href="../Classes/SBTransaction.html">SBTransaction</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">transaction</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">presentCapture</span><span class="p">(</span><span class="n">inCurrentViewController</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">,</span> <span class="n">using</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBTransaction.html">SBTransaction</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:withExpenseType:"></a>
+                    <a name="//apple_ref/swift/Method/+presentCaptureInCurrentViewController:withExpenseType:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:withExpenseType:">+presentCaptureInCurrentViewController:withExpenseType:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Present the capture view controller over the current view controller with a default expense type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                              <span class="nf">withExpenseType</span><span class="p">:</span>
+                                  <span class="p">(</span><span class="n"><a href="../Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a></span><span class="p">)</span><span class="nv">expenseType</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:usingTransaction:withExpenseType:"></a>
+                    <a name="//apple_ref/swift/Method/+presentCaptureInCurrentViewController:usingTransaction:withExpenseType:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)presentCaptureInCurrentViewController:usingTransaction:withExpenseType:">+presentCaptureInCurrentViewController:usingTransaction:withExpenseType:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Present the capture view controller over the current view controller using existing upload transaction with a default expense type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentCaptureInCurrentViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                             <span class="nf">usingTransaction</span><span class="p">:(</span><span class="n"><a href="../Classes/SBTransaction.html">SBTransaction</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">transaction</span>
+                              <span class="nf">withExpenseType</span><span class="p">:</span>
+                                  <span class="p">(</span><span class="n"><a href="../Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a></span><span class="p">)</span><span class="nv">expenseType</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)showLoadingViewInViewController:animated:"></a>
+                    <a name="//apple_ref/swift/Method/+showLoadingViewInViewController:animated:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)showLoadingViewInViewController:animated:">+showLoadingViewInViewController:animated:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Shows the Loading View Controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showLoadingViewInViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                               <span class="nf">animated</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">animated</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">showLoadingView</span><span class="p">(</span><span class="k">in</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)hideLoadingViewInViewController"></a>
+                    <a name="//apple_ref/swift/Method/+hideLoadingViewInViewController" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)hideLoadingViewInViewController">+hideLoadingViewInViewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Hides the Loading View Controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">hideLoadingViewInViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">hideLoadingViewInViewController</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)displayReceiptWithId:inNavigationController:"></a>
+                    <a name="//apple_ref/swift/Method/+displayReceiptWithId:inNavigationController:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)displayReceiptWithId:inNavigationController:">+displayReceiptWithId:inNavigationController:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays the Receipt View in the Current Navigation Controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">displayReceiptWithId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">receiptId</span>
+      <span class="nf">inNavigationController</span><span class="p">:(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span><span class="nv">navigationController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">displayReceipt</span><span class="p">(</span><span class="n">withId</span> <span class="nv">receiptId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="k">in</span> <span class="nv">navigationController</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)displayEditReceiptWithId:inNavigationController:"></a>
+                    <a name="//apple_ref/swift/Method/+displayEditReceiptWithId:inNavigationController:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)displayEditReceiptWithId:inNavigationController:">+displayEditReceiptWithId:inNavigationController:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Displays the Edit Receipt View in the Current Navigation Controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">displayEditReceiptWithId</span><span class="p">:(</span><span class="n"><a href="../Classes/SBReceipt.html">SBReceipt</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">receipt</span>
+          <span class="nf">inNavigationController</span><span class="p">:(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span><span class="nv">navigationController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">displayEditReceipt</span><span class="p">(</span><span class="n">withId</span> <span class="nv">receipt</span><span class="p">:</span> <span class="kt"><a href="../Classes/SBReceipt.html">SBReceipt</a></span><span class="o">!</span><span class="p">,</span> <span class="k">in</span> <span class="nv">navigationController</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)pushToExportsControllerFromNavigationController:"></a>
+                    <a name="//apple_ref/swift/Method/+pushToExportsControllerFromNavigationController:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)pushToExportsControllerFromNavigationController:">+pushToExportsControllerFromNavigationController:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays the Export List In the Current Navigations Stack</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushToExportsControllerFromNavigationController</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span><span class="nv">navController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">pushToExportsController</span><span class="p">(</span><span class="n">from</span> <span class="nv">navController</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)pushToSearchReceiptControllerFromController:andAllowFiltering:"></a>
+                    <a name="//apple_ref/swift/Method/+pushToSearchReceiptControllerFromController:andAllowFiltering:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)pushToSearchReceiptControllerFromController:andAllowFiltering:">+pushToSearchReceiptControllerFromController:andAllowFiltering:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Go To Search Receipt Controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushToSearchReceiptControllerFromController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                                  <span class="nf">andAllowFiltering</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowFilters</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">pushToSearchReceiptController</span><span class="p">(</span><span class="n">from</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">,</span> <span class="n">andAllowFiltering</span> <span class="nv">allowFilters</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)getEmbeddedReceiptListControllerWithCustomBottomBar:onMenuButtonTapped:"></a>
+                    <a name="//apple_ref/swift/Method/+getEmbeddedReceiptListControllerWithCustomBottomBar:onMenuButtonTapped:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)getEmbeddedReceiptListControllerWithCustomBottomBar:onMenuButtonTapped:">+getEmbeddedReceiptListControllerWithCustomBottomBar:onMenuButtonTapped:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use ReceiptListViewController directly.</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>Embed the receipt list controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">UINavigationController</span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">getEmbeddedReceiptListControllerWithCustomBottomBar</span><span class="p">:(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bottomBar</span>
+                                     <span class="nf">onMenuButtonTapped</span><span class="p">:</span>
+                                         <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">onMenuButtonTapped</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">getEmbeddedReceiptListController</span><span class="p">(</span><span class="n">withCustomBottomBar</span> <span class="nv">bottomBar</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">!</span><span class="p">,</span> <span class="nv">onMenuButtonTapped</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UINavigationController</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Transaction%20Matching"></a>
+                <a name="//apple_ref/swift/Section/Transaction Matching" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Transaction%20Matching"></a>
+                  <h3 class="section-name"><p>Transaction Matching</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)matchReceiptsToTransactions:withSuccessCallback:andErrorCallback:"></a>
+                    <a name="//apple_ref/swift/Method/+matchReceiptsToTransactions:withSuccessCallback:andErrorCallback:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)matchReceiptsToTransactions:withSuccessCallback:andErrorCallback:">+matchReceiptsToTransactions:withSuccessCallback:andErrorCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use SensibillTransactionMatcher directly.</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>Matches Receipts to Banking Account Transactions</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">matchReceiptsToTransactions</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">transactions</span>
+                <span class="nf">withSuccessCallback</span><span class="p">:</span>
+                    <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">))</span>
+                        <span class="n">successCallback</span>
+                   <span class="n">andErrorCallback</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="p">))</span><span class="n">errorCallback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">matchReceipts</span><span class="p">(</span><span class="n">to</span> <span class="nv">transactions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a></span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="n">withSuccessCallback</span> <span class="nv">successCallback</span><span class="p">:</span> <span class="p">(([</span><span class="kt"><a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a></span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="n">andErrorCallback</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="p">((</span><span class="kt">SBError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Miscellaneous"></a>
+                <a name="//apple_ref/swift/Section/Miscellaneous" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Miscellaneous"></a>
+                  <h3 class="section-name"><p>Miscellaneous</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)getPrefetchData"></a>
+                    <a name="//apple_ref/swift/Method/+getPrefetchData" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)getPrefetchData">+getPrefetchData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use Sensibill.shared.start() to setup necessary data</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>Get Categories &amp; Currencies</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getPrefetchData</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">getPrefetchData</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)registerErrorReceivingCallback:"></a>
+                    <a name="//apple_ref/swift/Method/+registerErrorReceivingCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)registerErrorReceivingCallback:">+registerErrorReceivingCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Receive CallBack Errors</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">registerErrorReceivingCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">SBError</span> <span class="o">*</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">registerErrorReceivingCallback</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="kt">SBError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)registerAnalyticsTrackerListener:"></a>
+                    <a name="//apple_ref/swift/Method/+registerAnalyticsTrackerListener:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)registerAnalyticsTrackerListener:">+registerAnalyticsTrackerListener:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Register analytics event through a listener</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">registerAnalyticsTrackerListener</span><span class="p">:(</span><span class="n"><a href="../UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">listener</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">registerAnalyticsTrackerListener</span><span class="p">(</span><span class="n">_</span> <span class="nv">listener</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)checkIfServerReachableForConfigurationWithCompletionHandler:"></a>
+                    <a name="//apple_ref/swift/Method/+checkIfServerReachableForConfigurationWithCompletionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)checkIfServerReachableForConfigurationWithCompletionHandler:">+checkIfServerReachableForConfigurationWithCompletionHandler:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check if server is reachable for the configured environment</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">checkIfServerReachableForConfigurationWithCompletionHandler</span><span class="p">:</span>
+    <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">_Bool</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">checkIfServerReachableForConfiguration</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)loadReceiptsInTableView:withCheckability:"></a>
+                    <a name="//apple_ref/swift/Method/+loadReceiptsInTableView:withCheckability:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)loadReceiptsInTableView:withCheckability:">+loadReceiptsInTableView:withCheckability:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadReceiptsInTableView</span><span class="p">:(</span><span class="n">SBReceiptListTableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">withCheckability</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">checkability</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">loadReceipts</span><span class="p">(</span><span class="k">in</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">SBReceiptListTableView</span><span class="o">!</span><span class="p">,</span> <span class="n">withCheckability</span> <span class="nv">checkability</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)loadFoldersInCollectionView:withCheckability:"></a>
+                    <a name="//apple_ref/swift/Method/+loadFoldersInCollectionView:withCheckability:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillSDK(cm)loadFoldersInCollectionView:withCheckability:">+loadFoldersInCollectionView:withCheckability:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadFoldersInCollectionView</span><span class="p">:(</span><span class="n">SBReceiptsFolderCollectionView</span> <span class="o">*</span><span class="p">)</span><span class="nv">collectionView</span> <span class="nf">withCheckability</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">checkability</span> <span class="n">DEPRECATED_ATTRIBUTE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">loadFolders</span><span class="p">(</span><span class="k">in</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">SBReceiptsFolderCollectionView</span><span class="o">!</span><span class="p">,</span> <span class="n">withCheckability</span> <span class="nv">checkability</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)application:openURL:options:"></a>
+                    <a name="//apple_ref/swift/Method/+application:openURL:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)application:openURL:options:">+application:openURL:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>AppDelegate Methods</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span>
+            <span class="nf">openURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+            <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">app</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="o">!</span><span class="p">,</span> <span class="kd">open</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span> <span class="o">=</span> <span class="p">[:])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)application:openURL:sourceApplication:annotation:"></a>
+                    <a name="//apple_ref/swift/Method/+application:openURL:sourceApplication:annotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)application:openURL:sourceApplication:annotation:">+application:openURL:sourceApplication:annotation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="o">!</span><span class="p">,</span> <span class="kd">open</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="o">!</span><span class="p">,</span> <span class="nv">sourceApplication</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">annotation</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SensibillSDK(cm)localizedStringForKey:"></a>
+                    <a name="//apple_ref/swift/Method/+localizedStringForKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SensibillSDK(cm)localizedStringForKey:">+localizedStringForKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">localizedStringForKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">localizedString</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
