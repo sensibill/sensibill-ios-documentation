@@ -295,18 +295,24 @@
 <p>Integration must be updated to reflect the following changes:</p>
 
 <ul>
-<li>SDK starting and stopping have changed. Please review <a href="#starting-and-stopping-sdk">Starting and Stopping SDK</a> section.</li>
-<li>PasswordAuthenticator was updated to work reflect SDk start/stop changes. Please review  <a href="#the-passwordauthenticator">PasswordAuthenticator</a> section below.</li>
-<li>The <code>Sensibill.shared.clear</code> method is now deprecated and cannot be used to stop SDK or clear user session. Use <code>Sensibill.stop</code> method with custom token provider, or <code>logout</code> with PasswordAuthenticator instead.</li>
+<li>SDK starting and stopping have changed. Please review <a href="#starting-and-stopping-sdk">Starting and Stopping the SDK</a> section.</li>
+<li>PasswordAuthenticator was updated to work with the SDK start/stop changes. Please review the <a href="#the-passwordauthenticator">PasswordAuthenticator</a> section below.</li>
+<li>The <code>Sensibill.shared.clear</code> method is now deprecated and cannot be used to stop the SDK or clear the user session. Use the <code>Sensibill.stop</code> method instead.</li>
 </ul>
 
-<p>The following changes may require updates, depending on implementation:</p>
+<p>The following changes may require updates, depending on your implementation:</p>
 
 <ul>
 <li><a href="#the-sensibillerror-codes">The SensibillError Codes</a> were changed. If your application is monitoring a specific error code, please review the changes.</li>
+<li>Multiple functions were changed to return <code><a href="Enums/SensibillError.html">SensibillError</a></code> instead of <code>Error</code> interface. These functions will now return
+
+<ul>
+<li>The code <code><a href="Enums/SensibillError.html#/none">SensibillError.none</a></code> on success.</li>
+<li>Any other code indicates an error.</li>
+</ul></li>
 </ul>
 
-<p>The following sections outline deprecations, and functions and classes to be removed in the next release:</p>
+<p>The following sections outline deprecations and functions and classes to be removed in the next release:</p>
 
 <ul>
 <li><a href="#deprecations">Deprecations</a></li>
@@ -314,58 +320,53 @@
 </ul>
 <h3 id='starting-and-stopping-sdk' class='heading'>Starting and Stopping SDK</h3>
 
-<p>To <strong>start SDK</strong>, instead of <code>Authenticator(tokenProvider).start(cacheIdentifier:completion)</code>, integrator must call </p>
+<p>To <strong>start the SDK</strong>, instead of <code>Authenticator(tokenProvider).start(cacheIdentifier:completion)</code>, the integrator must call </p>
 <pre class="highlight plaintext"><code>Sensibill.start(tokenProvider:cacheIdentifier:completion)
 </code></pre>
 
 <p>where </p>
 
 <ul>
-<li>the <code>tokenProvider</code> argument is the same as previously passed to <code>Authenticator</code> instance.</li>
-<li>the argument <code>cacheIdentifier</code> corresponds <code>identifier</code> argument in obsolete implementation of Authenticator&rsquo;s start function</li>
-<li>the <code>completion</code> callback now returns <code><a href="Enums/SensibillError.html">SensibillError</a></code> instead of <code>Error</code> interface. See more details below.</li>
+<li>the <code>tokenProvider</code> argument is the same as what was previously passed to the <code>Authenticator</code> instance.</li>
+<li>the <code>cacheIdentifier</code> argument is the same as the <code>identifier</code> argument from the obsolete implementation of Authenticator&rsquo;s start function</li>
+<li>the <code>completion</code> callback now returns a <code><a href="Enums/SensibillError.html">SensibillError</a></code> instead of an <code>Error</code> interface. See below for more details.</li>
 </ul>
 
-<p>To <strong>stop SDK</strong> and invalidate a current user session, instead of <code>PasswordAuthenticator().logout(completion)</code>, integrator must call </p>
+<p>To <strong>stop the SDK</strong> and invalidate a current user session, instead of using <code>PasswordAuthenticator().logout(completion)</code>, the integrator must call </p>
 <pre class="highlight plaintext"><code>Sensibill.stop(completion)
 </code></pre>
 
-<p>The <strong><code>completion</code> callback</strong> for both, start and stop, now returns <code><a href="Enums/SensibillError.html">SensibillError</a></code> instead of <code>Error</code> interface. </p>
+<p>The <strong><code>completion</code> callback</strong> for both start and stop now returns a <code><a href="Enums/SensibillError.html">SensibillError</a></code> instead of an <code>Error</code> interface, as specified in <a href="#summary-of-changes">Summary of Changes</a>. </p>
 
-<ul>
-<li>The code <code><a href="Enums/SensibillError.html#/none">SensibillError.none</a></code> is returned if start was successful.</li>
-<li>Any other code indicates an error.</li>
-</ul>
-
-<p>Additionally, SDK now <strong>allows <code>start</code> to be called only after SDK is stopped</strong>. 
-For more information and example of start and stop implementation, see <a href="sdk-lifecycle.html">SDK Lifecycle</a></p>
+<p>Additionally, the SDK now <strong>allows <code>start</code> to be called only after the SDK is stopped</strong>. 
+For more information and example of the new start and stop implementation, see <a href="sdk-lifecycle.html">SDK Lifecycle</a></p>
 <h4 id='the-passwordauthenticator' class='heading'>The PasswordAuthenticator</h4>
 
 <p>The <code>start</code> function inside <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code> is now deprecated and should not be used. </p>
 
 <ul>
-<li>To start SDK with custom <code><a href="Protocols/TokenProvider.html">TokenProvider</a></code>, use <code>Sensibill.start</code> function instead as explained in <a href="#starting-and-stopping-sdk">Starting and Stopping SDK</a> section above</li>
-<li>To use password authentication, use PasswordAuthenticator&rsquo;s <code>login</code> function to start SDK.</li>
+<li>To start the SDK with a custom <code><a href="Protocols/TokenProvider.html">TokenProvider</a></code>, use the <code>Sensibill.start</code> function instead as explained in the <a href="#starting-and-stopping-sdk">Starting and Stopping SDK</a> section above</li>
+<li>To use password authentication, use PasswordAuthenticator&rsquo;s <code>login</code> function to start the SDK.</li>
 </ul>
 
 <p>Similarly to <code>Sensibill.start</code> and <code>Sensibill.stop</code>: </p>
 
 <ul>
-<li>all functions in <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code> with <code>completion</code> callback now return <code><a href="Enums/SensibillError.html">SensibillError</a></code> instead of <code>Error</code> interface. Also while previously some functions always returned the same error, now error codes returned by functions indicate the failure reason.</li>
-<li>the <code>login</code> function can now only be called when previous user session was invalidated, using <code>logout</code> function or <code>Sensibill.stop</code>.</li>
+<li>all functions in <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code> with a <code>completion</code> callback now return a <code><a href="Enums/SensibillError.html">SensibillError</a></code> instead of an <code>Error</code> interface. Old generic errors have been replaced with more useful errors that will now return the reason for failure.</li>
+<li>the <code>login</code> function can now only be called after an existing user session is invalidated using the <code>logout</code> function or <code>Sensibill.stop</code>.</li>
 </ul>
 
-<p>See <a href="authentication.html#password-authentication">Password Authentication</a> for more information and example of completion callback implementation.</p>
+<p>See <a href="authentication.html#password-authentication">Password Authentication</a> for more information and examples of the completion callback implementation.</p>
 
-<p><em>Note:</em> mixing authentication types, or changing token providers within the same user session is no longer supported. Integrator must call <code>Sensibill.stop</code> to use a different authentication type, or use a different token provider.</p>
+<p><em>Note:</em> mixing authentication types or changing token providers within the same user session is no longer supported. The integrator must call <code>Sensibill.stop</code> to use a different authentication type, or use a different token provider.</p>
 <h4 id='the-sensibillerror-codes' class='heading'>The SensibillError Codes</h4>
 
-<p>The error codes in <code><a href="Enums/SensibillError.html">SensibillError</a></code> enum were changed. Old codes were marked with deprecation annotation, which includes a comment on migration strategy. </p>
+<p>The error codes in the <code><a href="Enums/SensibillError.html">SensibillError</a></code> enum have been changed. Old error codes have been marked with the deprecation annotation, which includes a comment on migration strategy. </p>
 
-<p><em>Note:</em> codes are given in Swift syntax; to convert to Objective C, capitalize first word, and remove dot between SensibillError and code name. For example: <code><a href="Enums/SensibillError.html#/sdkMissingCredentials">SensibillError.sdkMissingCredentials</a></code> will be known as <code>SensibillErrorSdkMissingCredentials</code> on Objective-C</p>
+<p><em>Note:</em> codes are given in Swift syntax; to convert to Objective C, capitalize the first word and remove dot between SensibillError and the code name. For example: <code><a href="Enums/SensibillError.html#/sdkMissingCredentials">SensibillError.sdkMissingCredentials</a></code> will become <code>SensibillErrorSdkMissingCredentials</code> in Objective-C</p>
 
 <ul>
-<li>The following error codes were renamed. Note that in some cases their name was changed to reflect the actual failure reason:
+<li>The following error codes have been renamed. Note that in some cases their name was changed to include the actual failure reason:
 
 <ul>
 <li><code>resetTemporaryPasswordRequired</code> &ndash;&gt; <code>apiNoAuthPasswordTemporary</code></li>
@@ -385,7 +386,7 @@ For more information and example of start and stop implementation, see <a href="
 <li><code>requestTimeOut</code> &ndash;&gt; <code>fdnNSURLRequestTimeout</code></li>
 <li><code>authenticationFailed</code> &ndash;&gt; <code>apiNoAuthCannotAuthenticate</code></li>
 </ul></li>
-<li>The following codes are no longer used by SDK (not returned and not thrown), and should be removed. 
+<li>The following codes are no longer used by the SDK (not returned and not thrown), and should be removed. 
 
 <ul>
 <li><code>entityNotFound</code></li>
@@ -403,10 +404,10 @@ For more information and example of start and stop implementation, see <a href="
 </ul></li>
 </ul>
 
-<p><em>Note:</em> This is usually done to expose more specific errors, and thus dependant on the function which used to return these errors. See specific changes below.</p>
+<p><em>Note:</em> These error code have been modified to enhance troubleshooting capabilites. More specific error codes make it easier to determine what went wrong and where it went wrong.</p>
 
 <ul>
-<li>The <code>parseResponseFailure</code> code was returned by various functions, for various reasons. It was replaced by several errors, which identify the place and reason of failure:
+<li>The <code>parseResponseFailure</code> code was generic error thrown by some of our functions. It has replaced with several new error codes to help identify the place and reason for a failure:
 
 <ul>
 <li><code>sdkParseUserModelFailure</code></li>
@@ -426,8 +427,8 @@ For more information and example of start and stop implementation, see <a href="
 <ul>
 <li><code>Authenticator</code> class. See <a href="#starting-and-stopping-sdk">Starting and Stopping SDK</a> section above</li>
 <li><code>Sensibill.shared.clear</code> method.</li>
-<li><code>SBNetworkReachabilityManager</code> class. New   <code>NetworkReachabilityService</code> can be used instead.</li>
-<li>Error codes in <code><a href="Enums/SensibillError.html">SensibillError</a></code> enum, as explained in  <a href="#the-sensibillerror-codes">The SensibillError Codes</a> section.</li>
+<li><code>SBNetworkReachabilityManager</code> class. The new <code>NetworkReachabilityService</code> should be used instead.</li>
+<li>Error codes in the <code><a href="Enums/SensibillError.html">SensibillError</a></code> enum, as explained in <a href="#the-sensibillerror-codes">The SensibillError Codes</a> section.</li>
 </ul>
 <h3 id='last-call' class='heading'>Last Call</h3>
 
@@ -521,7 +522,7 @@ For more information and example of start and stop implementation, see <a href="
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-22)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
