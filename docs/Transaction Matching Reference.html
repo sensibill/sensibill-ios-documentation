@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Transactions Reference  Reference</title>
+    <title>Transaction Matching Reference  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,18 +10,18 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Section/Transactions Reference" class="dashAnchor"></a>
-    <a title="Transactions Reference  Reference"></a>
+    <a name="//apple_ref/swift/Section/Transaction Matching Reference" class="dashAnchor"></a>
+    <a title="Transaction Matching Reference  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (72% documented)</p>
+        <p><a href="index.html"> Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html"> Reference</a>
         <img id="carat" src="img/carat.png" />
-        Transactions Reference  Reference
+        Transaction Matching Reference  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -37,7 +37,7 @@
                 <a href="installation.html">Installation</a>
               </li>
               <li class="nav-group-task">
-                <a href="sdk-configuration.html">SDK Configuration</a>
+                <a href="setup.html">Setup</a>
               </li>
               <li class="nav-group-task">
                 <a href="authentication.html">Authentication</a>
@@ -49,10 +49,13 @@
                 <a href="customization.html">Customization</a>
               </li>
               <li class="nav-group-task">
-                <a href="transactions.html">Transactions</a>
+                <a href="entry-points.html">Entry Points</a>
               </li>
               <li class="nav-group-task">
-                <a href="ui-presentation.html">UI Presentation</a>
+                <a href="transaction-linking.html">Transaction Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transaction-matching.html">Transaction Matching</a>
               </li>
               <li class="nav-group-task">
                 <a href="application-integrations.html">Application Integrations</a>
@@ -93,6 +96,9 @@
           <li class="nav-group-name">
             <a href="Customization%20Reference.html">Customization Reference</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
               </li>
@@ -145,9 +151,6 @@
                 <a href="Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SBSDKBundle.html">SBSDKBundle</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/SBSDKColors.html">SBSDKColors</a>
               </li>
               <li class="nav-group-task">
@@ -165,55 +168,75 @@
               <li class="nav-group-task">
                 <a href="Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Transactions%20Reference.html">Transactions Reference</a>
+            <a href="Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/CurrencyCode.html">CurrencyCode</a>
+                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/MatchingError.html">MatchingError</a>
+                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TransactionHandler.html">TransactionHandler</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBDataEvent.html">SBDataEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/SBDataEventType.html">SBDataEventType</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/TransactionError.html">TransactionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TransactionStatus.html">TransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TransactionType.html">TransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/TransactionObserver.html">TransactionObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Transaction%20Matching%20Reference.html">Transaction Matching Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
+                <a href="Transaction%20Matching%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
+                <a href="Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
+                <a href="Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBReceipt.html">SBReceipt</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/SBTransaction.html">SBTransaction</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SBTransactionDelegate.html">SBTransactionDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBTransactionStatus.html">SBTransactionStatus</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBTransactionType.html">SBTransactionType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
@@ -288,7 +311,7 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Transactions Reference</h1>
+            <h1>Transaction Matching Reference</h1>
             
           </section>
           <section class="section task-group-section">
@@ -321,218 +344,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">CurrencyCode</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Enum/MatchingError" class="dashAnchor"></a>
-                    <a class="token" href="#/">MatchingError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Error codes that can be occur when matching transactions to receipts</p>
-
-                        <a href="Enums/MatchingError.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBDataEvent"></a>
-                    <a name="//apple_ref/swift/Class/SBDataEvent" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBDataEvent">SBDataEvent</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Interface defining functionality of SBDataEvents</p>
-
-                        <a href="Classes/SBDataEvent.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBDataEvent</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SBDataEvent</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:SBDataEvent.h@T@SBDataEventReceiptBlock"></a>
-                    <a name="//apple_ref/swift/Type/SBDataEventReceiptBlock" class="dashAnchor"></a>
-                    <a class="token" href="#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Executable block containing code to run when Receipt data event is sent. Executed after added to receipt observer</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SBDataEventReceiptBlock</span><span class="p">)(</span><span class="n"><a href="Enums/SBDataEventType.html">SBDataEventType</a></span><span class="p">,</span> <span class="n"><a href="Classes/SBReceipt.html">SBReceipt</a></span> <span class="o">*</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SBDataEventReceiptBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Enums/SBDataEventType.html">SBDataEventType</a></span><span class="p">,</span> <span class="kt"><a href="Classes/SBReceipt.html">SBReceipt</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>type</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>DataEvent type associated with change to receipt data</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>receipt</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>SBReceipt containing updated receipt information</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:SBDataEvent.h@T@SBDataEventTransactionBlock"></a>
-                    <a name="//apple_ref/swift/Type/SBDataEventTransactionBlock" class="dashAnchor"></a>
-                    <a class="token" href="#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Executable block containing code to run when Transaction event is sent. Executed after added to transaction observer</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">SBDataEventTransactionBlock</span><span class="p">)(</span><span class="n"><a href="Enums/SBDataEventType.html">SBDataEventType</a></span><span class="p">,</span> <span class="n"><a href="Classes/SBTransaction.html">SBTransaction</a></span> <span class="o">*</span><span class="p">)</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">SBDataEventTransactionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Enums/SBDataEventType.html">SBDataEventType</a></span><span class="p">,</span> <span class="kt"><a href="Classes/SBTransaction.html">SBTransaction</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>type</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>DataEvent type associated with change to transaction data</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>transaction</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Transaction containing updated transaction information</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@E@SBDataEventType"></a>
-                    <a name="//apple_ref/swift/Enum/SBDataEventType" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@SBDataEventType">SBDataEventType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Type of Data event</p>
-
-                        <a href="Enums/SBDataEventType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SBDataEventType</span> <span class="p">{}</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">SBDataEventType</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">RawRepresentable</span></code></pre>
 
                         </div>
                       </div>
@@ -785,7 +596,7 @@
  *	@return returns the receipt's shared metadata's expense type
  *
  */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a></span> <span class="n">expenseType</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a></span> <span class="n">expenseType</span><span class="p">;</span>
 
 <span class="cp">#pragma mark Additional Properties
 </span><span class="cm">/**
@@ -797,7 +608,7 @@
 
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSMutableArray</span> <span class="o">&lt;</span><span class="n">UIColor</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">folderColors</span><span class="p">;</span>
 
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Transactions%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a></span> <span class="n">receiptEmailType</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Transaction%20Matching%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a></span> <span class="n">receiptEmailType</span><span class="p">;</span>
 
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span> <span class="o">=</span> <span class="n">editTaxTipDictionary</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">editTaxTipDictionary</span><span class="p">;</span>
 
@@ -853,138 +664,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SBTransaction"></a>
-                    <a name="//apple_ref/swift/Class/SBTransaction" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBTransaction">SBTransaction</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Interface representing the properties and functionality of Receipt Transaction data</p>
-
-                        <a href="Classes/SBTransaction.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBTransaction</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SBTransaction</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(pl)SBTransactionDelegate"></a>
-                    <a name="//apple_ref/swift/Protocol/SBTransactionDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SBTransactionDelegate">SBTransactionDelegate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Delegate to monitor individual changes in transaction state</p>
-
-                        <a href="Protocols/SBTransactionDelegate.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SBTransactionDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SBTransactionDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@E@SBTransactionStatus"></a>
-                    <a name="//apple_ref/swift/Enum/SBTransactionStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@SBTransactionStatus">SBTransactionStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Status of Transaction</p>
-
-                        <a href="Enums/SBTransactionStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SBTransactionStatus</span> <span class="p">{}</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">SBTransactionStatus</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@E@SBTransactionType"></a>
-                    <a name="//apple_ref/swift/Enum/SBTransactionType" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@SBTransactionType">SBTransactionType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Source type of transaction information</p>
-
-                        <a href="Enums/SBTransactionType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SBTransactionType</span> <span class="p">{}</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">SBTransactionType</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)SensibillTransactionMatcher"></a>
                     <a name="//apple_ref/swift/Class/SensibillTransactionMatcher" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)SensibillTransactionMatcher">SensibillTransactionMatcher</a>
@@ -1020,8 +699,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-25)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

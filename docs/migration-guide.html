@@ -13,7 +13,7 @@
     <a title="Migration Guide  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (72% documented)</p>
+        <p><a href="index.html"> Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -36,7 +36,7 @@
                 <a href="installation.html">Installation</a>
               </li>
               <li class="nav-group-task">
-                <a href="sdk-configuration.html">SDK Configuration</a>
+                <a href="setup.html">Setup</a>
               </li>
               <li class="nav-group-task">
                 <a href="authentication.html">Authentication</a>
@@ -48,10 +48,13 @@
                 <a href="customization.html">Customization</a>
               </li>
               <li class="nav-group-task">
-                <a href="transactions.html">Transactions</a>
+                <a href="entry-points.html">Entry Points</a>
               </li>
               <li class="nav-group-task">
-                <a href="ui-presentation.html">UI Presentation</a>
+                <a href="transaction-linking.html">Transaction Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="transaction-matching.html">Transaction Matching</a>
               </li>
               <li class="nav-group-task">
                 <a href="application-integrations.html">Application Integrations</a>
@@ -92,6 +95,9 @@
           <li class="nav-group-name">
             <a href="Customization%20Reference.html">Customization Reference</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
               </li>
@@ -144,9 +150,6 @@
                 <a href="Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SBSDKBundle.html">SBSDKBundle</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/SBSDKColors.html">SBSDKColors</a>
               </li>
               <li class="nav-group-task">
@@ -164,55 +167,75 @@
               <li class="nav-group-task">
                 <a href="Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Transactions%20Reference.html">Transactions Reference</a>
+            <a href="Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/CurrencyCode.html">CurrencyCode</a>
+                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/MatchingError.html">MatchingError</a>
+                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TransactionHandler.html">TransactionHandler</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBDataEvent.html">SBDataEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/SBDataEventType.html">SBDataEventType</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/TransactionError.html">TransactionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TransactionStatus.html">TransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TransactionType.html">TransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/TransactionObserver.html">TransactionObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Transaction%20Matching%20Reference.html">Transaction Matching Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
+                <a href="Transaction%20Matching%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
+                <a href="Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
+                <a href="Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBReceipt.html">SBReceipt</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/SBTransaction.html">SBTransaction</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SBTransactionDelegate.html">SBTransactionDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBTransactionStatus.html">SBTransactionStatus</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBTransactionType.html">SBTransactionType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
@@ -289,6 +312,437 @@
           <section class="section">
             
             <h1 id='migration-guide' class='heading'>Migration Guide</h1>
+<h2 id='upgrading-from-1-23-to-1-24' class='heading'>Upgrading from 1.23 to 1.24</h2>
+<h3 id='summary-of-changes' class='heading'>Summary of Changes</h3>
+
+<p>Integration must be updated to reflect the following changes:</p>
+
+<ul>
+<li><p>Support for iOS 9.x has been removed. To use this version of SDK, please update your project&rsquo;s iOS Deployment Target to iOS 10.0 or higher.</p></li>
+<li><p>Receipt processing was changed. This change affects usage of following classes:</p>
+
+<ul>
+<li><code>SBTransaction</code> read more in <a href="#transaction-data-model">Transaction Data Model</a> section.</li>
+<li><code>SBTransactionDelegate</code> read more in <a href="#transaction-delegate">Transaction Delegate</a> section.</li>
+<li><code>SBTransactionHandler</code> read more in <a href="#transaction-handler">Transaction Handler</a> section.</li>
+<li><code>SBTransactionStatus</code> read more in <a href="#transaction-status">Transaction Status</a> section.</li>
+<li><code>SBTransactionType</code> read more in <a href="#transaction-type">Transaction Type</a> section.</li>
+</ul></li>
+<li><p><code><a href="Classes/SBDataEvent.html">SBDataEvent</a></code> now provides different types of events for receipt and transaction observers. </p></li>
+<li><p>Inbox Sync feature and associated APIs are now deprecated. </p></li>
+</ul>
+<h3 id='sbdataevent-changes' class='heading'>SBDataEvent Changes</h3>
+
+<p><code><a href="Enums/SBDataEventType.html">SBDataEventType</a></code> was replaced by <code><a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a></code> for receipt observers, and <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> for transaction observers. The values are changed as follows:</p>
+
+<ul>
+<li><p><code>SBDataEventTypeStatusUpdate</code> event only exists for transaction observers (it was never sent for receipt observers in the past). Hence it was moved to <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> as <code>.statusUpdate</code> (<code>SBTransactionEventTypeStatusUpdate</code> in Objective-C)</p></li>
+<li><p><code>SBDataEventTypeEdit</code> event only exists for receipt observers (was never sent for transaction observers). Hence it was moved to <code><a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a></code> as <code>.edit</code> (<code>SBReceiptEventTypeEdit</code> in Objective-C)</p></li>
+<li><p><code>SBDataEventTypeDeletion</code> had a different meaning for receipt and transaction observers, and hence was added to both, <code><a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a></code> and <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code>. </p>
+
+<ul>
+<li>For receipt, this event is sent on receipt deletion, and is hence is called <code>.deletion</code> (<code>SBReceiptEventTypeDeletion</code> in Objective-C).<br></li>
+<li>For transaction, the event is sent when transaction is removed from the list of transactions processed by <code><a href="Classes/TransactionHandler.html">TransactionHandler</a></code>, and hence is called <code>.removed</code> (<code>SBTransactionEventTypeRemoved</code> in Objective-C)</li>
+</ul></li>
+<li><p>Additionally, an event <code>.expectedProcessingTimeDidChange</code> ( <code>SBTransactionEventTypeExpectedProcessingTimeDidChange</code> in Objective-C) was added to <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> to indicate when expected processing time for a transaction have changed.</p></li>
+</ul>
+<h3 id='receipt-processing-changes' class='heading'>Receipt Processing Changes</h3>
+<h4 id='transaction-data-model' class='heading'>Transaction Data Model</h4>
+
+<ul>
+<li><p><code>SBTransaction</code> data model was replaced with the <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> (<code><a href="Classes/SBLTransaction.html">SBLTransaction</a></code> in Objective-C). Change all <code>SBTransaction</code> references to <code>Transaction</code>/<code>SBLTransaction</code> and review changes in fields below.</p></li>
+<li><p>Every transaction is now guaranteed to have a unique non-null unchangeable <code>localID</code> for the entire lifetime of a transaction. </p></li>
+<li><p>Previously transaction&rsquo;s <code>remoteID</code> and <code>receiptID</code> had a <code>nonnull</code> property attributes and were set to empty value until a real value is received from the server. Now both fields are set to <code>nil</code> initially, and their value changes only when a corresponding value is received from the server. </p></li>
+</ul>
+
+<p>For example a verification</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="o">!</span><span class="n">transaction</span><span class="o">.</span><span class="n">receiptID</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+  <span class="c1">// Store transaction.receiptID</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>can either be replaced with <code>if transaction.receiptID != nil</code> or unwrapped as follows:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">receiptID</span> <span class="o">=</span> <span class="n">transaction</span><span class="o">.</span><span class="n">receiptID</span> <span class="p">{</span>
+    <span class="c1">// Store receiptID</span>
+<span class="p">}</span>
+</code></pre>
+
+<ul>
+<li><p>The <code>status</code> property of the new <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> model uses a new <code><a href="Enums/TransactionStatus.html">TransactionStatus</a></code> enum (<code>SBLTransactionStatus</code> in Objective-C). See detailed migration instructions in the <em>Transaction Status</em> section below.</p></li>
+<li><p>The <code>type</code> peroperty of the new <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> model uses a new <code><a href="Enums/TransactionType.html">TransactionType</a></code> enum (<code>SBLTransactionType</code> in Objective-C). See detailed migration instructions in the <em>Transaction Type</em> section below.</p></li>
+<li><p><code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> now has a new <code>error</code> field, containing a value from <code><a href="Enums/TransactionError.html">TransactionError</a></code> enum. When transaction <code>status</code> is set to <code>failed</code>, <code>error</code> field will contain the reason of failure as error code. Otherwise <code>error</code> field will be set to <code>noError</code> code.  </p></li>
+<li><p>The <code>delegate</code> which implemented <code>SBTransactionDelegate</code> interface in the <code>SBTransaction</code> is now changed to <code>observer</code>, and implements <code><a href="Protocols/TransactionObserver.html">TransactionObserver</a></code> interface. See <em>Transaction Delegate</em> section below.</p></li>
+<li><p>Initializer <code>Transaction(imageData: Data)</code> no longer allows initialization with the <code>nil</code> image (<code>imageData</code> is not optional). For usage with <em>Transaction Linking</em>, the new initializer is provided:  <code>Transaction((externalAccountTransactionID: String)</code>.  </p></li>
+</ul>
+
+<p>Replace the following lines:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">uploadTransaction</span> <span class="o">=</span> <span class="kt">SBTransaction</span><span class="p">(</span><span class="nv">imageData</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> 
+<span class="n">uploadTransaction</span><span class="o">.</span><span class="n">privateMetaData</span><span class="p">?</span><span class="o">.</span><span class="n">externalAccountTransactionID</span> <span class="o">=</span> <span class="s">"transactionID"</span>
+</code></pre>
+
+<p>with</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">uploadTransaction</span> <span class="o">=</span> <span class="kt">Transaction</span><span class="p">(</span><span class="nv">externalAccountTransactionID</span><span class="p">:</span> <span class="s">"transactionID"</span><span class="p">)</span> 
+</code></pre>
+<h4 id='transaction-status' class='heading'>Transaction Status</h4>
+
+<p><code>SBTransactionStatus</code> was replaced with the <code><a href="Enums/TransactionStatus.html">TransactionStatus</a></code>, which reflects the lifecycle of <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code>. </p>
+
+<ul>
+<li><p>Previous status <code>needsSynchronization</code> should be replaced with the <code>uploading</code> status. This status indicates, that receipt was saved locally, but before it was uploaded to the server, or server accepted it for processing. This status is followed with the <code>processing</code>, or <code>failed</code>.</p></li>
+<li><p>Statuses <code>pending</code> and <code>processing</code> previously had the same value, and could be used interchargeably. Now status <code>pending</code> is removed. Status <code>processing</code> is used to indicate that server accepted receipt for processing.  </p></li>
+<li><p>Transaction remains in status <code>processing</code> until server and SDK fully complete its processing. This status can change to <code>completed</code> (if receipt was processed successfully), or <code>failed</code> (an error was received). </p>
+
+<p>Note that if the server identifies a duplicate transaction, which was already successfully processed in the past, the SDK will set the completed status immediately, the transaction’s receiptID will be set to an existing receipt ID, and the transactionID field will remain empty.</p></li>
+<li><p>Statuses <code>uploaded</code> and <code>completed</code> had the same value, and could be used interchangeably. Now the status <code>uploaded</code> was removed. Use <code>completed</code> instead.</p></li>
+<li><p>Status <code>stopped</code> was removed. Previously this status was set when the server returned a status <em>stopped</em>. Now in the same case, the status will be set to <code>failed</code>, and the <code>error</code> property will be set to <code>wasStoppedOnServer</code>. For example, the following condition:
+<code>transaction.status == SBLTransactionStatusFailed || transaction.status == SBLTransactionStatusStopped</code>
+should be changed to:
+<code>transaction.status == SBLTransactionStatusFailed</code>
+In cases where it&rsquo;s important to differentiate <em>stopped</em> status returned by the server, change 
+<code>transaction.status == SBLTransactionStatusStopped</code>
+with
+<code>transaction.error == SBLTransactionErrorWasStoppedOnServer</code></p></li>
+</ul>
+
+<p>The following values have the same name and meaning as the previous version:</p>
+
+<ul>
+<li><code>unknown</code></li>
+<li><code>completed</code></li>
+<li><code>failed</code></li>
+</ul>
+<h4 id='transaction-delegate' class='heading'>Transaction Delegate</h4>
+
+<p><code>SBTransactionDelegate</code> was replaced with the <code><a href="Protocols/TransactionObserver.html">TransactionObserver</a></code> (<code>SBLTransactionObserver</code> in Objective-C).</p>
+
+<ul>
+<li><p>Change protocol name from <code>SBTransactionDelegate</code> to <code><a href="Protocols/TransactionObserver.html">TransactionObserver</a></code> in Swift (<code>SBLTransactionObserver</code> in Objective-C).</p></li>
+<li><p>Function <code>statusDidChange(for transaction: SBTransaction)</code> should be changed to <code>statusDidChangeForTransaction(_ transaction: Transaction)</code> in Swift (<code>statusDidChangeForTransaction:(SBLTransaction * _Nonnull)transaction</code> in Objective-C)</p></li>
+<li><p>Function <code>expectedProcessingTimeDidChange(for transaction: SBTransaction)</code> should be changed to <code>expectedProcessingTimeDidChangeForTransaction(_ transaction: Transaction)</code></p></li>
+</ul>
+<h4 id='transaction-handler' class='heading'>Transaction Handler</h4>
+
+<ul>
+<li><p><code>SBTransactionHandler</code> was replaced with the <code><a href="Classes/TransactionHandler.html">TransactionHandler</a></code> (<code>SBLTransactionHandler</code> in Objective-C). </p></li>
+<li><p>Previously if an integrated application was accessing <code>SBTransactionHandler.sharedHandler()</code>, an explicit cast from the <code>Any</code> type was required in Swift. Now, a shared instance of <code><a href="Classes/TransactionHandler.html">TransactionHandler</a></code> can be accessed with the <code><a href="Classes/TransactionHandler.html#/shared">TransactionHandler.shared</a></code>, and no casting is required.</p></li>
+<li><p><code>addTransaction</code> function was changed to <code>add</code></p></li>
+<li><p><code>removeTransaction</code> function was changed to <code>remove</code></p></li>
+<li><p><code>removeProcessedEmailTransaction</code> function was removed. Instead, find the transaction with the receiptID you want to remove, and pass it to the <code>remove</code> function:</p></li>
+</ul>
+<pre class="highlight swift"><code><span class="k">guard</span> <span class="k">let</span> <span class="nv">transaction</span> <span class="o">=</span> <span class="kt">TransactionHandler</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">transaction</span><span class="p">(</span><span class="nv">forReceiptID</span><span class="p">:</span> <span class="s">"receiptID"</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// Not found, nothing to remove</span>
+    <span class="k">return</span>
+<span class="p">}</span>
+<span class="kt">TransactionHandler</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
+</code></pre>
+
+<ul>
+<li>Filters <code>allFailedImageTransactions</code>, <code>allFailedEmailTransactions</code>, <code>allProcessingTransactions</code>, and <code>allOffineTransactions</code> were changed to properties <code>failedImageTransactions</code>, <code>failedEmailTransactions</code>, <code>processingTransactions</code>, and <code>offineTransactions</code> respectively.</li>
+<li>Filter <code>allNeedsSynchronizationTransactions</code> was changed to <code>inFlightTransactions</code> variable to clarify its meaning. This filter contains all functions that have not yet complete (i.e. status is not <code>failed</code> or <code>completed</code>)</li>
+<li><p>Filter named <code>allProcessedEmailTransactions</code> was changed to <code>completedEmailTransactions</code> to reflect its status.</p></li>
+<li><p>Function <code>convertEmailToReceipt</code> was migrated as <code>convert</code> with similar arguments.</p></li>
+<li><p>Function <code>- (void)transaction:(SBLTransaction * _Nonnull)transaction changeClassificationTo:(SBLTransactionType)type success:(void (^ __nullable)(BOOL didSucceed))success</code> is no longer required. Instead, create a transaction instance using <code>Transaction(forNonReceiptEmail: SBNonReceiptEmail)</code> initializer directly, and then <code>add</code> transaction for processing.</p></li>
+<li><p>Access to monitoring and persistence functions (<code>monitorTransactionAtSoonestDate</code>, <code>synchronizeUpdatedTransaction</code>, <code>synchronizeTransactionQueueFromDisk</code>, <code>synchronizeTransactionQueueToDisk</code>) is no longer available for external callers, and are not necessary. <code><a href="Classes/TransactionHandler.html">TransactionHandler</a></code> now continiously verifies which transactions should be uploaded, based on network and application state, transaction status, and transaction retry policy. It also ensures that any change in transactions is persisted to the disk.</p></li>
+</ul>
+<h4 id='transaction-type' class='heading'>Transaction Type</h4>
+
+<p><code>SBTransactionType</code> was replaced with the <code><a href="Enums/TransactionType.html">TransactionType</a></code> (<code>SBLTransactionType</code> in Objective-C), which reflects the type of <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code>. </p>
+
+<ul>
+<li><code>SBTransactionTypeReceipt</code> value of <code>SBTransactionType</code> enum is now called as <code>image</code> in <code><a href="Enums/TransactionType.html">TransactionType</a></code> enum.
+See <code><a href="Enums/TransactionType.html">TransactionType</a></code> enum documentation for more details.</li>
+</ul>
+<h4 id='transaction-notifications' class='heading'>Transaction Notifications</h4>
+
+<p>Notification types <code>kReceiptUploadCompleted</code>, <code>kReceiptUploadCompletedWithReceiptId</code>, <code>kReceiptUploadCompletedWithoutExpenseType</code> and <code>kReceiptUploadCompletedWithoutExpenseTypeWithReceiptId</code> are no longer sent by SDK. Instead a caller can use <code><a href="Protocols/TransactionObserver.html">TransactionObserver</a></code> to monitor the status of a particular transaction (<code>statusDidChangeForTransaction</code> event), or add a transaction observer in the <code><a href="Classes/SBDataEvent.html">SBDataEvent</a></code> to monitor the status changes for all transactions (<code>SBTransactionEventTypeStatusUpdate</code> event type). </p>
+
+<p>You can differentiate between the various transaction states in the following way:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">statusDidChangeForTransaction</span><span class="p">(</span><span class="n">_</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kt">Transaction</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">SBSDKConfiguration</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">withoutExpenseType</span> <span class="o">=</span> <span class="o">!</span><span class="kt">SBClientInfo</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">featureOptions</span><span class="o">.</span><span class="n">enableExpenseType</span> <span class="o">||</span> <span class="n">configuration</span><span class="p">?</span><span class="o">.</span><span class="n">searchFilterConfiguration</span><span class="o">.</span><span class="n">expenseTypeFilterEnabled</span> <span class="o">==</span> <span class="kc">nil</span>
+
+    <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">receiptID</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+
+        <span class="c1">// Matches previous kReceiptUploadCompleted case</span>
+        <span class="k">if</span> <span class="n">withoutExpenseType</span> <span class="p">{</span>
+            <span class="c1">// Matches previous kReceiptUploadCompletedWithoutExpenseTypeWithReceiptId case</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+         <span class="c1">// Matches previous kReceiptUploadCompletedWithReceiptId case</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="n">withoutExpenseType</span> <span class="p">{</span>
+            <span class="c1">// Matches previous kReceiptUploadCompletedWithoutExpenseType case</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="c1">// Matches previous kReceiptUploadCompleted case</span>
+        <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Notification <code>kReceiptProcessingBegan</code> corresponds to a status change notification, when the status of a transaction is set to <code>uploading</code>:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">statusDidChangeForTransaction</span><span class="p">(</span><span class="n">_</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kt">Transaction</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="o">.</span><span class="n">uploading</span> <span class="p">{</span>
+        <span class="c1">// Matches previous kReceiptProcessingBegan case</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Similarly, notification <code>kReceiptProcessingEnded</code>  corresponds to a status change notification, when the status of a transaction is set to <code>completed</code> or <code>failed</code>:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">statusDidChangeForTransaction</span><span class="p">(</span><span class="n">_</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kt">Transaction</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="o">.</span><span class="n">completed</span> <span class="o">||</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="o">.</span><span class="n">failed</span> <span class="p">{</span>
+        <span class="c1">// Matches previous kReceiptProcessingEnded case</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Alternatively you can check the <code>isFinal</code> flag of the status. This flag is set to <code>true</code> only for <code>completed</code> and <code>failed</code> statuses.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">statusDidChangeForTransaction</span><span class="p">(</span><span class="n">_</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kt">Transaction</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">isFinal</span> <span class="p">{</span>
+        <span class="c1">// Matches previous kReceiptProcessingEnded case</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Notification <code>kReceiptProcessingExpectedTimeUpdated</code>  is no longer sent by SDK. Instead a caller can use <code><a href="Protocols/TransactionObserver.html">TransactionObserver</a></code> to monitor the status of a particular transaction (<code>expectedProcessingTimeDidChangeForTransaction</code> event), or add itself as a transaction observer in the <code><a href="Classes/SBDataEvent.html">SBDataEvent</a></code> to monitor the status changes for all transactions (<code>SBTransactionEventTypeExpectedProcessingTimeDidChange</code> event type). </p>
+<h3 id='sbnotificationhandler-changes' class='heading'>SBNotificationHandler Changes</h3>
+
+<ul>
+<li>Earlier, if an integrated application was accessing <code>SBNotificationHandler.sharedHandler()</code> in Swift, an explicit cast from the <code>Any</code> object was required in order to use available public methods. Now, a shared instance is returned as <code>SBNotificationHandler.shared()</code>, and no casting is necessary.</li>
+</ul>
+<h3 id='uisearchbar-customization-changes' class='heading'>UISearchBar Customization Changes</h3>
+
+<p>A small change has been made to how <code>searchBarConfiguration</code> applies its tint properties. </p>
+
+<ul>
+<li><code>additionalTintColor</code> now specifies what color the native UISearchBar cancel button will be on the receipt search screen. This applies to all iOS versions.</li>
+<li><code>tintColor</code> now specifies the color of the cursor in the search text field on the receipt and folder search screens. This applies to iOS 11 only.</li>
+</ul>
+<h3 id='deprecations' class='heading'>Deprecations</h3>
+
+<p>The following classes and functions were deprecated in this release, and will be removed in the future:</p>
+
+<ul>
+<li><p>In the <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code> the following configurations are no longer used, and can be removed:</p>
+
+<ul>
+<li><code>launchWithCapture</code></li>
+<li><code>allowCrashReporting</code></li>
+<li><code>crashLoggerAppID</code></li>
+<li><code>locale</code></li>
+<li><code>gmailClientId</code></li>
+<li><code>outlookClientId</code></li>
+<li><code>keyboardAccessoryTextColor</code></li>
+<li><code>keyboardAccessoryDisabledTextColor</code></li>
+<li><code>exportListConfiguration</code> property, and <code>SBRecentExportsConfiguration</code> interface</li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBExportsConfiguration.html">SBExportsConfiguration</a></code> (accessed via <code>exportsConfiguration</code>) property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>, the following properties are now deprecated:</p>
+
+<ul>
+<li><code>exportsEmailCollectionEnabled</code></li>
+<li><code>initWithExportsEnabled:(BOOL)exportsEnabled exportsEmailCollectionEnabled:(BOOL)exportsEmailCollectionEnabled</code>. Use <code>initWithExportsState</code> instead.</li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></code> (accessed via <code>captureViewConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:</p>
+
+<ul>
+<li><code>captureTipImageIsLight</code></li>
+<li><code>toolTipBackgroundColor</code></li>
+<li><code>toolTipTextColor</code></li>
+<li><code>captureTipTextRegularFont</code></li>
+<li><code>captureTipTextBoldFont</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a></code> (accessed via <code>folderEditConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:</p>
+
+<ul>
+<li><code>nameFieldTextColour</code></li>
+<li><code>titleFieldTextColour</code></li>
+<li><code>fieldSeparatorColour</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a></code> (accessed via <code>receiptEditConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>editFieldOptionalPlaceholderColor</code></li>
+<li><code>editCategoryButtonBackgroundColor</code></li>
+<li><code>editExpenseTypeButtonBackgroundColor</code></li>
+<li><code>editViewToggleBackgroundColor</code></li>
+<li><code>editViewToggleTextColor</code></li>
+<li><code>editFieldSeparatorColor</code></li>
+<li><code>sectionTitleColor</code></li>
+<li><code>editViewRowButtonBorderColour</code></li>
+<li><code>editViewRowButtonTextColor</code></li>
+<li><code>screenBackgroundColor</code></li>
+<li><code>editViewRowButtonBackgroundColor</code></li>
+<li><code>editCategoryLabelTextColor</code></li>
+<li><code>editCategorySectionHeaderBackgrounColor</code></li>
+<li><code>receiptTypeHeaderTextColor</code></li>
+<li><code>editReminderFieldTextColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a></code> (accessed via <code>receiptProcessingConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>buttonTextSelectedColor</code></li>
+<li><code>buttonSelectedBackgroundColor</code></li>
+<li><code>processingScreensBackgroundColor</code></li>
+<li><code>processingExpenseTypeButtonBackgroundColor</code></li>
+<li><code>processingExpenseTypeButtonTextColor</code></li>
+<li><code>processingSwitchColor</code></li>
+<li><code>processingRowButtonBackgroundColor</code></li>
+<li><code>processingRowButtonTextColor</code></li>
+<li><code>processingRowButtonBorderColour</code></li>
+<li><code>processingRowButtonDropdownDividerColor</code></li>
+<li><code>processingInformationBoxErrorButtonSelectedBackgroundColor</code></li>
+<li><code>processingDialogBackgroundColor</code></li>
+<li><code>processingDialogTextColor</code></li>
+<li><code>processingDialogDividerColor</code></li>
+<li><code>processingToolTipBackgroundColor</code></li>
+<li><code>processingToolTipTitleColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a></code> (accessed via <code>folderListConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>folderDialogButtonOneColor</code></li>
+<li><code>folderDialogButtonTwoColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a></code> (accessed via <code>folderViewConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), <code>folderNameTitleTextColor</code> is deprecated.</p></li>
+<li><p>In the <code><a href="Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a></code> (accessed via <code>nonReceiptConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), <code>selectDeleteButtonDisabledBackgroundColor</code> is deprecated.</p></li>
+<li><p>In the <code><a href="Classes/SBNotificationCentreConfiguration.html">SBNotificationCentreConfiguration</a></code> (accessed via <code>receiptListConfiguration.notificationCentreConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), <code>receiptAddedToFolderNotificationBackgroundColor</code> is deprecated.</p></li>
+<li><p>In the <code><a href="Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a></code> (accessed via <code>receiptDetailConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), <code>headerMerchantInfoForegroundColor</code> is deprecated.</p></li>
+<li><p>In the <code><a href="Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a></code> (accessed via <code>taxTipsConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>fieldNameTextColor</code></li>
+<li><code>fieldPlaceholderColor</code></li>
+<li><code>fieldEntryTextColor</code></li>
+<li><code>fieldAlertTextColor</code></li>
+<li><code>alertMessageTextColor</code></li>
+<li><code>fieldSeparatorColor</code></li>
+<li><code>fieldOptionalPlaceholderColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a></code> (accessed via <code>receiptListControllerConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>showUserEmailView</code></li>
+<li><code>userEmailViewBackgroundColor</code></li>
+<li><code>userEmailViewTextColor</code></li>
+<li><code>userEmailReceiptCaptionColor</code></li>
+<li><code>userEmailReceiptCaptionColorDisable</code></li>
+<li><code>userEmailReceiptCaptionText</code></li>
+<li><code>userReceiptEmailText</code></li>
+<li><code>userEmailCaptionLabelText</code></li>
+<li><code>userEmailEmptyViewTextColor</code></li>
+<li><code>emptyViewActionButtonTextColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a></code> (accessed via <code>tableCellConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>paymentReceiptHighlightColor</code></li>
+<li><code>recentlyAddedReceiptTitleColor</code></li>
+<li><code>linkedReceiptRowBackgroundColor</code></li>
+<li><code>linkedReceiptRowDividerColor</code></li>
+<li><code>linkedReceiptRowTitleColor</code></li>
+<li><code>linkedReceiptRowCaptionColor</code></li>
+<li><code>viewReceiptLabelColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a></code> (accessed via <code>receiptListConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>monthWeekHeaderBackgroundColor</code></li>
+<li><code>deleteOptionInDialogColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a></code> (accessed via <code>searchFilterConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>selectedColor</code></li>
+<li><code>expenseBackgoundSelectedColor</code></li>
+<li><code>expenseTypeSelectedTextColor</code></li>
+<li><code>remindersBackgoundColor</code></li>
+<li><code>remindersTypeTextColor</code></li>
+<li><code>remindersBackgoundSelectedColor</code></li>
+<li><code>remindersTypeTextColor</code></li>
+<li><code>applyFiltersButtonTextColor</code></li>
+<li><code>applyFiltersButtonBackgroundColor</code></li>
+<li><code>currencyFilterSaveButtonTextColor</code></li>
+<li><code>currencyFilterSaveButtonBackgroundColor</code></li>
+<li><code>resetFiltersButtonTextColor</code></li>
+<li><code>applyFiltersDisabledButtonTextColor</code></li>
+<li><code>applyFiltersDisabledButtonBackgroundColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a></code> (accessed via <code>remindersConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>reminderListBackgroundColor</code></li>
+<li><code>reminderListHeaderColor</code></li>
+<li><code>reminderListSeparatorColor</code></li>
+<li><code>tableFooterTextColor</code></li>
+<li><code>highlightedButtonBackgroundColor</code></li>
+<li><code>timePeriodButtonBackgroundColor</code></li>
+<li><code>returnExchangeHeaderTextColor</code></li>
+<li><code>exchangeReturnDaysTextColor</code></li>
+<li><code>returnDurationTextSeparatorColor</code></li>
+<li><code>setDaysButtonTextColor</code></li>
+<li><code>setReminderBackgroundColor</code></li>
+<li><code>setReturnReminderHeaderTextColor</code></li>
+<li><code>setWarrantyReminderHeaderTextColor</code></li>
+<li><code>setWeekButtonTextColor</code></li>
+<li><code>setWeekButtonSeparatorColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a></code> (accessed via <code>tabBarConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:  </p>
+
+<ul>
+<li><code>captureButtonBackgroundHighlightedColor</code></li>
+<li><code>exportsButtonBackgroundHighlightedColor</code></li>
+</ul></li>
+<li><p>In the <code><a href="Classes/SBNotificationHandler.html">SBNotificationHandler</a></code>, the following method is deprecated:</p>
+
+<ul>
+<li><code>application(application: UIApplication, didReceive: UILocalNotification)</code> deprecated as a result of removal of iOS 9.x support. Use iOS 10 and up compatible method <code>userNotificationCenter(center: UNUserNotificationCenter, didReceive: UNNotificationResponse, withCompletionHandler: (() -&gt; Void)?)</code> instead.</li>
+</ul></li>
+</ul>
+<h3 id='removed' class='heading'>Removed</h3>
+
+<p>The following classes were removed. Please follow  <em>Receipt Processing Changes</em> section to update your code:</p>
+
+<ul>
+<li><code>SBTransactionDelegate</code> was replaced with the <code><a href="Protocols/TransactionObserver.html">TransactionObserver</a></code>.</li>
+<li><code>SBTransaction</code> was replaced with the <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code>.</li>
+<li><code>SBTransactionStatus</code> was removed. <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> data model uses <code><a href="Enums/TransactionStatus.html">TransactionStatus</a></code> enum instead.</li>
+<li><p><code>SBTransactionType</code> was removed. <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> data model uses <code><a href="Enums/TransactionType.html">TransactionType</a></code> enum instead.</p></li>
+<li><p>Constants file <code>SBURLConstants.h</code> was removed. It&rsquo;s no longer required to include this file.
+This includes the following notifications, which were not sent by the SDK in previous releases, and can be removed: </p>
+
+<ul>
+<li><code>kReceiptProcessingBeganWithoutTransaction</code></li>
+<li><code>kOfflineReceiptCreated</code>
+The following notifications were previously sent by the SDK. They should be migrated as described in <em>Receipt Processing Changes</em> section above:</li>
+<li><code>kReceiptProcessingBegan</code></li>
+<li><code>kReceiptProcessingEnded</code></li>
+<li><code>kReceiptUploadCompleted</code></li>
+<li><code>kReceiptUploadCompletedWithoutExpenseType</code></li>
+<li><code>kReceiptUploadCompletedWithReceiptId</code></li>
+<li><code>kReceiptUploadCompletedWithoutExpenseTypeWithReceiptId</code></li>
+<li><code>kReceiptProcessingExpectedTimeUpdated</code></li>
+</ul></li>
+</ul>
+
+<p>The following properties and associated classes are removed from <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>:</p>
+
+<ul>
+<li><code>autoCompleteSuggestionBarConfiguration</code> property and <code>SBAutocompletionBarConfiguration</code> interface.</li>
+<li><code>receiptValidationConfiguration</code> property, and <code>SBReceiptValidationControllerConfiguration</code> interface.</li>
+<li><code>exportListConfiguration</code> property, and <code>SBRecentExportsConfiguration</code> interface.</li>
+<li><code>reminderNoticeConfiguration</code> property, and <code>SBReminderPopupConfiguration</code> interface.</li>
+<li><code>exportDialogConfiguration</code> property, and <code>SBExportPopupConfiguration</code> interface.</li>
+</ul>
+
+<p>The following methods has been deprecated from <code><a href="Classes/SensibillSDK.html">SensibillSDK</a></code> interface as a result of removal of Inbox Sync feature.</p>
+
+<ul>
+<li>application(_ app: UIApplication, open url: URL, options: [AnyHashable : Any] = [:]) -&gt; Bool</li>
+<li>application(_ application: UIApplication, open url: URL, sourceApplication: String, annotation: Any) -&gt; Bool</li>
+</ul>
+<h3 id='last-call' class='heading'>Last Call</h3>
+
+<p>Classes and functions deprecated in release 1.23 will be removed in the next release. Review the <em>Deprecated</em> section and follow our upgrade instructions in the <a href="#upgrading-from-1.22-to-1.23">Upgrading from 1.22 to 1.23</a> sections.  </p>
 <h2 id='upgrading-from-1-22-to-1-23' class='heading'>Upgrading from 1.22 to 1.23</h2>
 <h3 id='summary-of-changes' class='heading'>Summary of Changes</h3>
 
@@ -437,19 +891,19 @@ For more information and example of the new start and stop implementation, see <
 <ul>
 <li><code>SBDataEvent.removeObserver</code> function.</li>
 <li><code>SBSessionLocalStore</code> class.</li>
-<li>In <code>SBClientInfoFeatureOptions</code>:
+<li>In the <code>SBClientInfoFeatureOptions</code>:
 
 <ul>
 <li><code>showIssueReporting</code></li>
 <li><code>showAdditionalFeedback</code></li>
 </ul></li>
-<li>In <code>SBClientInfo</code>:
+<li>In the <code>SBClientInfo</code>:
 
 <ul>
 <li><code>fetchWithCompletion</code></li>
 <li><code>retrieveClientInfoWithCompletion</code></li>
 </ul></li>
-<li>In <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>, the following properties are no longer used and can be removed:
+<li>In the <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>, the following properties are no longer used and can be removed:
 
 <ul>
 <li><code>tagsEnabled</code></li>
@@ -465,7 +919,7 @@ For more information and example of the new start and stop implementation, see <
 </ul></li>
 <li><code>SBSDKSearchBarSet.placeholderTextString</code>. Use Localizable.strings instead</li>
 <li><code>SBCaptureViewConfiguration.automaticCaptureTimeout</code>. The value will have no effect.</li>
-<li>In <code><a href="Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a></code>, the following properties are no longer used:
+<li>In the <code><a href="Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a></code>, the following properties are no longer used:
 
 <ul>
 <li><code>setReminderTimeAmountTextColor</code></li>
@@ -473,7 +927,7 @@ For more information and example of the new start and stop implementation, see <
 </ul></li>
 <li>Entire <code>SBReportIssueConfiguration</code> is no longer used.</li>
 <li><code>SBFolderReceiptListControllerConfiguration.tintTopBarByFolderColour</code></li>
-<li>In <code>SBUserOperation</code>, the following functions should not be used. Migrate to  <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code> instead:
+<li>In the <code>SBUserOperation</code>, the following functions should not be used. Migrate to  <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code> instead:
 
 <ul>
 <li><code>checkAvailabilityOfAccessId</code></li>
@@ -485,7 +939,7 @@ For more information and example of the new start and stop implementation, see <
 <li><code>signupUserWithAccessId</code></li>
 <li><code>signinUserWithUsername</code></li>
 </ul></li>
-<li>In <code>SBReceiptListController</code>, the following properties:
+<li>In the <code>SBReceiptListController</code>, the following properties:
 
 <ul>
 <li><code>dismissible</code><br></li>
@@ -522,8 +976,8 @@ For more information and example of the new start and stop implementation, see <
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-25)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
