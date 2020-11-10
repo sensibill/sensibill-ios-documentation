@@ -8,12 +8,20 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a title="Troubleshooting  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (87% documented)</p>
+        <p><a href="index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -176,10 +184,10 @@
             <a href="Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
+                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/TransactionHandler.html">TransactionHandler</a>
@@ -197,10 +205,13 @@
                 <a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/SBDataEventType.html">SBDataEventType</a>
+                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/TransactionError.html">TransactionError</a>
@@ -238,6 +249,9 @@
                 <a href="Classes/SBReceipt.html">SBReceipt</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
               </li>
             </ul>
@@ -245,6 +259,12 @@
           <li class="nav-group-name">
             <a href="UI%20Presentation.html">UI Presentation</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
               </li>
@@ -313,6 +333,36 @@
             
             <h1 id='troubleshooting' class='heading'>Troubleshooting</h1>
 <h2 id='installation-troubleshooting' class='heading'>Installation Troubleshooting</h2>
+<h3 id='no-such-module-39-sensibillui-39-in-swift-file' class='heading'>No such module &lsquo;SensibillUI&rsquo; (in Swift File)</h3>
+
+<p>This compile time error will appear next to the following statement in a Swift file after upgrading to <strong>v1.25</strong> if you are consuming the SDK by embedding it manually.</p>
+<pre class="highlight plaintext"><code>import SensibillUI
+</code></pre>
+
+<ul>
+<li>To fix this, add the path to the Sensibill framork to your target&rsquo;s  <strong>Import Paths</strong> setting under the <code>Swift Compiler - Search Paths</code> section in your target&rsquo;s Build Settings. Specify the recursive option.</li>
+</ul>
+
+<p><img src="./guide-resources/images/installation/direct-download/how-to-swift-compiler-import-paths.png" alt=""></p>
+<h3 id='module-39-sensibillui-39-not-found-in-objective-c-file' class='heading'>Module &lsquo;SensibillUI&rsquo; not found (in Objective-C File)</h3>
+
+<p>This compile time error will appear next to following statement in Objective-C file after upgrading to <strong>v1.25</strong>.</p>
+<pre class="highlight plaintext"><code>@import SensibillUI;
+</code></pre>
+
+<p>Usage of this syntax is unavailable as of <strong>v1.25</strong>. Please convert to the following syntax:</p>
+<pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI.h&gt;
+#import &lt;SensibillUI/SensibillUI-Swift.h&gt;
+</code></pre>
+<h3 id='unknown-type-name-code-sbl-code-in-objective-c-file' class='heading'>Unknown type name <code>SBL*</code> (in Objective-C File)</h3>
+
+<p>This compile time error will appear in Objective-C file after upgrading to <strong>v1.25</strong>, even if you have imported SensibillUI with following syntax.</p>
+<pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI.h&gt;
+</code></pre>
+
+<p><strong>The following import statement is required</strong> to access the SDK&rsquo;s swift classes in an <code>Objective-C</code> file:</p>
+<pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI-Swift.h&gt;
+</code></pre>
 <h3 id='image-not-found' class='heading'>Image not Found</h3>
 
 <p>You may get an <code>image not found</code> error during run time:</p>
@@ -354,8 +404,8 @@ Example:</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

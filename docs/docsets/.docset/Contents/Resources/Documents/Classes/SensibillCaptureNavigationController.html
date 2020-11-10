@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/SensibillCaptureNavigationController" class="dashAnchor"></a>
     <a title="SensibillCaptureNavigationController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (87% documented)</p>
+        <p><a href="../index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -177,10 +185,10 @@
             <a href="../Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/SBLTransaction.html">SBLTransaction</a>
+                <a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+                <a href="../Classes/SBLTransaction.html">SBLTransaction</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/TransactionHandler.html">TransactionHandler</a>
@@ -198,10 +206,13 @@
                 <a href="../Enums/SBTransactionEventType.html">SBTransactionEventType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/SBDataEventType.html">SBDataEventType</a>
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TransactionError.html">TransactionError</a>
@@ -239,6 +250,9 @@
                 <a href="../Classes/SBReceipt.html">SBReceipt</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
               </li>
             </ul>
@@ -246,6 +260,12 @@
           <li class="nav-group-name">
             <a href="../UI%20Presentation.html">UI Presentation</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
               </li>
@@ -312,11 +332,23 @@
         <section>
           <section class="section">
             <h1>SensibillCaptureNavigationController</h1>
+            <div class="aside aside-deprecated">
+              <p class="aside-title">Deprecated</p>
+              <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+            </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SensibillCaptureNavigationController</span>
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">SensibillCaptureNavigationController</span>
     <span class="p">:</span> <span class="nc">UINavigationController</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></span><span class="p">,</span>
                               <span class="n">UINavigationControllerDelegate</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SensibillCaptureNavigationController</span> <span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></span><span class="p">,</span> <span class="kt">UINavigationControllerDelegate</span></code></pre>
 
                 </div>
               </div>
@@ -332,13 +364,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(py)dismissDelegate"></a>
                     <a name="//apple_ref/swift/Property/dismissDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(py)dismissDelegate">dismissDelegate</a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(py)dismissDelegate">dismissDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>The delegate<code><a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></code> to handle SensibillCaptureNavigationController dismissal</p>
 
@@ -364,13 +401,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(py)captureDelegate"></a>
                     <a name="//apple_ref/swift/Property/captureDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(py)captureDelegate">captureDelegate</a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(py)captureDelegate">captureDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>The delegate <code><a href="../Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a></code> to handle capture data on dismissal</p>
 
@@ -396,13 +438,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(py)captureFlowState"></a>
                     <a name="//apple_ref/swift/Property/captureFlowState" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(py)captureFlowState">captureFlowState</a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(py)captureFlowState">captureFlowState</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>The SBReceiptCaptureFlowState represents the current position in the capture flow that is presented</p>
 
@@ -428,13 +475,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(py)rootCaptureViewController"></a>
                     <a name="//apple_ref/swift/Property/rootCaptureViewController" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(py)rootCaptureViewController">rootCaptureViewController</a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(py)rootCaptureViewController">rootCaptureViewController</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>The SBReceiptCaptureViewController that handles receipt capture. Set during initialization</p>
 
@@ -460,13 +512,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:"></a>
                     <a name="//apple_ref/swift/Method/-initWithTransaction:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:">-initWithTransaction:<wbr></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:">-initWithTransaction:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>Initialize <code>SensibillCaptureNavigationController</code> with optional SBLTransaction.</p>
 
@@ -512,13 +569,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:withExpenseType:"></a>
                     <a name="//apple_ref/swift/Method/-initWithTransaction:withExpenseType:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:withExpenseType:">-initWithTransaction:<wbr>withExpenseType:<wbr></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:withExpenseType:">-initWithTransaction:<wbr>withExpenseType:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>Initialize <code>SensibillCaptureNavigationController</code> with optional SBLTransaction and boolean if capture should close after receipt capture (no processing screens)</p>
 
@@ -572,13 +634,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:withExpenseType:exitAfterCapture:"></a>
                     <a name="//apple_ref/swift/Method/-initWithTransaction:withExpenseType:exitAfterCapture:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:withExpenseType:exitAfterCapture:">-initWithTransaction:<wbr>withExpenseType:<wbr>exitAfterCapture:<wbr></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:withExpenseType:exitAfterCapture:">-initWithTransaction:<wbr>withExpenseType:<wbr>exitAfterCapture:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>Initialize <code>SensibillCaptureNavigationController</code> with optional SBLTransaction and boolean if capture should close after receipt capture (no processing screens)</p>
 
@@ -645,13 +712,18 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
                     <code>
                     <a name="/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:exitAfterCapture:"></a>
                     <a name="//apple_ref/swift/Method/-initWithTransaction:exitAfterCapture:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:exitAfterCapture:">-initWithTransaction:<wbr>exitAfterCapture:<wbr></a>
+                    <a class="token discouraged" href="#/c:objc(cs)SensibillCaptureNavigationController(im)initWithTransaction:exitAfterCapture:">-initWithTransaction:<wbr>exitAfterCapture:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
+
+                      </div>
                       <div class="abstract">
                         <p>Initialize <code>SensibillCaptureNavigationController</code> with optional SBLTransaction and boolean if capture should close after receipt capture (no processing screens)</p>
 
@@ -710,8 +782,8 @@ Encompasses entire capture flow, from camera capture to processing screens</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

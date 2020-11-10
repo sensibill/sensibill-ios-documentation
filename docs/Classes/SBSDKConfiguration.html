@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/SBSDKConfiguration" class="dashAnchor"></a>
     <a title="SBSDKConfiguration Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (87% documented)</p>
+        <p><a href="../index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -177,10 +185,10 @@
             <a href="../Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/SBLTransaction.html">SBLTransaction</a>
+                <a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+                <a href="../Classes/SBLTransaction.html">SBLTransaction</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/TransactionHandler.html">TransactionHandler</a>
@@ -198,10 +206,13 @@
                 <a href="../Enums/SBTransactionEventType.html">SBTransactionEventType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/SBDataEventType.html">SBDataEventType</a>
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TransactionError.html">TransactionError</a>
@@ -239,6 +250,9 @@
                 <a href="../Classes/SBReceipt.html">SBReceipt</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
               </li>
             </ul>
@@ -246,6 +260,12 @@
           <li class="nav-group-name">
             <a href="../UI%20Presentation.html">UI Presentation</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
               </li>
@@ -314,7 +334,13 @@
             <h1>SBSDKConfiguration</h1>
               <div class="declaration">
                 <div class="language">
+                  <p class="aside-title">Objective-C</p>
                   <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBSDKConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SBSDKConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
 
                 </div>
               </div>
@@ -1393,7 +1419,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Singleton instance</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1475,302 +1502,13 @@
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)launchWithCapture"></a>
-                    <a name="//apple_ref/swift/Property/launchWithCapture" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)launchWithCapture">launchWithCapture</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Activates a Home Screen shortcut for capture. Default: NO/False</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">launchWithCapture</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">launchWithCapture</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)allowCrashReporting"></a>
-                    <a name="//apple_ref/swift/Property/allowCrashReporting" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)allowCrashReporting">allowCrashReporting</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allowCrashReporting</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">allowCrashReporting</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)crashLoggerAppID"></a>
-                    <a name="//apple_ref/swift/Property/crashLoggerAppID" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)crashLoggerAppID">crashLoggerAppID</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">crashLoggerAppID</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">crashLoggerAppID</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)locale"></a>
-                    <a name="//apple_ref/swift/Property/locale" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)locale">locale</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">getLocale</span><span class="p">,</span> <span class="n">setter</span><span class="o">=</span><span class="n">setLocale</span><span class="o">:</span><span class="p">)</span> <span class="n">NSLocale</span> <span class="o">*</span><span class="n">locale</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">locale</span><span class="p">:</span> <span class="kt">Locale</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)gmailClientId"></a>
-                    <a name="//apple_ref/swift/Property/gmailClientId" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)gmailClientId">gmailClientId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">gmailClientId</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">gmailClientId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)outlookClientId"></a>
-                    <a name="//apple_ref/swift/Property/outlookClientId" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)outlookClientId">outlookClientId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">outlookClientId</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">outlookClientId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryTextColor"></a>
-                    <a name="//apple_ref/swift/Property/keyboardAccessoryTextColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryTextColor">keyboardAccessoryTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">keyboardAccessoryTextColor</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">keyboardAccessoryTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryDisabledTextColor"></a>
-                    <a name="//apple_ref/swift/Property/keyboardAccessoryDisabledTextColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBSDKConfiguration(py)keyboardAccessoryDisabledTextColor">keyboardAccessoryDisabledTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">keyboardAccessoryDisabledTextColor</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">keyboardAccessoryDisabledTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

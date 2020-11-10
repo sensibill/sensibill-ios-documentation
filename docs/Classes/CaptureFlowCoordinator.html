@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CaptureFlowCoordinator Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CaptureFlowCoordinator" class="dashAnchor"></a>
+    <a title="CaptureFlowCoordinator Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CaptureFlowCoordinator Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Documentation.html">Documentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../compatibility.html">Compatibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../setup.html">Setup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdk-lifecycle.html">SDK Lifecycle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../customization.html">Customization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../entry-points.html">Entry Points</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transaction-linking.html">Transaction Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transaction-matching.html">Transaction Matching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../application-integrations.html">Application Integrations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../troubleshooting.html">Troubleshooting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../using-objective-c.html">Using Objective-C</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../data-stored-on-device.html">Data Stored on Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../migration-guide.html">Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Authentication%20Reference.html">Authentication Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../SDK%20Lifecycle%20Reference.html">SDK Lifecycle Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Sensibill.html">Sensibill</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Customization%20Reference.html">Customization Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationCentreConfiguration.html">SBNotificationCentreConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKColors.html">SBSDKColors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKConfiguration.html">SBSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKSearchBarSet.html">SBSDKSearchBarSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLTransaction.html">SBLTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransactionHandler.html">TransactionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBDataEvent.html">SBDataEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionEventType.html">SBTransactionEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBReceiptEventType.html">SBReceiptEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionError.html">TransactionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionStatus.html">TransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionType.html">TransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TransactionObserver.html">TransactionObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Transaction%20Matching%20Reference.html">Transaction Matching Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceipt.html">SBReceipt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../UI%20Presentation.html">UI Presentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalytics.html">SBAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTrackingEvent.html">SBTrackingEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Application%20Integrations%20Reference.html">Application Integrations Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationHandler.html">SBNotificationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Troubleshooting%20Reference.html">Troubleshooting Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CaptureFlowCoordinator</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Properties"></a>
+                  <h3 class="section-name"><p>Public Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Receives one or more event associated with receipt capturing and optionally processing.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/exitAfterCapture" class="dashAnchor"></a>
+                    <a class="token" href="#/">exitAfterCapture</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When set to true capture flow will not continue after receipt is captured.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializers"></a>
+                  <h3 class="section-name"><p>Initializers</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/init(host:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(host:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a capture flow coordinator with provided <code>UIViewController</code></p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Public Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Methods"></a>
+                  <h3 class="section-name"><p>Public Methods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
+                    <a class="token" href="#/">start()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start receipt capture flow on host <code>UIViewController</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/start(transaction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">start(transaction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start receipt capture flow on host <code>UIViewController</code> with provided <code><a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> object.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/start(expenseType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">start(expenseType:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start receipt capture flow on host <code>UIViewController</code> with provided <code><a href="../Enums/ReceiptExpenseType.html">ReceiptExpenseType</a></code> information.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CaptureTipsViewControllerDelegate"></a>
+                <a name="//apple_ref/swift/Section/CaptureTipsViewControllerDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CaptureTipsViewControllerDelegate"></a>
+                  <h3 class="section-name"><p>CaptureTipsViewControllerDelegate</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/dismissCaptureTips(viewController:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">dismissCaptureTips(viewController:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates user has selected option go to capture.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/dismissCapture(viewController:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">dismissCapture(viewController:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates user has cancelled option of onboarding.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CaptureNavigationControllerDelegate"></a>
+                <a name="//apple_ref/swift/Section/CaptureNavigationControllerDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CaptureNavigationControllerDelegate"></a>
+                  <h3 class="section-name"><p>CaptureNavigationControllerDelegate</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/captureNavigationController(_:didCapture:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">captureNavigationController(_:<wbr>didCapture:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ReceiptProcessingFlowControllerDelegate"></a>
+                <a name="//apple_ref/swift/Section/ReceiptProcessingFlowControllerDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ReceiptProcessingFlowControllerDelegate"></a>
+                  <h3 class="section-name"><p>ReceiptProcessingFlowControllerDelegate</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/receiptProcessingFlowControllerDidRequestAddNewReceipt(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">receiptProcessingFlowControllerDidRequestAddNewReceipt(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/receiptProcessingFlowControllerDidRequestRetakeReceiptImage(_:transaction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">receiptProcessingFlowControllerDidRequestRetakeReceiptImage(_:<wbr>transaction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/receiptProcessingFlowController(_:didFinishWith:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">receiptProcessingFlowController(_:<wbr>didFinishWith:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/SBViewControllerDelegate"></a>
+                <a name="//apple_ref/swift/Section/SBViewControllerDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/SBViewControllerDelegate"></a>
+                  <h3 class="section-name"><p>SBViewControllerDelegate</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/dismissSensibillViewController(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">dismissSensibillViewController(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ReceiptProcessingDelegate"></a>
+                <a name="//apple_ref/swift/Section/ReceiptProcessingDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ReceiptProcessingDelegate"></a>
+                  <h3 class="section-name"><p>ReceiptProcessingDelegate</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/didRequestRetakeReceiptImage(_:transaction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">didRequestRetakeReceiptImage(_:<wbr>transaction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/didRequestAddNewReceipt(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">didRequestAddNewReceipt(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -8,12 +8,20 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a title="Installation  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (87% documented)</p>
+        <p><a href="index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -176,10 +184,10 @@
             <a href="Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
+                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/TransactionHandler.html">TransactionHandler</a>
@@ -197,10 +205,13 @@
                 <a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/SBDataEventType.html">SBDataEventType</a>
+                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/TransactionError.html">TransactionError</a>
@@ -238,6 +249,9 @@
                 <a href="Classes/SBReceipt.html">SBReceipt</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
               </li>
             </ul>
@@ -245,6 +259,12 @@
           <li class="nav-group-name">
             <a href="UI%20Presentation.html">UI Presentation</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
               </li>
@@ -335,18 +355,63 @@
 
 <p>To download the Sensibill SDK directly, contact our Delivery/Support team to get access to the portal to download the <code>SensibillUI.framework</code> file.</p>
 
-<blockquote>
-<p>Download and Import <code>SensibillUI.framework</code> into your project, and ensure that it is included in <strong>Embedded Binaries</strong> and <strong>Linked Frameworks and Libraries</strong>
-Create a new <code>Run Script Phase</code> in your target&rsquo;s <code>Build Phases</code>, underneath the <code>Embed Frameworks</code> phase. Input the following command in the text field of the new phase:</p>
-</blockquote>
+<p><strong>Step 1:</strong> Download and Import <code>SensibillUI.framework</code> into your project, and ensure that it is included in <strong>Embedded Binaries</strong> and <strong>Linked Frameworks and Libraries</strong></p>
+
+<p><strong>Step 2:</strong> Create a new <code>Run Script Phase</code> in your target&rsquo;s <code>Build Phases</code>, underneath the <code>Embed Frameworks</code> phase. Input the following command in the text field of the new phase:</p>
+
+<p><img src="./guide-resources/images/installation/direct-download/how-to-embed-sdk.png" alt=""></p>
 <pre class="highlight shell"><code>bash <span class="s2">"</span><span class="nv">$BUILT_PRODUCTS_DIR</span><span class="s2">/</span><span class="nv">$FRAMEWORKS_FOLDER_PATH</span><span class="s2">/SensibillUI.framework/strip-unused-architectures.sh"</span>
 </code></pre>
+<h3 id='using-sensibillui-module-in-swift' class='heading'>Using SensibillUI module in Swift</h3>
+<pre class="highlight plaintext"><code>import SensibillUI
+</code></pre>
+
+<p><strong>Note:</strong>
+You will see <strong>No such module &lsquo;SensibillUI&rsquo;</strong> compilation error next to the above statement (SDK 1.25 and up)</p>
+
+<ul>
+<li>Select the <code>Build Settings</code> tab of the Target that contains the SensibillUI framework.</li>
+<li>Scroll to <code>Swift Compiler - Search Paths</code> section. (Tip: Search <code>Import Paths</code> to quickly jump to this section.)</li>
+<li>Add the path found below to the <code>SensibillUI</code> framework for <code>Import Paths</code> settings, replacing <code>&lt;relative_path_to&gt;</code> with the path pointing to the location on disk of the Sensibill framework.</li>
+<li>Set the search mechanism set to <strong>recursive</strong> so that the swift compiler can find one or more module maps:</li>
+</ul>
+<pre class="highlight plaintext"><code>$(SRCROOT)/&lt;relative_path_to&gt;/SensibillUI.framework
+</code></pre>
+
+<p><strong>Example:</strong> 
+If the <code>SensibillUI</code> framework lives in the following folder structure:</p>
+
+<ul>
+<li>host-app-source-root &gt; frameworks &gt; sensibill &gt; SensibillUI.framework</li>
+</ul>
+
+<p>Then you would add the following path to the <code>Import Paths</code> setting:</p>
+
+<p><img src="./guide-resources/images/installation/direct-download/how-to-swift-compiler-import-paths.png" alt=""></p>
+
+<p><strong>Source control would show the change as follows for the above example:</strong></p>
+<pre class="highlight plaintext"><code>SWIFT_INCLUDE_PATHS = "$(SRCROOT)/frameworks/sensibill/SensibillUI.framework/**";
+</code></pre>
+<h2 id='using-sensibillui-module-in-objective-c' class='heading'>Using SensibillUI module in Objective-C.</h2>
+
+<p>When the SensibillUI framework is used in an Objective-C Project, the
+&lsquo;SensibillUI&rsquo; framework can be imported by adding the following two statements.</p>
+<pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI.h&gt;
+#import &lt;SensibillUI/SensibillUI-Swift.h&gt;
+</code></pre>
+
+<p>Note: </p>
+
+<ul>
+<li><code>@import SensibillUI;</code> syntax is no longer compatible from <strong>SDK v1.25</strong></li>
+<li>Import of <code>*-Swift.h</code> is necessary for the compiler to use the swift classes of the SDK in an <code>Objective-C</code> file, which usually starts with the prefix <code>SBL*</code>.</li>
+</ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

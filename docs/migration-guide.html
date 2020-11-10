@@ -8,12 +8,20 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a title="Migration Guide  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (87% documented)</p>
+        <p><a href="index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -176,10 +184,10 @@
             <a href="Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
+                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+                <a href="Classes/SBLTransaction.html">SBLTransaction</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/TransactionHandler.html">TransactionHandler</a>
@@ -197,10 +205,13 @@
                 <a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/SBDataEventType.html">SBDataEventType</a>
+                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/TransactionError.html">TransactionError</a>
@@ -238,6 +249,9 @@
                 <a href="Classes/SBReceipt.html">SBReceipt</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
               </li>
             </ul>
@@ -245,6 +259,12 @@
           <li class="nav-group-name">
             <a href="UI%20Presentation.html">UI Presentation</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/ReceiptListViewController.html">ReceiptListViewController</a>
               </li>
@@ -312,6 +332,187 @@
           <section class="section">
             
             <h1 id='migration-guide' class='heading'>Migration Guide</h1>
+<h2 id='guides' class='heading'>Guides</h2>
+
+<ul>
+<li><a href="#upgrading-from-1-24-to-1-25">Upgrading from 1.24 to 1.25</a></li>
+<li><a href="#upgrading-from-1-23-to-1-24">Upgrading from 1.23 to 1.24</a></li>
+<li><a href="#upgrading-from-1-22-to-1-23">Upgrading from 1.22 to 1.23</a></li>
+</ul>
+<h2 id='upgrading-from-1-24-to-1-25' class='heading'>Upgrading from 1.24 to 1.25</h2>
+<h3 id='summary-of-changes' class='heading'>Summary of Changes</h3>
+
+<p>Integration must be updated to reflect the following changes:</p>
+
+<ul>
+<li>Compilation of the framework after installation may result in the compile time error <code>No such module &#39;SensibillUI&#39;</code> in a Swift file or <code>Module &#39;SensibillUI&#39; not found</code> in anObjective-C file. Please review <a href="#target-application-project-changes">Module Usage Changes</a> section for more information.</li>
+<li>This release introduces a new <strong>Sensibill Capture</strong> experience. The new experience is fully integrated into existing workflows, but provides additional configuration options. Please review the <a href="#capture-changes">Capture Changes</a> section for more information.</li>
+<li>Support for iOS 10.x and the 32-bit architectures has been <strong>removed</strong>. Please see the <a href="#target-application-project-changes">Target Application Project Changes</a> section for more information.</li>
+<li>The <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> object now supports <code>imageData</code> creation directly from the <code>UIImage</code>. The <code><a href="Classes/TransactionHandler.html">TransactionHandler</a></code> now validates the provided image size. Please see the <a href="#receipt-uploading-changes">Receipt Uploading Changes</a> section for more information.</li>
+</ul>
+<h3 id='target-application-project-changes' class='heading'>Target Application Project Changes</h3>
+
+<p>The SDK no longer supports iOS 10.x, and 32-bit architectures. To use this version of the SDK, please update your project&rsquo;s <em>Build Settings</em> as follows:</p>
+
+<ul>
+<li>Set <em>iOS Deployment Target</em> to iOS 11.0 or higher.</li>
+<li>Ensure <em>Valid Architectures</em> only includes 64-bit architectures (<code>arm64</code> and <code>arm64e</code>)</li>
+</ul>
+<h3 id='module-usage-changes' class='heading'>Module Usage Changes</h3>
+
+<p>The SDK is modifying the default location of the module map in the dynamic framework in order to accomodate an additional module map for an embedded static library. This may result in a compilation error as the compiler won&rsquo;t be able to find the required module map at the default location. To use this version of the SDK, please update your project&rsquo;s <em>Build Settings</em> as follows if applicable:</p>
+
+<p><strong>In Swift</strong></p>
+
+<ul>
+<li><p>If the SDK installation and integration is done via <strong>Podfile</strong>, </p>
+
+<ul>
+<li>No manual <strong>build settings</strong> changes are required . The SDK&rsquo;s <code>Podspec</code> automatically applies all of the required build settings to the host application target via <strong>Cocoapods</strong>.</li>
+</ul></li>
+<li><p>If the SDK is integrated via a <strong>Direct Download</strong> of the framework that is dragged and dropped into the application target&rsquo;s <strong>Frameworks, Libraries, and Embedded Content</strong> section:</p>
+
+<ul>
+<li>To resolve the compilation error that appears when using <code>import SensibillUI</code>, the application target&rsquo;s <strong>build settings</strong> need to be updated. The <strong>Swift Compiler - Search Path</strong> section and <strong>Import Path</strong> setting need to be updated with the path of the <code>SensibillUI</code> framework with the search mechanism set to <strong>recursive</strong>.</li>
+</ul>
+<pre class="highlight plaintext"><code>$(SRCROOT)/&lt;relative_path_to&gt;/SensibillUI.framework
+</code></pre></li>
+</ul>
+
+<p><strong>In Objective-C</strong></p>
+
+<ul>
+<li><p>Irrespective of whether the installation and integration is done via <strong>Podfile</strong> or via <strong>Direct Download followed by a Drag and Drop in the Embed section</strong> of the host application target, the following changes must be performed:</p>
+
+<ul>
+<li>Use <code>#import &lt;SensibillUI/SensibillUI.h&gt;</code> instead of the <code>@import SensibillUI;</code> directive.</li>
+<li>Specify <code>#import &lt;SensibillUI/SensibillUI-Swift.h&gt;</code> in order to use SDK types that are prefixed with <code>SBL</code>. Types which starts with <code>SBL</code> are internally implemented in <code>swift</code>. In order to expose those symbols to the Objective-C compiler, the  <code>*-Swift.h</code> header file needs to be imported.</li>
+</ul></li>
+</ul>
+
+<p><strong>Note:</strong> <code>@import SensibillUI;</code> directive is not available due to internal changes to the SDK&rsquo;s module map.</p>
+
+<p>For additional assistance, make sure the necessary steps are implemented as specified in the <a href="installation.html">Installation</a> guide, or refer our <a href="troubleshooting.html#installation-troubleshooting">Installation Troubleshooting</a> guide.</p>
+<h3 id='capture-changes' class='heading'>Capture Changes</h3>
+<h4 id='capture-initialization-changes' class='heading'>Capture Initialization Changes</h4>
+
+<p>The <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was replaced with the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> (<code>SBLCaptureFlowCoordinator</code> in Objective-C). The coordinator is responsible for initiating a new receipt capture workflow, presentation and dismissal of the Receipt Capture screen, the Receipt Expense Type Selection screen (if enabled), the Receipt Processing screen, and the Receipt Validation screens. </p>
+
+<p>The following outlines the differences between the two approaches from an integrator perspective. For detailed integration instructions, please see the <a href="entry-points.html#receipt-capture">Receipt Capture</a> section on the <strong><em>Entry Points</em></strong> page.</p>
+
+<ul>
+<li><p>Previously <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was presented by a host <code>UIViewController</code>. Now the presentation of all screens is handled by a coordinator. A host view controller must be provided as a parameter on initialization of the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> (using <code>CaptureFlowCoordinator(host:)</code> initializer). </p></li>
+<li><p>When the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was presented on a host <code>UIViewController</code>, it did not require a presenting class to retain its instance. Now, when using the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code>, the created instance of the coordinator needs to be retained by a host <code>UIViewController</code> until the receipt capture flow (and optionally receipt processing) is finished.</p></li>
+<li><p>The <code>init?(transaction: SBLTransaction?)</code> initializer of the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> is replaced with the <code>start(transaction:)</code> method of the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> class. This method can be used for <a href="transaction-linking.html">Transaction Linking</a> while capturing a receipt.</p></li>
+<li><p>The <code>init?(transaction: SBLTransaction?, with expenseType: ReceiptExpenseType)</code> initializer of the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was removed. Instead, update a transaction&rsquo;s <code>expenseType</code> (with the value from  <code><a href="Enums/ReceiptExpenseType.html">ReceiptExpenseType</a></code>) before providing it to the coordinator, and use the <code>start(transaction:)</code> method on <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> similarly to the previous case. Example:</p>
+<pre class="highlight swift"><code><span class="o">...</span>
+<span class="k">let</span> <span class="nv">coordinator</span> <span class="o">=</span> <span class="kt">CaptureFlowCoordinator</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="k">let</span> <span class="nv">sensibillTransaction</span> <span class="o">=</span> <span class="kt">Transaction</span><span class="p">(</span><span class="nv">externalAccountTransactionID</span><span class="p">:</span> <span class="n">externalAccountTransactionID</span><span class="p">)</span>
+<span class="n">sensibillTransaction</span><span class="o">.</span><span class="n">sharedMetaData</span><span class="p">?</span><span class="o">.</span><span class="n">expenseType</span> <span class="o">=</span> <span class="n">expenseType</span><span class="o">.</span><span class="n">code</span>
+<span class="o">...</span>
+<span class="n">coordinator</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span> <span class="n">sensibillTransaction</span><span class="p">)</span>
+<span class="o">...</span>
+</code></pre></li>
+<li><p>The <code>init?(transaction: SBLTransaction?, exitAfterCapture shouldExitAfterCapture: Bool)</code> initializer of <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was removed. Instead, set the <code>exitAfterCapture</code> property of the coordinator to <code>true</code> , and use the <code>start(transaction:)</code> method on instance of <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> similarly to the previous case. Example: </p></li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">coordinator</span> <span class="o">=</span> <span class="kt">CaptureFlowCoordinator</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+<span class="n">coordinator</span><span class="o">.</span><span class="n">exitAfterCapture</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="o">...</span>
+<span class="k">let</span> <span class="nv">sensibillTransaction</span> <span class="o">=</span> <span class="kt">Transaction</span><span class="p">(</span><span class="nv">externalAccountTransactionID</span><span class="p">:</span> <span class="n">externalAccountTransactionID</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">coordinator</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span> <span class="n">sensibillTransaction</span><span class="p">)</span>
+</code></pre>
+
+<ul>
+<li>Use <code>start(expenseType:)</code> method on instance of <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> to associate the specific expense type with the receipt after capturing. If this method is used, the Receipt Expense Type Selection screen will not be shown, and a user will be taken directly to the Receipt Processing screen.</li>
+</ul>
+<h4 id='capture-delegate-changes' class='heading'>Capture Delegate Changes</h4>
+
+<p>The delegate method </p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sensibillCaptureNavigationController</span><span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">SensibillCaptureNavigationController</span><span class="p">,</span> <span class="n">didCreateReceipt</span> <span class="nv">receipt</span><span class="p">:</span> <span class="kt">SBReceipt</span><span class="p">?)</span><span class="err">`</span> <span class="n">of</span> <span class="err">`</span><span class="kt">SensibillCaptureNavigationControllerDelegate</span>
+</code></pre>
+
+<p>was replaced with optional delegate method in <code><a href="Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a></code>: </p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">coordinator</span><span class="p">(</span><span class="n">_</span> <span class="nv">coordinator</span><span class="p">:</span> <span class="kt">CaptureFlowCoordinator</span><span class="p">,</span> <span class="n">didProcessReceipt</span> <span class="nv">receipt</span><span class="p">:</span> <span class="kt">SBReceipt</span><span class="p">)</span>
+</code></pre>
+
+<p><strong>Note:</strong> This event will only be triggered, if user waits on Receipt Processing screen, and a receipt is successfully created. To be notified on any other outcomes, please register a transaction observer with <code><a href="Classes/SBDataEvent.html">SBDataEvent</a></code>, as described in the <a href="transaction-linking.html#monitoring-receipt-uploading-status">Monitoring Receipt Uploading Status</a> section.</p>
+<h4 id='capture-dismissal-changes' class='heading'>Capture Dismissal Changes</h4>
+
+<p>Previously, if the <code>exitAfterCapture</code> flag was set to <code>false</code>, the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> required a <code>dismissDelegate</code> of type <code><a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></code> to receive an event <code>dismissSensibillViewController(_ controller: UIViewController!)</code> upon capture completion to be able to dismiss capture. </p>
+
+<p>The <code><a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></code> type is no longer used for new capture: the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> internally manages presentation and dismissal of all view controllers.</p>
+
+<p>Instead, implement <code><a href="Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a></code> to receive the following events:</p>
+
+<ul>
+<li><p>The <code>coordinatorDidCancelCapture</code> event will notify the delegate when the user cancels a receipt capture flow by pressing a Cancel button.  </p></li>
+<li><p>The <code>coordinatorDidFinishCapture</code> event will notify the delegate when the user finishes capturing a receipt, and presses the Done button.
+<em>Note:</em> If the capture flow was started with the <code>exitAfterCapture</code> flag set to <code>true</code>, the event will be delivered to the delegate  as soon as the transaction is submitted to the <code><a href="Classes/TransactionHandler.html">TransactionHandler</a></code> for processing.</p></li>
+</ul>
+
+<p>In both cases, the coordinator will handle the dismissal of the capture flow internally on the host view controller. </p>
+
+<ul>
+<li>Optionally the delegate can also be notified when an image was submitted for processing to the server (<code>didSubmitTransaction</code> event), and when a resulting receipt is avalable in local user&rsquo;s cache (<code>didProcessReceipt</code> event).</li>
+</ul>
+
+<p>See <code><a href="Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a></code> for detailed information on all available events.</p>
+<h4 id='transaction-linking-changes' class='heading'>Transaction Linking Changes</h4>
+
+<p>The <a href="transaction-linking.html">Transaction Linking</a> page provides the updated instructions on how to create a link between a particular receipt and a bank transaction using the new capture flow.</p>
+<h4 id='capture-configuration-changes' class='heading'>Capture Configuration Changes</h4>
+
+<p>The capture configuration is encapsulated in <code><a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></code>, which outlines feature flags and UI properties used by both legacy and new capture, as well as feature flags and UI properties specific to legacy and new capture. Please review  <code><a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></code> for detailed information.</p>
+<h4 id='receipt-uploading-changes' class='heading'>Receipt Uploading Changes</h4>
+
+<ul>
+<li><code><a href="Classes/TransactionHandler.html">TransactionHandler</a></code> will now return a new error code <code><a href="Enums/TransactionError.html#/uploadCancelledImageTooBig">TransactionError.uploadCancelledImageTooBig</a></code> if an <code>imageData</code> in the provided <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> object is larger than 2 MB.</li>
+<li><code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> has a new initializer <code>init(uiImage: UIImage)</code>, which allows to initialize a transaction with a provided <code>UIImage</code>. The image is automatically downsampled to 900px on a shorter side, converted to JPEG format, and compressed to 2 MB.</li>
+<li><code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> also has a new function <code>updateImageData(using: UIImage)</code>, which allows retrieving <code>imageData</code> from a provided <code>UIImage</code>. Similarly to initalizer, the image is automatically downsampled to 900px on a shorter side, converted to JPEG format, and compressed to 2 MB.</li>
+</ul>
+<h3 id='deprecations' class='heading'>Deprecations</h3>
+<h4 id='legacy-capture-deprecations' class='heading'>Legacy Capture Deprecations</h4>
+
+<p>Because of the introduction of a new <strong>sensibill capture</strong> experience, all interfaces associated with <strong>legacy capture</strong> are now deprecated, and will be removed in the next release.</p>
+
+<ul>
+<li>Entry point <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code></li>
+<li>Legacy Capture UI interfaces: <code><a href="Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a></code>, <code><a href="Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a></code>, <code>SBCameraGridView</code>, <code>SBCaptureTitleCell</code>, <code>SBReceiptCaptureViewController</code>, <code>SBTipCollectionViewCell</code></li>
+<li>SBCaptureKit interfaces: <code>SBAutoRectangleDetector</code>, <code>SBCameraCropUtility</code>, <code>SBCameraFilter</code>, <code>SBDetectLayer</code>, <code>SBRectangleFeature</code></li>
+<li>The function <code>lastPhotoThumbnail</code> in <code>PHAsset</code> extension</li>
+<li>In the <code><a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></code> (accessed via <code>captureViewConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:
+
+<ul>
+<li><code>isGridEnabled</code></li>
+<li><code>gridViewColor</code></li>
+<li><code>sliderTrackColor</code></li>
+<li><code>captureFooterColor</code></li>
+<li><code>controlsBarBackgroundColor</code></li>
+<li><code>captureTypeSeperatorColor</code></li>
+<li><code>addSectionButtonColor</code></li>
+<li><code>addSectionButtonTextColor</code></li>
+<li><code>retakeButtonColor</code></li>
+<li><code>retakeButtonTextColor</code></li>
+<li><code>doneButtonColor</code></li>
+<li><code>doneButtonTextColor</code></li>
+<li><code>doneButtonDisabledColor</code></li>
+<li><code>captureTipImageBackgroundColor</code></li>
+<li><code>captureTipViewBackgroundColor</code></li>
+<li><code>captureTipTextFontColor</code></li>
+<li><code>addSectionOverlayOpacity</code></li>
+<li><code>addSectionOverlayDropShadowOpacity</code></li>
+</ul></li>
+</ul>
+
+<p>Please follow <a href="#capture-changes">Capture Changes</a> section in order to start using a new sensibill capture experience.</p>
+<h3 id='last-call' class='heading'>Last Call</h3>
+
+<ul>
+<li><p>Classes and functions deprecated in release 1.24 will be removed in the next release. Review the <em>Deprecated</em> section and follow our upgrade instructions in the <a href="#upgrading-from-1.23-to-1.24">Upgrading from 1.23 to 1.24</a> sections.  </p></li>
+<li><p>Legacy Capture was deprecated in this release, and will be removed in the next release. See list of classes in <a href="#legacy-capture-deprecations">Legacy Capture Deprecations</a> section.</p></li>
+</ul>
 <h2 id='upgrading-from-1-23-to-1-24' class='heading'>Upgrading from 1.23 to 1.24</h2>
 <h3 id='summary-of-changes' class='heading'>Summary of Changes</h3>
 
@@ -333,7 +534,7 @@
 </ul>
 <h3 id='sbdataevent-changes' class='heading'>SBDataEvent Changes</h3>
 
-<p><code><a href="Enums/SBDataEventType.html">SBDataEventType</a></code> was replaced by <code><a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a></code> for receipt observers, and <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> for transaction observers. The values are changed as follows:</p>
+<p><code><a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a></code> was replaced by <code><a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a></code> for receipt observers, and <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> for transaction observers. The values are changed as follows:</p>
 
 <ul>
 <li><p><code>SBDataEventTypeStatusUpdate</code> event only exists for transaction observers (it was never sent for receipt observers in the past). Hence it was moved to <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> as <code>.statusUpdate</code> (<code>SBTransactionEventTypeStatusUpdate</code> in Objective-C)</p></li>
@@ -976,8 +1177,8 @@ For more information and example of the new start and stop implementation, see <
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
