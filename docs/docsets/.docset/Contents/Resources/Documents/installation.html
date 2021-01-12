@@ -347,7 +347,7 @@
 <li><p>If your project isn&rsquo;t using CocoaPods already, follow the set up guide from the official CocoaPods website <a href="https://guides.cocoapods.org/using/getting-started.html">here</a></p></li>
 <li><p>Once your project is set up with CocoaPods, add the Sensibill dependency to your project&rsquo;s Podfile in the following format: <code>pod &#39;Sensibill&#39;, :git =&gt; &#39;ssh://git@bitbucket.org/sensibill/sensibill-ios-sdk-release.git&#39;, :tag =&gt; &#39;vX.Y.Z&#39;</code>, where <code>vX.Y.Z</code> represents to version of the SDK you want to use.</p>
 
-<p><em>Note:</em> the link above provides an SDK for the latest supported version of Xcode. To obtain the SDK for earlier versions of Xcode, use the tag format <code>:tag =&gt; &#39;vX.Y.Z-xcode-11.N&#39;</code>, where <code>N</code> is the minor Xcode version. </p></li>
+<p><em>Note:</em> the link above provides an SDK for the latest supported version of Xcode. To obtain the SDK for earlier versions of Xcode, use the tag format <code>:tag =&gt; &#39;vX.Y.Z-xcode-11.N&#39;</code>, where <code>N</code> is the minor Xcode version.</p></li>
 <li><p>In your terminal, navigate to the root directory of your application&rsquo;s project folder.</p></li>
 <li><p>Run <code>pod install</code> to integrate Sensibill SDK to your project.</p></li>
 </ol>
@@ -366,51 +366,47 @@
 <pre class="highlight plaintext"><code>import SensibillUI
 </code></pre>
 
-<p><strong>Note:</strong>
-You will see <strong>No such module &lsquo;SensibillUI&rsquo;</strong> compilation error next to the above statement (SDK 1.25 and up)</p>
+<p><strong>Note:</strong> You may see <strong>No such module &lsquo;SensibillUI&rsquo;</strong> or <strong>Could not load underlying module <code>SensibillUI</code></strong> compilation error next to the above statement (SDK 1.25 and up). Perform the following steps to resolve the <strong>compilation</strong> error:</p>
 
-<ul>
-<li>Select the <code>Build Settings</code> tab of the Target that contains the SensibillUI framework.</li>
-<li>Scroll to <code>Swift Compiler - Search Paths</code> section. (Tip: Search <code>Import Paths</code> to quickly jump to this section.)</li>
-<li>Add the path found below to the <code>SensibillUI</code> framework for <code>Import Paths</code> settings, replacing <code>&lt;relative_path_to&gt;</code> with the path pointing to the location on disk of the Sensibill framework.</li>
-<li>Set the search mechanism set to <strong>recursive</strong> so that the swift compiler can find one or more module maps:</li>
-</ul>
+<ol>
+<li>Locate the <code>SensibillUI</code> framework on disk, and notice its path relative to the project&rsquo;s root folder. For Example:</li>
+</ol>
 <pre class="highlight plaintext"><code>$(SRCROOT)/&lt;relative_path_to&gt;/SensibillUI.framework
 </code></pre>
 
-<p><strong>Example:</strong> 
-If the <code>SensibillUI</code> framework lives in the following folder structure:</p>
+<ol>
+<li>Select the <strong><em>Build Settings</em></strong> tab of the Target that contains the <code>SensibillUI</code> framework.</li>
+<li>Scroll to the <strong><em>Swift Compiler - Search Paths</em></strong> section. (Tip: Search <strong><em>Import Paths</em></strong> to quickly jump to this section.)</li>
+<li>Add the <code>SensibillUI.framework</code> path you located in the first step to <strong><em>Import Paths</em></strong> settings, followed by the directory <strong><em>SupportModules</em></strong>, and set the search mechanism to <strong><em>recursive</em></strong> so that the swift compiler can find one or more module maps. For Example:</li>
+</ol>
+<pre class="highlight plaintext"><code>$(SRCROOT)/&lt;relative_path_to&gt;/SensibillUI.framework/SupportModules
+</code></pre>
+
+<p><strong>Example:</strong>
+If the <code>SensibillUI</code> framework can be located in the following folder structure:</p>
 
 <ul>
 <li>host-app-source-root &gt; frameworks &gt; sensibill &gt; SensibillUI.framework</li>
 </ul>
 
-<p>Then you would add the following path to the <code>Import Paths</code> setting:</p>
+<p>You would add the following path to the <code>Import Paths</code> setting:</p>
 
 <p><img src="./guide-resources/images/installation/direct-download/how-to-swift-compiler-import-paths.png" alt=""></p>
 
-<p><strong>Source control would show the change as follows for the above example:</strong></p>
-<pre class="highlight plaintext"><code>SWIFT_INCLUDE_PATHS = "$(SRCROOT)/frameworks/sensibill/SensibillUI.framework/**";
+<p><strong>The above change will be shown as follows in the project file:</strong></p>
+<pre class="highlight plaintext"><code>SWIFT_INCLUDE_PATHS = "$(SRCROOT)/frameworks/sensibill/SensibillUI.framework/SupportModules/**";
 </code></pre>
 <h2 id='using-sensibillui-module-in-objective-c' class='heading'>Using SensibillUI module in Objective-C.</h2>
 
 <p>When the SensibillUI framework is used in an Objective-C Project, the
-&lsquo;SensibillUI&rsquo; framework can be imported by adding the following two statements.</p>
-<pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI.h&gt;
-#import &lt;SensibillUI/SensibillUI-Swift.h&gt;
+&lsquo;SensibillUI&rsquo; framework can be imported by adding the following statement:</p>
+<pre class="highlight plaintext"><code>@import SensibillUI;
 </code></pre>
-
-<p>Note: </p>
-
-<ul>
-<li><code>@import SensibillUI;</code> syntax is no longer compatible from <strong>SDK v1.25</strong></li>
-<li>Import of <code>*-Swift.h</code> is necessary for the compiler to use the swift classes of the SDK in an <code>Objective-C</code> file, which usually starts with the prefix <code>SBL*</code>.</li>
-</ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-09)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-01-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
