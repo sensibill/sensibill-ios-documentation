@@ -7,7 +7,7 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-    
+
     <script src="js/lunr.min.js" defer></script>
     <script src="js/typeahead.jquery.js" defer></script>
     <script src="js/jazzy.search.js" defer></script>
@@ -330,10 +330,18 @@
       <article class="main-content">
         <section>
           <section class="section">
-            
+
             <h1 id='troubleshooting' class='heading'>Troubleshooting</h1>
 <h2 id='installation-troubleshooting' class='heading'>Installation Troubleshooting</h2>
 <h3 id='compilation-error-code-could-not-load-underlying-module-code-while-importing-sdk-using-code-import-sensibillui-code-statement' class='heading'>Compilation error <code>Could not load underlying module</code> while importing SDK using <code>import SensibillUI</code> statement.</h3>
+
+<p>If you encounter this error while migrating from 1.25.0 to 1.25.1, please follow the <a href="installation.html#using-sensibillui-module-in-swift">How to use SensibillUI module in Swift</a> instructions specified in the Direct Download section of the Installation Guide.</p>
+
+<h3 class='heading'>Building for the iOS Simulator, but the linked and embedded framework 'My.framework' was built for iOS + iOS Simulator. (Xcode 12.3)</h3>
+<p>Go to target's build setting and update <strong>Validate Workspace</strong> to <strong>YES</strong>. This will turn compilation error into warning.</p>
+
+<h3 class='heading'>Building for iOS, but the linked and embedded framework 'My.framework' was built for iOS + iOS Simulator. (Xcode 12.3)</h3>
+<p>Go to target's build setting and update <strong>Validate Workspace</strong> to <strong>YES</strong>. This will turn compilation error into warning.</p>
 
 <p>If you encounter this error while migrating from 1.25.0 to 1.25.1, please follow the <a href="installation.html#using-sensibillui-module-in-swift">How to use SensibillUI module in Swift</a> instructions specified in the Direct Download section of the Installation Guide.</p>
 <h3 id='no-such-module-39-sensibillui-39-in-swift-file' class='heading'>No such module &lsquo;SensibillUI&rsquo; (in Swift File)</h3>
