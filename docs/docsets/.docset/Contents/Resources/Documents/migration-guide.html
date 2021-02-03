@@ -90,6 +90,9 @@
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -211,9 +214,6 @@
                 <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/TransactionError.html">TransactionError</a>
               </li>
               <li class="nav-group-task">
@@ -257,7 +257,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="UI%20Presentation.html">UI Presentation</a>
+            <a href="Entry%20Points.html">Entry Points</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
@@ -275,16 +275,13 @@
                 <a href="Classes/SBAnalytics.html">SBAnalytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+                <a href="Entry%20Points.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBTrackingEvent.html">SBTrackingEvent</a>
@@ -296,16 +293,13 @@
                 <a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptCaptureManager.html">ReceiptCaptureManager</a>
               </li>
             </ul>
           </li>
@@ -335,10 +329,231 @@
 <h2 id='guides' class='heading'>Guides</h2>
 
 <ul>
+<li><a href="#upgrading-from-1-25-to-1-26">Upgrading from 1.25.1 to 1.26</a></li>
 <li><a href="#upgrading-from-1-25-to-1-25-1">Upgrading from 1.25 to 1.25.1</a></li>
 <li><a href="#upgrading-from-1-24-to-1-25">Upgrading from 1.24 to 1.25</a></li>
 <li><a href="#upgrading-from-1-23-to-1-24">Upgrading from 1.23 to 1.24</a></li>
 <li><a href="#upgrading-from-1-22-to-1-23">Upgrading from 1.22 to 1.23</a></li>
+</ul>
+<h2 id='upgrading-from-1-25-1-to-1-26' class='heading'>Upgrading from 1.25.1 to 1.26</h2>
+<h3 id='summary-of-changes' class='heading'>Summary of Changes</h3>
+
+<p>Integration must be updated to reflect the following changes:</p>
+
+<ul>
+<li>Removal of previously deprecated classes, functions, and properties, including removal of Legacy Capture. For more information, see <em>Removed</em> section below.</li>
+<li>All screens associated with capture that are presented modally have been modified to to use <code>UIModalPresentationStyle.overFullScreen</code> instead of <code>UIModalPresentatStyle.fullScreen</code>.</li>
+<li><code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code> and all its members previously conformed to an <code>NSCoding</code> protocol. The conformance has been removed, since the SDK is not archiving or unarchiving <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>.</li>
+</ul>
+<h3 id='removed' class='heading'>Removed</h3>
+
+<ul>
+<li>Legacy capture, deprecated in release 1.25 was removed. See the next section for the full list of removed items. To migrate to a new capture, please follow the <a href="#capture-changes">Capture Changes</a> guide in <a href="#upgrading-from-1-24-to-1-25">Upgrading from 1.24 to 1.25</a> section.</li>
+<li>The <code>start</code> function inside <code><a href="Classes/PasswordAuthenticator.html">PasswordAuthenticator</a></code> was removed. Please follow <em>The PasswordAuthenticator</em> guide in <a href="#upgrading-from-1-22-to-1-23">Upgrading from 1.22 to 1.23</a> section to migrate to a new method.</li>
+<li>The <code>SBDataEventType</code> was removed. Please follow the <em>SBDataEvent Changes</em> guide in <a href="#upgrading-from-1-23-to-1-24">Upgrading from 1.23 to 1.24</a> section to adjust your Receipt and Transaction observers to new methods.</li>
+<li>Classes, functions, and properties deprecated in release 1.24 were removed. Review <em>Deprecated</em> list of <a href="#upgrading-from-1-23-to-1-24">Upgrading from 1.23 to 1.24</a> section for a full list of items removed.</li>
+<li>Unused SensibillError codes deprecated in release 1.22 were removed. Review <em>Deprecated</em> list of  <a href="#upgrading-from-1-22-to-1-23">Upgrading from 1.22 to 1.23</a> section for a full list of items removed.</li>
+<li>Unused functions saveEmails and getAllEmails inside SBNonReceiptEmail were removed.</li>
+</ul>
+<h4 id='legacy-capture-removal' class='heading'>Legacy Capture Removal</h4>
+
+<ul>
+<li><code>enableLegacyCapture</code> property introduced in SDK 1.25 has been removed as part of removal of legacy capture experience.</li>
+<li>Entry point <code>SensibillCaptureNavigationController</code> has been removed. Please us <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> instead.</li>
+<li><code>SensibillCaptureNavigationControllerDelegate</code> has been removed.</li>
+<li><code>SBReceiptCaptureFlowState</code> has been removed.</li>
+<li><code>SBReceiptCaptureViewController</code> has been removed.</li>
+<li><code>SBCameraGridView</code> has been removed.</li>
+<li><code>SBCaptureTitleCell</code> has been removed</li>
+<li><code>SBTipCollectionViewCell</code> has been removed.</li>
+<li>The function <code>lastPhotoThumbnail</code> in <code>PHAsset</code> extension has been removed.</li>
+<li>Internal <code>SBCaptureKit</code> interfaces <code>SBAutoRectangleDetector</code>, <code>SBCameraCropUtility</code>, <code>SBCameraFilter</code>, <code>SBDetectLayer</code>, <code>SBRectangleFeature</code> has been removed.</li>
+<li><code>CaptureTipsViewControllerProtocol</code> interface has been removed.</li>
+<li><code>CaptureTipsViewControllerDelegate</code> interface has been removed.</li>
+<li><code>CaptureMode</code> enum has been removed.</li>
+<li><p><code>GenericCaptureTipsViewController</code> has been removed.</p></li>
+<li><p>In the <code><a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></code> (accessed via <code>captureViewConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now removed:</p>
+
+<ul>
+<li><code>isGridEnabled</code></li>
+<li><code>gridViewColor</code></li>
+<li><code>sliderTrackColor</code></li>
+<li><code>captureFooterColor</code></li>
+<li><code>controlsBarBackgroundColor</code></li>
+<li><code>captureTypeSeperatorColor</code></li>
+<li><code>addSectionButtonColor</code></li>
+<li><code>addSectionButtonTextColor</code></li>
+<li><code>retakeButtonColor</code></li>
+<li><code>retakeButtonTextColor</code></li>
+<li><code>doneButtonColor</code></li>
+<li><code>doneButtonTextColor</code></li>
+<li><code>doneButtonDisabledColor</code></li>
+<li><code>captureTipImageBackgroundColor</code></li>
+<li><code>captureTipViewBackgroundColor</code></li>
+<li><code>captureTipTextFontColor</code></li>
+<li><code>addSectionOverlayOpacity</code></li>
+<li><code>addSectionOverlayDropShadowOpacity</code></li>
+</ul></li>
+<li><p>If you were overriding one or more localization strings of legacy capture experience earlier using any of the following <code>key</code>, those keys has been removed and no longer required to be overridden.</p></li>
+</ul>
+<pre class="highlight plaintext"><code>accessibility-capture-mode-button
+add-section
+add-section-hint
+adjust-crop-area-hint
+align-images-hint
+automatic
+automatic-flash
+automatic-mode-button-hint
+begins-processing
+capture-next-button-hint
+capture-receipt-photo
+captured-image
+discard-image-alert-title
+display-camera-grid
+display-tips-for-receipt-capture
+exits-the-camera
+first-section-image
+grid-off
+grid-on
+hides-camera-grid
+large-image-file-error-message
+large-image-file-error-title
+manual
+manual-mode-button-hint
+photos-permission-message
+photos-permission-title
+quick-tips
+second-receipt-section-image
+exits-quick-tips
+capture-automatic-tip-1
+capture-automatic-tip-2
+capture-automatic-tip-3
+capture-manual-tip-1
+capture-manual-tip-2
+capture-manual-tip-3
+capture_onboarding_tips_page_title
+</code></pre>
+
+<ul>
+<li>The string associated with the following localization key has been updated as described below to match the new capture onboarding experience. If you have overridden this key in the context of legacy capture then it needs to be updated:</li>
+</ul>
+<pre class="highlight plaintext"><code>"capture-onboarding-tip-3" =&gt; "You take the photo. Great for receipts against light backgrounds or long receipts"
+</code></pre>
+
+<ul>
+<li>If you were overriding one or more image assets of legacy capture experience earlier, those has been removed and no longer required to be overridden.</li>
+</ul>
+<pre class="highlight plaintext"><code>capture-add-section
+capture-crop-slider
+capture-flash-on-auto
+capture-grid-off
+capture-grid-on
+capture-info-on
+AutomaticFlattenWhite
+AutomaticFlashWhite
+ManualFlattenWhite
+ManualAddSectionWhite
+
+</code></pre>
+<h3 id='deprecations' class='heading'>Deprecations</h3>
+
+<ul>
+<li><code><a href="Classes/SensibillSDK.html">SensibillSDK</a></code> class and all its functions were deprecated. Please see the following section on how to migrate.</li>
+</ul>
+<h4 id='sensibillsdk-deprecation' class='heading'>SensibillSDK Deprecation</h4>
+<h5 id='to-migrate-code-initwithaccesstoken-code' class='heading'>To migrate <code>initWithAccessToken</code>:</h5>
+
+<ol>
+<li>Implement <code><a href="Protocols/TokenProvider.html">TokenProvider</a></code>, as described in <a href="authentication.html#custom-token-provider-authentication">Custom Token Provider Authentication</a> section. Inside the <code>provideTokenReplacement</code> function, construct a <code><a href="Classes/Credentials.html">Credentials</a></code> object by providing the <code>accessToken</code> and <code>refreshToken</code> you previously provided to the deprecated function:</li>
+</ol>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CustomTokenProvider</span><span class="p">:</span> <span class="kt">TokenProvider</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">provideTokenReplacement</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Credentials</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="p">{</span>
+
+        <span class="o">...</span>
+        <span class="k">let</span> <span class="nv">credentials</span> <span class="o">=</span> <span class="kt">Credentials</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">accessToken</span><span class="p">:</span> <span class="n">accessToken</span><span class="p">,</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="n">refreshToken</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<ol>
+<li>Replace the deprecated method with the following code:</li>
+</ol>
+<pre class="highlight swift"><code><span class="c1">// Set user mode</span>
+<span class="kt">Sensibill</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">userMode</span> <span class="o">=</span> <span class="o">.</span><span class="n">single</span>
+
+<span class="c1">// Use cacheIdentifier, which will be set automatically for single userMode.</span>
+<span class="k">let</span> <span class="nv">cacheIdentifier</span> <span class="o">=</span> <span class="kt">Sensibill</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">cacheIdentifier</span>
+
+<span class="c1">// Create an instance of CustomRTokenProvider, created in step 1</span>
+<span class="k">let</span> <span class="nv">tokenProvider</span> <span class="o">=</span> <span class="kt">CustomTokenProvider</span><span class="p">()</span>
+
+<span class="kt">Sensibill</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">tokenProvider</span><span class="p">:</span> <span class="n">tokenProvider</span><span class="p">,</span> <span class="nv">cacheIdentifier</span><span class="p">:</span> <span class="n">cacheIdentifier</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">guard</span> <span class="k">case</span> <span class="o">.</span><span class="k">none</span> <span class="o">=</span> <span class="n">error</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// error callback, similar to the one used previously</span>
+        <span class="nf">errorCallback</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="c1">// success callback, similar to the one used previously</span>
+    <span class="nf">successCallback</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h5 id='to-migrate-code-presentcapture-code-functions' class='heading'>To migrate <code>presentCapture</code> functions:</h5>
+
+<ul>
+<li>The function <code>SensibillSDK.presentCapture(inCurrentViewController: controller)</code> can be replaced with <code>ReceiptCaptureManager.shared.presentCapture(host: controller, expenseType: .unknown)</code></li>
+<li>The function <code>SensibillSDK.presentCapture(inCurrentViewController: controller, using: transaction)</code> can be replaced with <code>ReceiptCaptureManager.shared.presentCapture(host: controller, transaction: transaction)</code></li>
+<li>The function <code>SensibillSDK.presentCapture(inCurrentViewController: controller, expenseType: expenseType)</code> can be replaced with <code>ReceiptCaptureManager.shared.presentCapture(host: controller, expenseType: expenseType)</code></li>
+<li>The function <code>SensibillSDK.presentCapture(inCurrentViewController: controller, transaction: transaction, expenseType: expenseType)</code> can be replaced with <code>ReceiptCaptureManager.shared.presentCapture(host: controller, transaction: transaction, expenseType: expenseType)</code></li>
+</ul>
+<h5 id='to-migrate-ui-helper-functions' class='heading'>To migrate UI helper functions:</h5>
+
+<p>The following functions were moved to other classes, their signature didn&rsquo;t change:</p>
+
+<ul>
+<li>The function <code>displayReceipt</code> was moved to <code><a href="Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a></code></li>
+<li>The function <code>pushToExportsController</code> was moved to <code><a href="Classes/RecentExportsViewController.html">RecentExportsViewController</a></code>. In Objective C function signature was changed from <code>pushToExportsControllerFromNavigationController</code> to <code>pushToExportsControllerFrom</code></li>
+<li>The function <code>pushToSearchReceiptControllerFromController</code> was moved to <code><a href="Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a></code> and renamed to <code>push</code> (<code>pushFromController</code> in Objective-C)</li>
+</ul>
+<h5 id='to-migrate-utility-callbacks' class='heading'>To migrate utility callbacks:</h5>
+
+<ul>
+<li><p>Instead of <code>checkIfServerReachableForConfigurationWithCompletionHandler</code>, use <code>NetworkReachabilityService.isAPIReachable</code>, which provides an <code>Error</code> object in case of failure, in addition to a boolean result:</p>
+<pre class="highlight swift"><code><span class="kt">NetworkReachabilityService</span><span class="o">.</span><span class="n">isAPIReachable</span> <span class="p">{</span> <span class="p">(</span><span class="n">isSuccessful</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+
+<span class="k">guard</span> <span class="n">isSuccessful</span> <span class="k">else</span> <span class="p">{</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Failed to contact API. Error: </span><span class="se">\(</span><span class="n">error</span><span class="p">?</span><span class="o">.</span><span class="n">localizedDescription</span> <span class="p">??</span> <span class="s">"unknown"</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">return</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"Successfully contacted API"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>Instead of <code>registerAnalyticsTrackerListener</code>, register your listener with <code><a href="Classes/SBAnalytics.html">SBAnalytics</a></code> directly:</p>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MyClass</span><span class="p">:</span> <span class="kt">SBEventListenerInterface</span> <span class="p">{</span>
+
+<span class="o">...</span>
+<span class="kd">func</span> <span class="nf">register</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">SBAnalytics</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span><span class="o">.</span><span class="nf">addListener</span><span class="p">(</span><span class="k">self</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">...</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>The <code>registerErrorReceivingCallback</code> is deprecated to be removed. Since this callback provided low-level networking errors, it didn&rsquo;t accurately reflect the state of the SDK (e.g. temporary network disconnections are handled as part of normal SDK lifecycle). Use <code><a href="Classes/SBAnalytics.html">SBAnalytics</a></code> for application-level events, or register for the <code>reachabilityDidChange</code> notification provided by a <code>NetworkReachabilityService</code> to be notified on network state changes.</p></li>
+</ul>
+<h5 id='to-migrate-code-localizedstringforkey-code' class='heading'>To migrate <code>localizedStringForKey</code></h5>
+
+<p>The function was moved to <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>, its signature didn&rsquo;t change:</p>
+<pre class="highlight swift"><code>    <span class="kt">SBSDKConfiguration</span><span class="o">.</span><span class="nf">localizedString</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"..."</span><span class="p">)</span>
+</code></pre>
+
+<p>Note that if you used a <code>SBLocalizedString</code> or <code>SBLocalizedPluralString</code> functions, no change is required: the functions are still fully supported.</p>
+<h3 id='last-call' class='heading'>Last Call</h3>
+
+<ul>
+<li><code><a href="Classes/SensibillSDK.html">SensibillSDK</a></code> class deprecated in this release will be removed in the next release. Please follow the migration guide above.</li>
 </ul>
 <h2 id='upgrading-from-1-25-to-1-25-1' class='heading'>Upgrading from 1.25 to 1.25.1</h2>
 <h3 id='summary-of-changes' class='heading'>Summary of Changes</h3>
@@ -407,15 +622,15 @@
 <h3 id='capture-changes' class='heading'>Capture Changes</h3>
 <h4 id='capture-initialization-changes' class='heading'>Capture Initialization Changes</h4>
 
-<p>The <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was replaced with the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> (<code>SBLCaptureFlowCoordinator</code> in Objective-C). The coordinator is responsible for initiating a new receipt capture workflow, presentation and dismissal of the Receipt Capture screen, the Receipt Expense Type Selection screen (if enabled), the Receipt Processing screen, and the Receipt Validation screens.</p>
+<p>The <code>SensibillCaptureNavigationController</code> was replaced with the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> (<code>SBLCaptureFlowCoordinator</code> in Objective-C). The coordinator is responsible for initiating a new receipt capture workflow, presentation and dismissal of the Receipt Capture screen, the Receipt Expense Type Selection screen (if enabled), the Receipt Processing screen, and the Receipt Validation screens.</p>
 
 <p>The following outlines the differences between the two approaches from an integrator perspective. For detailed integration instructions, please see the <a href="entry-points.html#receipt-capture">Receipt Capture</a> section on the <strong><em>Entry Points</em></strong> page.</p>
 
 <ul>
-<li><p>Previously the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was presented by a host <code>UIViewController</code>. Now the presentation of all screens is handled by a coordinator. A host view controller must be provided as a parameter on initialization of the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> (using <code>CaptureFlowCoordinator(host:)</code> initializer).</p></li>
-<li><p>When the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was presented on a host <code>UIViewController</code>, it did not require a presenting class to retain its instance. Now, when using the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code>, the created instance of the coordinator needs to be retained by a host <code>UIViewController</code> until the receipt capture flow (and optionally receipt processing) is finished.</p></li>
-<li><p>The <code>init?(transaction: SBLTransaction?)</code> initializer of the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> is replaced with the <code>start(transaction:)</code> method of the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> class. This method can be used for <a href="transaction-linking.html">Transaction Linking</a> while capturing a receipt.</p></li>
-<li><p>The <code>init?(transaction: SBLTransaction?, with expenseType: ReceiptExpenseType)</code> initializer of the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was removed. Instead, update a transaction&rsquo;s <code>expenseType</code> (with the value from  <code><a href="Enums/ReceiptExpenseType.html">ReceiptExpenseType</a></code>) before providing it to the coordinator, and use the <code>start(transaction:)</code> method on <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> similarly to the previous case. Example:</p>
+<li><p>Previously the <code>SensibillCaptureNavigationController</code> was presented by a host <code>UIViewController</code>. Now the presentation of all screens is handled by a coordinator. A host view controller must be provided as a parameter on initialization of the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> (using <code>CaptureFlowCoordinator(host:)</code> initializer).</p></li>
+<li><p>When the <code>SensibillCaptureNavigationController</code> was presented on a host <code>UIViewController</code>, it did not require a presenting class to retain its instance. Now, when using the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code>, the created instance of the coordinator needs to be retained by a host <code>UIViewController</code> until the receipt capture flow (and optionally receipt processing) is finished.</p></li>
+<li><p>The <code>init?(transaction: SBLTransaction?)</code> initializer of the <code>SensibillCaptureNavigationController</code> is replaced with the <code>start(transaction:)</code> method of the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> class. This method can be used for <a href="transaction-linking.html">Transaction Linking</a> while capturing a receipt.</p></li>
+<li><p>The <code>init?(transaction: SBLTransaction?, with expenseType: ReceiptExpenseType)</code> initializer of the <code>SensibillCaptureNavigationController</code> was removed. Instead, update a transaction&rsquo;s <code>expenseType</code> (with the value from  <code><a href="Enums/ReceiptExpenseType.html">ReceiptExpenseType</a></code>) before providing it to the coordinator, and use the <code>start(transaction:)</code> method on <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> similarly to the previous case. Example:</p>
 <pre class="highlight swift"><code><span class="o">...</span>
 <span class="k">let</span> <span class="nv">coordinator</span> <span class="o">=</span> <span class="kt">CaptureFlowCoordinator</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
 <span class="o">...</span>
@@ -425,7 +640,7 @@
 <span class="n">coordinator</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span> <span class="n">sensibillTransaction</span><span class="p">)</span>
 <span class="o">...</span>
 </code></pre></li>
-<li><p>The <code>init?(transaction: SBLTransaction?, exitAfterCapture shouldExitAfterCapture: Bool)</code> initializer of <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> was removed. Instead, set the <code>exitAfterCapture</code> property of the coordinator to <code>true</code> , and use the <code>start(transaction:)</code> method on an instance of <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> similar to the previous case. Example:</p></li>
+<li><p>The <code>init?(transaction: SBLTransaction?, exitAfterCapture shouldExitAfterCapture: Bool)</code> initializer of <code>SensibillCaptureNavigationController</code> was removed. Instead, set the <code>exitAfterCapture</code> property of the coordinator to <code>true</code> , and use the <code>start(transaction:)</code> method on an instance of <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> similar to the previous case. Example:</p></li>
 </ul>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">coordinator</span> <span class="o">=</span> <span class="kt">CaptureFlowCoordinator</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
 <span class="n">coordinator</span><span class="o">.</span><span class="n">exitAfterCapture</span> <span class="o">=</span> <span class="kc">true</span>
@@ -451,7 +666,7 @@
 <p><strong>Note:</strong> This event will only be triggered, if user waits on Receipt Processing screen, and a receipt is successfully created. To be notified on any other outcomes, please register a transaction observer with <code><a href="Classes/SBDataEvent.html">SBDataEvent</a></code>, as described in the <a href="transaction-linking.html#monitoring-receipt-uploading-status">Monitoring Receipt Uploading Status</a> section.</p>
 <h4 id='capture-dismissal-changes' class='heading'>Capture Dismissal Changes</h4>
 
-<p>Previously, if the <code>exitAfterCapture</code> flag was set to <code>false</code>, the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> required a <code>dismissDelegate</code> of type <code><a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></code> to receive an event <code>dismissSensibillViewController(_ controller: UIViewController!)</code> upon capture completion to be able to dismiss capture.</p>
+<p>Previously, if the <code>exitAfterCapture</code> flag was set to <code>false</code>, the <code>SensibillCaptureNavigationController</code> required a <code>dismissDelegate</code> of type <code><a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></code> to receive an event <code>dismissSensibillViewController(_ controller: UIViewController!)</code> upon capture completion to be able to dismiss capture.</p>
 
 <p>The <code><a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></code> type is no longer used for new capture: the <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> internally manages presentation and dismissal of all view controllers.</p>
 
@@ -489,8 +704,8 @@
 <p>Because of the introduction of a new <strong>sensibill capture</strong> experience, all interfaces associated with <strong>legacy capture</strong> are now deprecated, and will be removed in the next release.</p>
 
 <ul>
-<li>Entry point <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code></li>
-<li>Legacy Capture UI interfaces: <code><a href="Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a></code>, <code><a href="Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a></code>, <code>SBCameraGridView</code>, <code>SBCaptureTitleCell</code>, <code>SBReceiptCaptureViewController</code>, <code>SBTipCollectionViewCell</code></li>
+<li>Entry point <code>SensibillCaptureNavigationController</code></li>
+<li>Legacy Capture UI interfaces: <code>SensibillCaptureNavigationControllerDelegate</code>, <code>SBReceiptCaptureFlowState</code>, <code>SBCameraGridView</code>, <code>SBCaptureTitleCell</code>, <code>SBReceiptCaptureViewController</code>, <code>SBTipCollectionViewCell</code></li>
 <li>SBCaptureKit interfaces: <code>SBAutoRectangleDetector</code>, <code>SBCameraCropUtility</code>, <code>SBCameraFilter</code>, <code>SBDetectLayer</code>, <code>SBRectangleFeature</code></li>
 <li>The function <code>lastPhotoThumbnail</code> in <code>PHAsset</code> extension</li>
 <li>In the <code><a href="Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a></code> (accessed via <code>captureViewConfiguration</code> property of <code><a href="Classes/SBSDKConfiguration.html">SBSDKConfiguration</a></code>), the following properties are now deprecated:
@@ -545,7 +760,7 @@
 </ul>
 <h3 id='sbdataevent-changes' class='heading'>SBDataEvent Changes</h3>
 
-<p><code><a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a></code> was replaced by <code><a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a></code> for receipt observers, and <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> for transaction observers. The values are changed as follows:</p>
+<p><code>SBDataEventType</code> was replaced by <code><a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a></code> for receipt observers, and <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> for transaction observers. The values are changed as follows:</p>
 
 <ul>
 <li><p><code>SBDataEventTypeStatusUpdate</code> event only exists for transaction observers (it was never sent for receipt observers in the past). Hence it was moved to <code><a href="Enums/SBTransactionEventType.html">SBTransactionEventType</a></code> as <code>.statusUpdate</code> (<code>SBTransactionEventTypeStatusUpdate</code> in Objective-C)</p></li>
@@ -1188,7 +1403,7 @@ For more information and example of the new start and stop implementation, see <
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-01-12)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
