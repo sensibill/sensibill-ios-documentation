@@ -91,6 +91,9 @@
               <li class="nav-group-task">
                 <a href="../Protocols/TokenProvider.html">TokenProvider</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Credentials.html">Credentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -212,9 +215,6 @@
                 <a href="../Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/TransactionError.html">TransactionError</a>
               </li>
               <li class="nav-group-task">
@@ -258,7 +258,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../UI%20Presentation.html">UI Presentation</a>
+            <a href="../Entry%20Points.html">Entry Points</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
@@ -276,16 +276,13 @@
                 <a href="../Classes/SBAnalytics.html">SBAnalytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="../UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+                <a href="../Entry%20Points.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SBTrackingEvent.html">SBTrackingEvent</a>
@@ -297,16 +294,13 @@
                 <a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptCaptureManager.html">ReceiptCaptureManager</a>
               </li>
             </ul>
           </li>
@@ -335,12 +329,12 @@
               <div class="declaration">
                 <div class="language">
                   <p class="aside-title">Objective-C</p>
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBCaptureViewConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBCaptureViewConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
                 <div class="language">
                   <p class="aside-title">Swift</p>
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SBCaptureViewConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SBCaptureViewConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -417,6 +411,38 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)attachLocationData"></a>
+                    <a name="//apple_ref/swift/Property/attachLocationData" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)attachLocationData">attachLocationData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When set to true, sdk will attempt to attach location information when image is captured (Note: Applicable only if user has authorized to access device location.) Default: False/No</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">attachLocationData</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">attachLocationData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)SBCaptureViewConfiguration(py)isCropEnabled"></a>
                     <a name="//apple_ref/swift/Property/isCropEnabled" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)isCropEnabled">isCropEnabled</a>
@@ -440,6 +466,166 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isCropEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableBlurDetection"></a>
+                    <a name="//apple_ref/swift/Property/enableBlurDetection" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableBlurDetection">enableBlurDetection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to enable a blur warning on the capture preview screen after capturing. (applicable for iPhone 6s and newer) Default: True/Yes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableBlurDetection</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableBlurDetection</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableFlash"></a>
+                    <a name="//apple_ref/swift/Property/enableFlash" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableFlash">enableFlash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to enable the ability to toggle the phone&rsquo;s flash on/off to help capture in low-light situations. Default: True/Yes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableFlash</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableFlash</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableFeedbackToast"></a>
+                    <a name="//apple_ref/swift/Property/enableFeedbackToast" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableFeedbackToast">enableFeedbackToast</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to enable feedback toast on the capture screen. Default: True/Yes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableFeedbackToast</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableFeedbackToast</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableImageGallery"></a>
+                    <a name="//apple_ref/swift/Property/enableImageGallery" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableImageGallery">enableImageGallery</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to enable the user to select an image from phone&rsquo;s image gallery. Default: True/Yes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableImageGallery</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableImageGallery</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableAutoCapture"></a>
+                    <a name="//apple_ref/swift/Property/enableAutoCapture" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableAutoCapture">enableAutoCapture</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to enable the auto-capture feature. Default: True/Yes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableAutoCapture</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableAutoCapture</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -545,6 +731,614 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleStrokeColor"></a>
+                    <a name="//apple_ref/swift/Property/captureCircleStrokeColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleStrokeColor">captureCircleStrokeColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The stroke color of the processing circle edge which appears when a document is detected in auto-capture. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)brandForeground">SBSDKColors.brandForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureCircleStrokeColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureCircleStrokeColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleFillColor"></a>
+                    <a name="//apple_ref/swift/Property/captureCircleFillColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleFillColor">captureCircleFillColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The fill color of the processing circle which appears when a document is detected in auto-capture. Defaults to UIColor <code>clearColor</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureCircleFillColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureCircleFillColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureIconButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/captureIconButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureIconButtonTextColor">captureIconButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the buttons that contain an icon (crop, add page, and retake).. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureIconButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureIconButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewTitleColor"></a>
+                    <a name="//apple_ref/swift/Property/capturePreviewTitleColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewTitleColor">capturePreviewTitleColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the title on the Capture Preview screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePreviewTitleColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePreviewTitleColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionMessageColor"></a>
+                    <a name="//apple_ref/swift/Property/capturePermissionMessageColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionMessageColor">capturePermissionMessageColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the message that appears if a user denies system capture permissions. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePermissionMessageColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePermissionMessageColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/capturePermissionButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonBackgroundColor">capturePermissionButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the button that appears when the user denies system capture permissions. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionBackground">SBSDKColors.actionBackground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePermissionButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePermissionButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/capturePermissionButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonTextColor">capturePermissionButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the button that appears when the user denies system capture permissions. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionForeground">SBSDKColors.actionForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePermissionButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePermissionButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureDocumentTypeButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/captureDocumentTypeButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureDocumentTypeButtonTextColor">captureDocumentTypeButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the unselected capture type button (Normal/Long) Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureDocumentTypeButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureDocumentTypeButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/capturePreviewDoneButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonBackgroundColor">capturePreviewDoneButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the done button on the capture preview screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionBackground">SBSDKColors.actionBackground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePreviewDoneButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePreviewDoneButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/capturePreviewDoneButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonTextColor">capturePreviewDoneButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the done button on the capture preview screen. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionForeground">SBSDKColors.actionForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePreviewDoneButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePreviewDoneButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/autoCaptureButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureButtonTextColor">autoCaptureButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the auto-capture button when auto-capture is enabled. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">autoCaptureButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">autoCaptureButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureDisabledButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/autoCaptureDisabledButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureDisabledButtonTextColor">autoCaptureDisabledButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the auto-capture button when auto-capture is disabled. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)disabledBackground">SBSDKColors.disabledBackground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">autoCaptureDisabledButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">autoCaptureDisabledButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/cropCancelButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonBackgroundColor">cropCancelButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the cancel button on the crop screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateBackground">SBSDKColors.alternateBackground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropCancelButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropCancelButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/cropCancelButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonTextColor">cropCancelButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the cancel button on the crop screen. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropCancelButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropCancelButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/cropDoneButtonBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonBackgroundColor">cropDoneButtonBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color to be applied to Done button&rsquo;s background visible on image crop screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionBackground">SBSDKColors.actionBackground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropDoneButtonBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropDoneButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonTextColor"></a>
+                    <a name="//apple_ref/swift/Property/cropDoneButtonTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonTextColor">cropDoneButtonTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the done button on the crop screen.  Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionForeground">SBSDKColors.actionForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropDoneButtonTextColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropDoneButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropLoaderColor"></a>
+                    <a name="//apple_ref/swift/Property/cropLoaderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropLoaderColor">cropLoaderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The tint color of the UIActivityIndicatorView that appears while the crop screen is loading. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropLoaderColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropLoaderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)toastBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/toastBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)toastBackgroundColor">toastBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the feedback toast that appears while capturing. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateBackground">SBSDKColors.alternateBackground</a></code> with 0.45 alpha.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">toastBackgroundColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">toastBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)toastTitleColor"></a>
+                    <a name="//apple_ref/swift/Property/toastTitleColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)toastTitleColor">toastTitleColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The title color of the feedback toast that appears while capturing. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">toastTitleColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">toastTitleColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)SBCaptureViewConfiguration(py)detectionlineWidth"></a>
                     <a name="//apple_ref/swift/Property/detectionlineWidth" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)detectionlineWidth">detectionlineWidth</a>
@@ -577,774 +1371,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableBlurDetection"></a>
-                    <a name="//apple_ref/swift/Property/enableBlurDetection" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableBlurDetection">enableBlurDetection</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only, Allows to enable a blur warning on the capture preview screen after capturing. (applicable for iPhone 6s and newer) Default: True/Yes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableBlurDetection</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableBlurDetection</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableFlash"></a>
-                    <a name="//apple_ref/swift/Property/enableFlash" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableFlash">enableFlash</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only, Allows to enable the ability to toggle the phone&rsquo;s flash on/off to help capture in low-light situations. Default: True/Yes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableFlash</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableFlash</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableFeedbackToast"></a>
-                    <a name="//apple_ref/swift/Property/enableFeedbackToast" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableFeedbackToast">enableFeedbackToast</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only, Allows to enable feedback toast on the capture screen. Default: True/Yes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableFeedbackToast</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableFeedbackToast</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableImageGallery"></a>
-                    <a name="//apple_ref/swift/Property/enableImageGallery" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableImageGallery">enableImageGallery</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only, Allows to enable the user to select an image from phone&rsquo;s image gallery. Default: True/Yes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableImageGallery</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableImageGallery</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)enableAutoCapture"></a>
-                    <a name="//apple_ref/swift/Property/enableAutoCapture" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)enableAutoCapture">enableAutoCapture</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only, Allows to enable the auto-capture feature. Default: True/Yes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableAutoCapture</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableAutoCapture</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleStrokeColor"></a>
-                    <a name="//apple_ref/swift/Property/captureCircleStrokeColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleStrokeColor">captureCircleStrokeColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only.  The stroke color of the processing circle edge which appears when a document is detected in auto-capture. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)brandForeground">SBSDKColors.brandForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureCircleStrokeColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureCircleStrokeColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleFillColor"></a>
-                    <a name="//apple_ref/swift/Property/captureCircleFillColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureCircleFillColor">captureCircleFillColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The fill color of the processing circle which appears when a document is detected in auto-capture. Defaults to UIColor <code>clearColor</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureCircleFillColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureCircleFillColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureIconButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/captureIconButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureIconButtonTextColor">captureIconButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the buttons that contain an icon (crop, add page, and retake).. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureIconButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureIconButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewTitleColor"></a>
-                    <a name="//apple_ref/swift/Property/capturePreviewTitleColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewTitleColor">capturePreviewTitleColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the title on the Capture Preview screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePreviewTitleColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePreviewTitleColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionMessageColor"></a>
-                    <a name="//apple_ref/swift/Property/capturePermissionMessageColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionMessageColor">capturePermissionMessageColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the message that appears if a user denies system capture permissions. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePermissionMessageColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePermissionMessageColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/capturePermissionButtonBackgroundColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonBackgroundColor">capturePermissionButtonBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The background color of the button that appears when the user denies system capture permissions. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionBackground">SBSDKColors.actionBackground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePermissionButtonBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePermissionButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/capturePermissionButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonTextColor">capturePermissionButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the button that appears when the user denies system capture permissions. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionForeground">SBSDKColors.actionForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePermissionButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePermissionButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureDocumentTypeButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/captureDocumentTypeButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureDocumentTypeButtonTextColor">captureDocumentTypeButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the unselected capture type button (Normal/Long) Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureDocumentTypeButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureDocumentTypeButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/capturePreviewDoneButtonBackgroundColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonBackgroundColor">capturePreviewDoneButtonBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only.  The background color of the done button on the capture preview screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionBackground">SBSDKColors.actionBackground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePreviewDoneButtonBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePreviewDoneButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/capturePreviewDoneButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePreviewDoneButtonTextColor">capturePreviewDoneButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the done button on the capture preview screen. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionForeground">SBSDKColors.actionForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">capturePreviewDoneButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturePreviewDoneButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/autoCaptureButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureButtonTextColor">autoCaptureButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only.  The text color of the auto-capture button when auto-capture is enabled. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">autoCaptureButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">autoCaptureButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureDisabledButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/autoCaptureDisabledButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)autoCaptureDisabledButtonTextColor">autoCaptureDisabledButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the auto-capture button when auto-capture is disabled. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)disabledBackground">SBSDKColors.disabledBackground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">autoCaptureDisabledButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">autoCaptureDisabledButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/cropCancelButtonBackgroundColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonBackgroundColor">cropCancelButtonBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only.  The background color of the cancel button on the crop screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateBackground">SBSDKColors.alternateBackground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropCancelButtonBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropCancelButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/cropCancelButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropCancelButtonTextColor">cropCancelButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The text color of the cancel button on the crop screen. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropCancelButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropCancelButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/cropDoneButtonBackgroundColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonBackgroundColor">cropDoneButtonBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The color to be applied to Done button&rsquo;s background visible on image crop screen. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionBackground">SBSDKColors.actionBackground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropDoneButtonBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropDoneButtonBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/cropDoneButtonTextColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropDoneButtonTextColor">cropDoneButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The background color of the done button on the crop screen.  Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)actionForeground">SBSDKColors.actionForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropDoneButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropDoneButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)cropLoaderColor"></a>
-                    <a name="//apple_ref/swift/Property/cropLoaderColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)cropLoaderColor">cropLoaderColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The tint color of the UIActivityIndicatorView that appears while the crop screen is loading. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">cropLoaderColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cropLoaderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)toastBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/toastBackgroundColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)toastBackgroundColor">toastBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The background color of the feedback toast that appears while capturing. Defaults to <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateBackground">SBSDKColors.alternateBackground</a></code> with 0.45 alpha.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">toastBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">toastBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)toastTitleColor"></a>
-                    <a name="//apple_ref/swift/Property/toastTitleColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)toastTitleColor">toastTitleColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The title color of the feedback toast that appears while capturing. Defaults to  <code><a href="../Classes/SBSDKColors.html#/c:objc(cs)SBSDKColors(py)alternateForeground">SBSDKColors.alternateForeground</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">toastTitleColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">toastTitleColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonCornerRadius"></a>
                     <a name="//apple_ref/swift/Property/capturePermissionButtonCornerRadius" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)SBCaptureViewConfiguration(py)capturePermissionButtonCornerRadius">capturePermissionButtonCornerRadius</a>
@@ -1355,7 +1381,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The corner radius of the capture permission button that appears when the user denies system capture permissions. Default: 24.0</p>
+                        <p>The corner radius of the capture permission button that appears when the user denies system capture permissions. Default: 24.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1387,7 +1413,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The corner radius of the auto-capture toggle button. Default: 0.0</p>
+                        <p>The corner radius of the auto-capture toggle button. Default: 0.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1419,7 +1445,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The width of the border of the circle that appears when an auto-capture is processing. Default: 2.0</p>
+                        <p>The width of the border of the circle that appears when an auto-capture is processing. Default: 2.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1451,7 +1477,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The corner radius of the cancel button on the crop screen. Default: 0.0</p>
+                        <p>The corner radius of the cancel button on the crop screen. Default: 0.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1483,7 +1509,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The corner radius of the done button on the crop screen. Default: 24.0</p>
+                        <p>The corner radius of the done button on the crop screen. Default: 24.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1515,7 +1541,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The diameter of the corner points that are used to crop. Default: 30.0</p>
+                        <p>The diameter of the corner points that are used to crop. Default: 30.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1547,7 +1573,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The distance away from a crop edge&rsquo;s bar a user&rsquo;s touch can be that will still grab the edge. Default: 50.0</p>
+                        <p>The distance away from a crop edge&rsquo;s bar a user&rsquo;s touch can be that will still grab the edge. Default: 50.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1579,7 +1605,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The corner radius of the done button on the capture preview screen. Default: 24.0</p>
+                        <p>The corner radius of the done button on the capture preview screen. Default: 24.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1611,7 +1637,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies to new sensibill capture module only. The corner radius of the feedback toast that appears while capturing. Default: 24.0</p>
+                        <p>The corner radius of the feedback toast that appears while capturing. Default: 24.0</p>
 
                       </div>
                       <div class="declaration">
@@ -1630,752 +1656,12 @@
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)isGridEnabled"></a>
-                    <a name="//apple_ref/swift/Property/isGridEnabled" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)isGridEnabled">isGridEnabled</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. Allows to enable or disable grid on capture screen. Default: True/Yes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isGridEnabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isGridEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)gridViewColor"></a>
-                    <a name="//apple_ref/swift/Property/gridViewColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)gridViewColor">gridViewColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the grid view during capture.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">gridViewColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">gridViewColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)sliderTrackColor"></a>
-                    <a name="//apple_ref/swift/Property/sliderTrackColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)sliderTrackColor">sliderTrackColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the crop slider of capture screen. Defaults to actionForegroundColor</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">sliderTrackColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sliderTrackColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureFooterColor"></a>
-                    <a name="//apple_ref/swift/Property/captureFooterColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureFooterColor">captureFooterColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the background of capture footer view. Defaults to actionBackgroundColor</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureFooterColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureFooterColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)controlsBarBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/controlsBarBackgroundColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)controlsBarBackgroundColor">controlsBarBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the background of capture controls of capture screen. Defaults to UIColor clearColor</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">controlsBarBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">controlsBarBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureTypeSeperatorColor"></a>
-                    <a name="//apple_ref/swift/Property/captureTypeSeperatorColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureTypeSeperatorColor">captureTypeSeperatorColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the divider in between the auto/manual capture modes. Defaults to actionForegroundColor</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureTypeSeperatorColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureTypeSeperatorColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)addSectionButtonColor"></a>
-                    <a name="//apple_ref/swift/Property/addSectionButtonColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)addSectionButtonColor">addSectionButtonColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the background of the add section button. Defaults to offPrimaryBackground</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">addSectionButtonColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">addSectionButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)addSectionButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/addSectionButtonTextColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)addSectionButtonTextColor">addSectionButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the add section button text. Defaults to primaryForeground2</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">addSectionButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">addSectionButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)retakeButtonColor"></a>
-                    <a name="//apple_ref/swift/Property/retakeButtonColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)retakeButtonColor">retakeButtonColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the retake button background. Defaults to offPrimaryBackground</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">retakeButtonColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">retakeButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)retakeButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/retakeButtonTextColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)retakeButtonTextColor">retakeButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the text in the retake button</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">retakeButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">retakeButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)doneButtonColor"></a>
-                    <a name="//apple_ref/swift/Property/doneButtonColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)doneButtonColor">doneButtonColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the done button background. Defaults to actionBackground</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">doneButtonColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">doneButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)doneButtonTextColor"></a>
-                    <a name="//apple_ref/swift/Property/doneButtonTextColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)doneButtonTextColor">doneButtonTextColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the text in the done button. Defaults to actionForeground</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">doneButtonTextColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">doneButtonTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)doneButtonDisabledColor"></a>
-                    <a name="//apple_ref/swift/Property/doneButtonDisabledColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)doneButtonDisabledColor">doneButtonDisabledColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color that will be applied to the done button when in disabled state.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">doneButtonDisabledColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">doneButtonDisabledColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureTipImageBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/captureTipImageBackgroundColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureTipImageBackgroundColor">captureTipImageBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color to be applied to the background area behind capture tip images. Defaults to brandForeground</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureTipImageBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureTipImageBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureTipViewBackgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/captureTipViewBackgroundColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureTipViewBackgroundColor">captureTipViewBackgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color to be applied to the background of the capture tip view. Defaults to brandBackground</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureTipViewBackgroundColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureTipViewBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureTipTextFontColor"></a>
-                    <a name="//apple_ref/swift/Property/captureTipTextFontColor" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureTipTextFontColor">captureTipTextFontColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. The color to be applied to the capture tips text. Defaults to brandForeground</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">captureTipTextFontColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureTipTextFontColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)addSectionOverlayOpacity"></a>
-                    <a name="//apple_ref/swift/Property/addSectionOverlayOpacity" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)addSectionOverlayOpacity">addSectionOverlayOpacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. Add section overlay opacity in range [0,1]. 0 indicates transparent and 1 indicates opaque. Defaults to 0.7 (70% opacity). Value outside of the range will lead to unexpected behaviour.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">addSectionOverlayOpacity</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">addSectionOverlayOpacity</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)addSectionOverlayDropShadowOpacity"></a>
-                    <a name="//apple_ref/swift/Property/addSectionOverlayDropShadowOpacity" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)addSectionOverlayDropShadowOpacity">addSectionOverlayDropShadowOpacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated in v1.25 and will be removed in v1.26. Please follow Capture Changes section in the Migration Guide to start using a new Sensibill Capture module</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>Applies to Legacy Capture only. Add section overlay shadow opacity in range [0,1]. 0 indicates transparent and 1 indicates opaque. Defaults to 0 (transparent). Value outside of the range will lead to unexpected behaviour.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">addSectionOverlayDropShadowOpacity</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">addSectionOverlayDropShadowOpacity</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureTipTextRegularFont"></a>
-                    <a name="//apple_ref/swift/Property/captureTipTextRegularFont" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureTipTextRegularFont">captureTipTextRegularFont</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>The font to be applied to the regular text in capture tips</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIFont</span> <span class="o">*</span><span class="n">captureTipTextRegularFont</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureTipTextRegularFont</span><span class="p">:</span> <span class="kt">UIFont</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)SBCaptureViewConfiguration(py)captureTipTextBoldFont"></a>
-                    <a name="//apple_ref/swift/Property/captureTipTextBoldFont" class="dashAnchor"></a>
-                    <a class="token discouraged" href="#/c:objc(cs)SBCaptureViewConfiguration(py)captureTipTextBoldFont">captureTipTextBoldFont</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="aside aside-deprecated">
-                        <p class="aside-title">Deprecated</p>
-                        <p>Deprecated. No longer used by SDK</p>
-
-                      </div>
-                      <div class="abstract">
-                        <p>The font to be applied to bold text in capture tips</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UIFont</span> <span class="o">*</span><span class="n">captureTipTextBoldFont</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">captureTipTextBoldFont</span><span class="p">:</span> <span class="kt">UIFont</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-01-12)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

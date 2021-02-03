@@ -90,6 +90,9 @@
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -211,9 +214,6 @@
                 <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/TransactionError.html">TransactionError</a>
               </li>
               <li class="nav-group-task">
@@ -257,7 +257,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="UI%20Presentation.html">UI Presentation</a>
+            <a href="Entry%20Points.html">Entry Points</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
@@ -275,16 +275,13 @@
                 <a href="Classes/SBAnalytics.html">SBAnalytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+                <a href="Entry%20Points.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBTrackingEvent.html">SBTrackingEvent</a>
@@ -296,16 +293,13 @@
                 <a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptCaptureManager.html">ReceiptCaptureManager</a>
               </li>
             </ul>
           </li>
@@ -332,82 +326,155 @@
           <section class="section">
             
             <h1 id='troubleshooting' class='heading'>Troubleshooting</h1>
-<h2 id='installation-troubleshooting' class='heading'>Installation Troubleshooting</h2>
-<h3 id='compilation-error-code-could-not-load-underlying-module-code-while-importing-sdk-using-code-import-sensibillui-code-statement' class='heading'>Compilation error <code>Could not load underlying module</code> while importing SDK using <code>import SensibillUI</code> statement.</h3>
+<h2 id='compilation-errors' class='heading'>Compilation Errors</h2>
+<h5 id='em-quot-building-for-but-the-linked-and-embedded-framework-39-sensibillui-framework-39-was-built-for-ios-ios-simulator-quot-em-on-xcode-12-3' class='heading'><em>&ldquo;Building for &hellip;, but the linked and embedded framework &lsquo;SensibillUI.framework&rsquo; was built for iOS + iOS Simulator.&rdquo;</em> on Xcode 12.3</h5>
 
-<p>If you encounter this error while migrating from 1.25.0 to 1.25.1, please follow the <a href="installation.html#using-sensibillui-module-in-swift">How to use SensibillUI module in Swift</a> instructions specified in the Direct Download section of the Installation Guide.</p>
-<h3 id='no-such-module-39-sensibillui-39-in-swift-file' class='heading'>No such module &lsquo;SensibillUI&rsquo; (in Swift File)</h3>
+<p>When running on a simulator using Xcode 12.3, the following error appears during compilation:</p>
 
-<p>This compile time error will appear next to the following statement in a Swift file after upgrading to <strong>v1.25</strong> if you are consuming the SDK by embedding it manually.</p>
+<blockquote>
+<p>Building for the iOS Simulator, but the linked and embedded framework &lsquo;SensibillUI.framework&rsquo; was built for iOS + iOS Simulator.</p>
+</blockquote>
+
+<p>Or, when running on a device using Xcode 12.3, the following error appears during compilation:</p>
+
+<blockquote>
+<p>Building for iOS, but the linked and embedded framework &lsquo;SensibillUI.framework&rsquo; was built for iOS + iOS Simulator.</p>
+</blockquote>
+
+<p><strong>Solution:</strong> </p>
+
+<p>Update target&rsquo;s Build Settings <strong><em>Validate Workspace</em></strong> settings to <strong><em>Yes</em></strong>.</p>
+<h5 id='em-quot-could-not-load-underlying-module-quot-em-while-migrating-from-1-25-0-to-1-25-1' class='heading'><em>&ldquo;Could not load underlying module&rdquo;</em> while migrating from 1.25.0 to 1.25.1.</h5>
+
+<p>Compilation error  </p>
+
+<blockquote>
+<p>Could not load underlying module</p>
+</blockquote>
+
+<p>appears when importing the SDK using <code>import SensibillUI</code>.</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>Please follow the <a href="installation.html#using-sensibillui-module-in-swift">How to use SensibillUI module in Swift</a> instructions specified in the Direct Download section of the Installation Guide.</p>
+<h5 id='em-quot-no-such-module-39-sensibillui-39-quot-em-in-swift-files' class='heading'><em>&ldquo;No such module &lsquo;SensibillUI&rsquo;&rdquo;</em> in Swift Files</h5>
+
+<p>When you are embedding Sensibill SDK manually, and are upgrading to Sensibill SDK v. 1.25.0 or higher, the above compilation error may appear next to the </p>
 <pre class="highlight plaintext"><code>import SensibillUI
 </code></pre>
 
-<ul>
-<li>To fix this, add the path to the Sensibill framork to your target&rsquo;s  <strong>Import Paths</strong> setting under the <code>Swift Compiler - Search Paths</code> section in your target&rsquo;s Build Settings. Specify the recursive option.</li>
-</ul>
+<p>statement in a Swift file. </p>
+
+<p><strong>Solution:</strong> </p>
+
+<p>Add the path to the Sensibill framework to your target&rsquo;s  <strong>Import Paths</strong> setting under the <code>Swift Compiler - Search Paths</code> section in your target&rsquo;s Build Settings. Specify the recursive option.</p>
 
 <p><img src="./guide-resources/images/installation/direct-download/how-to-swift-compiler-import-paths.png" alt=""></p>
-<h3 id='module-39-sensibillui-39-not-found-in-objective-c-file' class='heading'>Module &lsquo;SensibillUI&rsquo; not found (in Objective-C File)</h3>
+<h5 id='em-quot-module-39-sensibillui-39-not-found-quot-em-in-objective-c-files' class='heading'><em>&ldquo;Module &lsquo;SensibillUI&rsquo; not found&rdquo;</em> in Objective-C Files</h5>
 
-<p>This compile time error will appear next to following statement in Objective-C file after upgrading to <strong>v1.25</strong>.</p>
+<p>After upgrading to the Sensibill SDK v1.25.0 or higher, the above compilation error may appear next to the</p>
 <pre class="highlight plaintext"><code>@import SensibillUI;
 </code></pre>
 
-<p>Usage of this syntax is unavailable as of <strong>v1.25</strong>. Please convert to the following syntax:</p>
+<p>statement in Objective-C file .</p>
+
+<p><strong>Solution:</strong> </p>
+
+<p>Usage of this syntax is unavailable in Sensibill SDK 1.25.0 or higher. Please convert the <code>import</code> statement to the following syntax:</p>
 <pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI.h&gt;
 #import &lt;SensibillUI/SensibillUI-Swift.h&gt;
 </code></pre>
-<h3 id='unknown-type-name-code-sbl-code-in-objective-c-file' class='heading'>Unknown type name <code>SBL*</code> (in Objective-C File)</h3>
+<h5 id='em-quot-unknown-type-name-code-sbl-code-quot-em-in-objective-c-file' class='heading'><em>&ldquo;Unknown type name <code><a href="Classes/SBLoadingViewConfiguration.html">SBL...</a></code>&rdquo;</em> in Objective-C File</h5>
 
-<p>This compile time error will appear in Objective-C file after upgrading to <strong>v1.25</strong>, even if you have imported SensibillUI with following syntax.</p>
+<p>After upgrading to the Sensibill SDK v. 1.25.0 or higher, the above compilation error may appear in the Objective-C file, even though you have imported SensibillUI with the following syntax.</p>
 <pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI.h&gt;
 </code></pre>
 
-<p><strong>The following import statement is required</strong> to access the SDK&rsquo;s swift classes in an <code>Objective-C</code> file:</p>
+<p><strong>Solution:</strong> </p>
+
+<p>In addition to the <code>SensibillUI.h</code>, import the <code>SensibillUI-Swift.h</code> header file to access the SDK&rsquo;s Swift classes from an Objective-C file:</p>
 <pre class="highlight plaintext"><code>#import &lt;SensibillUI/SensibillUI-Swift.h&gt;
 </code></pre>
-<h3 id='image-not-found' class='heading'>Image not Found</h3>
+<h2 id='runtime-errors' class='heading'>Runtime Errors</h2>
+<h5 id='em-quot-image-not-found-quot-em' class='heading'><em>&ldquo;Image not Found&rdquo;</em></h5>
 
-<p>You may get an <code>image not found</code> error during run time:</p>
-<pre class="highlight plaintext"><code>Referenced from: /.../SensibillDemo.app/Frameworks/SensibillUI.framework/SensibillUI
-Reason: image not found
-</code></pre>
+<p>The following error may appear at runtime:</p>
 
-<p>The following are common ways that this error is caused, and ways to mitigate them:</p>
+<blockquote>
+<p>Referenced from: /&hellip;/SensibillDemo.app/Frameworks/SensibillUI.framework/SensibillUI
+Reason: image not found</p>
+</blockquote>
+
+<p><strong>Possible Cause:</strong> Framework was not included in <em>Embedded Binaries</em></p>
+
+<p><strong>Solution:</strong> ensure that the framework is included in <em>Embedded Binaries</em> in addition to the default <em>Linked Frameworks and Libraries</em>.</p>
+
+<p><strong>Possible Cause:</strong> Objective-C only project doesn&rsquo;t have a correct configuration for Swift</p>
+
+<p><strong>Solution:</strong> add a Swift Bridging header to the project:</p>
 
 <ul>
-<li>Framework was not included in <strong>Embedded Binaries</strong>
-
-<ul>
-<li>To fix this ensure that the framework is included in <strong>Embedded Binaries</strong> in addition to the default <strong>Linked Frameworks and Libraries</strong>.</li>
-</ul></li>
-<li><strong>Objective-C only</strong> project may not have Swift setup properly
-
-<ul>
-<li>To fix this simply add a single Swift file to your project using File &gt; New &gt; File&hellip;. When Xcode prompts you if you would like to create a <strong>Bridging Header</strong> click <strong>Yes</strong>.</li>
-</ul></li>
+<li>Open a new file dialog from the <em>File &gt; New &gt; File&hellip;</em> menu</li>
+<li>Select the <em>Swift File</em></li>
+<li>When prompted to create a <em>Bridging Header</em>, click <em>Yes</em>.</li>
 </ul>
-<h3 id='no-code-signature-found' class='heading'>No code signature Found</h3>
+<h5 id='em-quot-no-code-signature-found-quot-em' class='heading'><em>&ldquo;No code signature found&rdquo;</em></h5>
 
-<p>If you encounter an error when installing your app to a physical device:</p>
-<pre class="highlight plaintext"><code>App installation failed
-No code signature found.
+<p>The following error appears when installing your app to a physical device:</p>
+
+<blockquote>
+<p>App installation failed
+No code signature found.</p>
+</blockquote>
+
+<p><strong>Solution:</strong></p>
+
+<p>Make sure that the <em>Run Script Phase</em> added during installation has the option <em>Run script only when installing</em> checked.</p>
+<h2 id='debugging' class='heading'>Debugging</h2>
+
+<p>The Sensibill SDK uses the OSLog framework for logging. All Sensibill SDK log statements use <code>SBL</code>-prefixed categories to be identifiable. The category will appear in front of the log message in with the format <code>[SBL...]</code> and can be used to filter specific messages. </p>
+
+<p>The following categories are provided:</p>
+
+<ul>
+<li><strong>SBLNet</strong> for error and debug messages related to networking</li>
+<li><strong>SBLCapture</strong> for error and debug messages related to Sensibill Capture</li>
+<li><strong>SBLError</strong> for all other SDK error messages</li>
+<li><strong>SBLSDK</strong> for all other SDK debug statements</li>
+</ul>
+
+<p>Example:</p>
+
+<p>The following snippet shows the appearance of various log messages in the XCode Console.</p>
+<pre class="highlight plaintext"><code>2021-01-13 12:08:18.263416-0500 YourApp[1234:5678901] [SBLSDK] Sensibill:start
+...
+2021-01-13 12:08:18.263703-0500 YourApp[1234:5678901] [SBLNet] Certificates for pinning were loaded from main bundle
+...
+2021-01-13 12:08:18.264000-0500 YourApp[1234:5678901] [SBLError] SensibillError=1001: Error Domain=&lt;...&gt;
 </code></pre>
+<h3 id='sensibill-errors' class='heading'>Sensibill Errors</h3>
 
-<p>Make sure that the <code>Run Script Phase</code> added during installation has the option <code>Run script only when installing</code> checked.</p>
-<h2 id='debugging-errors' class='heading'>Debugging Errors</h2>
+<p>When the SDK generates an error it returns a <code><a href="Enums/SensibillError.html">SensibillError</a></code> type and logs the code of the returned error using the <code>SBLError</code> category with the format <code>SensibillError=...</code>, followed by additional information.</p>
 
-<p>All errors received or generated by the SDK are logged using <code>os_log</code> with the prefix <code>[SBLError]</code>. A <code><a href="Enums/SensibillError.html">SensibillError</a></code> code will always be logged at the beginning of an error. This is an error code that will be returned to your app from the SDK.
-Example:</p>
-<pre class="highlight plaintext"><code>[SBLError] SensibillError=1001: Error Domain=&lt;...&gt;
+<p>The additional information provides details about the cause and/or source of the error. It may include:</p>
+
+<ul>
+<li>The domain, code, and message (if available) of the error received from the underlying framework.</li>
+<li>The name, code, message, and <code>correlationID</code> of the error returned by the Sensibill API. The last field - <code>correlationID</code> - allows Sensibill support to find the matching operation in the server side logs.</li>
+</ul>
+
+<p><em>Note:</em> when viewing the log in the Console app outside of XCode, any additional information about the error that may contain sensitive data is stripped.</p>
+
+<p>Example:</p>
+
+<p>The following example demonstrates a situation where an error with the code <code>1063</code> is generated by the SDK. As the additional information shows, the log was generated when an error with the domain <code>NSURLErrorDomain</code> and code <code>2</code> was received by the SDK from the one of the underlying frameworks. </p>
+<pre class="highlight plaintext"><code>2021-01-13 12:08:18.265700-0500 YourApp[1234:5678901] [SBLError] SensibillError=1063: Error Domain=NSURLErrorDomain Code=2 "(null)"
 </code></pre>
-
-<p>Additionally, if an error is returned by the Sensibill API, it will contain a <code>correlationID</code> field, which allows Sensibill support to find a matching operation in server side logs.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-01-12)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

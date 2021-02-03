@@ -90,6 +90,9 @@
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -211,9 +214,6 @@
                 <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/TransactionError.html">TransactionError</a>
               </li>
               <li class="nav-group-task">
@@ -257,7 +257,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="UI%20Presentation.html">UI Presentation</a>
+            <a href="Entry%20Points.html">Entry Points</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
@@ -275,16 +275,13 @@
                 <a href="Classes/SBAnalytics.html">SBAnalytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+                <a href="Entry%20Points.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBTrackingEvent.html">SBTrackingEvent</a>
@@ -296,16 +293,13 @@
                 <a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptCaptureManager.html">ReceiptCaptureManager</a>
               </li>
             </ul>
           </li>
@@ -454,56 +448,11 @@ This function can be called right before presenting capture (as shown above in <
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<h2 id='using-legacy-receipt-capture' class='heading'>Using Legacy Receipt Capture</h2>
-
-<p><strong><em>*WARNING:</em> This is a deprecated method, which will be removed in the next version of SDK.</strong></p>
-<h2 id='steps' class='heading'>Steps</h2>
-
-<ol>
-<li>Initialize <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> (<code><a href="Classes/SBLTransaction.html">SBLTransaction</a></code> in Objective-C) with <code>externalAccountTransactionID</code>.</li>
-<li>Pass a created <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> instance to a <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> on initialization.</li>
-<li>Present the <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code>.</li>
-<li>Optionally (recommended) register a transaction observer with <code><a href="Classes/SBDataEvent.html">SBDataEvent</a></code>, so you can provide custom handling of various receipt uploading states. See the <a href="transaction-linking.html#monitoring-receipt-uploading-status">Monitoring Receipt Uploading Status</a> section for more information.</li>
-</ol>
-
-<p>Please note:</p>
-
-<ul>
-<li>The <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> object represents a Sensibill receipt uploading transaction.</li>
-<li>The bank account transaction identifier (called <code>externalAccountTransactionID</code> below) is a free-form string that supports various transaction identifiers. It can be provided by the integrator via the <code>privateMetaData</code> property of the <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> object.</li>
-<li>It&rsquo;s important to differentiate the bank account transaction identifier from the Sensibill transaction identifier (a read-only property called <code>remoteID</code>, not mentioned in example below).</li>
-</ul>
-<h2 id='example' class='heading'>Example</h2>
-<h3 id='presenting-capture' class='heading'>Presenting Capture</h3>
-
-<p>The following example demonstrates the minimal steps required to invoke a receipt capture linked to bank account transaction.
-This function can be called when <code>externalAccountTransactionID</code> is available, and the app is ready to show the receipt capture screen.</p>
-<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">presentReceiptCapture</span><span class="p">(</span><span class="nv">externalAccountTransactionID</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="c1">// Step 1</span>
-    <span class="k">let</span> <span class="nv">sensibillTransaction</span> <span class="o">=</span> <span class="kt">Transaction</span><span class="p">(</span><span class="nv">externalAccountTransactionID</span><span class="p">:</span> <span class="n">externalAccountTransactionID</span><span class="p">)</span>
-
-    <span class="c1">// Optional Step 4: uncomment the following line to enable (function is shown in section below)</span>
-    <span class="c1">// registerTransactionObserver(externalAccountTransactionID: externalAccountTransactionID)</span>
-
-    <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
-
-        <span class="c1">// Step 2</span>
-        <span class="k">guard</span> <span class="k">let</span> <span class="nv">captureNC</span> <span class="o">=</span> <span class="kt">SensibillCaptureNavigationController</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span> <span class="n">sensibillTransaction</span><span class="p">,</span> <span class="nv">exitAfterCapture</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="c1">// Error: SensibillCaptureNavigationController could not be instantiated</span>
-            <span class="k">return</span>
-        <span class="p">}</span>
-
-        <span class="c1">// Step 3</span>
-        <span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">captureNC</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-01-12)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

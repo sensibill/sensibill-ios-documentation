@@ -90,6 +90,9 @@
               <li class="nav-group-task">
                 <a href="Protocols/TokenProvider.html">TokenProvider</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/Credentials.html">Credentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -211,9 +214,6 @@
                 <a href="Enums/SBReceiptEventType.html">SBReceiptEventType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventType">SBDataEventType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/TransactionError.html">TransactionError</a>
               </li>
               <li class="nav-group-task">
@@ -257,7 +257,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="UI%20Presentation.html">UI Presentation</a>
+            <a href="Entry%20Points.html">Entry Points</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
@@ -275,16 +275,13 @@
                 <a href="Classes/SBAnalytics.html">SBAnalytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="UI%20Presentation.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+                <a href="Entry%20Points.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SBReceiptCaptureFlowState.html">SBReceiptCaptureFlowState</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SBTrackingEvent.html">SBTrackingEvent</a>
@@ -296,16 +293,13 @@
                 <a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SensibillCaptureNavigationControllerDelegate.html">SensibillCaptureNavigationControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReceiptCaptureManager.html">ReceiptCaptureManager</a>
               </li>
             </ul>
           </li>
@@ -340,7 +334,6 @@
 <li><a href="#recent-receipt-export-list">Recent Receipt Export List</a><br></li>
 <li><a href="#receipt-search">Receipt Search</a><br></li>
 <li><a href="#receipt-list">Receipt List</a><br></li>
-<li><a href="#legacy-receipt-capture">Legacy Receipt Capture</a><br></li>
 </ul>
 <h2 id='receipt-capture' class='heading'>Receipt Capture</h2>
 
@@ -355,13 +348,14 @@
 <li>Ability to turn the <strong>Flash</strong> on and off</li>
 <li><strong>Blur</strong> detection after capturing a receipt.</li>
 <li><strong>Cropping</strong> a receipt image.</li>
+<li>Ability to attach user&rsquo;s device <strong>Location</strong> data on capturing receipt.</li>
 </ul>
-<h4 id='overview' class='heading'>Overview</h4>
+<h3 id='overview' class='heading'>Overview</h3>
 
 <p>The SDK uses <code><a href="Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a></code> to provide access to the capture flow. The coordinator instance is created when the capture flow should be instantiated. You must retain the instance while the capture flow is displayed, and the coordinator instance must be discarded once capture is finished. </p>
 
 <p>By default, the coordinator will display the capture workflow, and then proceed to the Expense Type and Receipt Processing screens. However, you can cusomize this behavior and skip one or both of the screens. Additionally, the coordinator allows you to be notified when a receipt is initially submitted and when the receipt is finished processing.</p>
-<h4 id='basic-receipt-capture-flow-steps' class='heading'>Basic Receipt Capture Flow Steps</h4>
+<h3 id='basic-receipt-capture-flow-steps' class='heading'>Basic Receipt Capture Flow Steps</h3>
 
 <ol>
 <li>Decide which <code>UIViewController</code> you would like to present a modal capture flow. This view controller becomes the <em>host</em> of the capture flow.</li>
@@ -452,7 +446,7 @@
 <span class="p">}</span>
 
 </code></pre>
-<h5 id='hide-receipt-expense-type-selection-screen' class='heading'>Hide Receipt Expense Type Selection Screen.</h5>
+<h4 id='hide-receipt-expense-type-selection-screen' class='heading'>Hide Receipt Expense Type Selection Screen.</h4>
 
 <p>The receipt expense type selection screen appears after a receipt is captured and submitted to the receipt engine for processing in the basic capture flow.</p>
 
@@ -520,7 +514,7 @@ Otherwise, set the following flag to <code>false</code> before starting the capt
 </code></pre>
 
 <p><em>Note:</em> The <code>didProcessReceipt</code> event will only be triggered if a user waits on the Receipt Processing screen, and a receipt is successfully created from a submitted <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code>. If you would like to receive a notification in any case, or want to be notified on additional <code><a href="Transactions%20Linking%20Reference.html#/Transaction">Transaction</a></code> status changes, please register a transaction observer with <code><a href="Classes/SBDataEvent.html">SBDataEvent</a></code> as described in the <a href="transaction-linking.html#monitoring-receipt-uploading-status">Monitoring Receipt Uploading Status</a> section.</p>
-<h4 id='capturing-receipt-for-bank-account-transaciton' class='heading'>Capturing Receipt for Bank Account Transaciton</h4>
+<h4 id='capturing-receipt-for-bank-account-transaction' class='heading'>Capturing Receipt for Bank Account Transaction</h4>
 
 <p>Receipt Capture can also be used to link an external bank account transaction to a receipt, using the coordinator&rsquo;s <code>coordinator.start(transaction:)</code> method. See <a href="transactions.md#transaction-linking">Transaction Linking</a> for details.</p>
 <h2 id='receipt-details' class='heading'>Receipt Details</h2>
@@ -586,14 +580,14 @@ Otherwise, set the following flag to <code>false</code> before starting the capt
 </code></pre>
 <h2 id='receipt-search' class='heading'>Receipt Search</h2>
 
-<p>The <code><a href="Classes/SensibillSDK.html">SensibillSDK</a></code> instance provides a convenient method to push the Receipt Search Controller (<code><a href="Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a></code>) to the current Navigation Controller.
+<p>The <code><a href="Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a></code> instance provides a convenient method to push the Receipt Search Controller to the current Navigation Controller.
 This method also provides an option to disable or enable a search filters feature in the Search UI by passing true (to show filters) or false (to hide filters) to the property <code>andAllowFiltering</code>.</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SensibillUI</span>
 
 <span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
 
     <span class="kd">func</span> <span class="nf">pushSearchReceipts</span><span class="p">(</span><span class="n">allowFiltering</span> <span class="nv">canFilter</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">SensibillSDK</span><span class="o">.</span><span class="nf">pushToSearchReceiptController</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">andAllowFiltering</span><span class="p">:</span> <span class="n">canFilter</span><span class="p">)</span>
+        <span class="kt">SBSearchReceiptsController</span><span class="o">.</span><span class="nf">push</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">andAllowFiltering</span><span class="p">:</span> <span class="n">canFilter</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -660,51 +654,11 @@ This method also provides an option to disable or enable a search filters featur
 <span class="p">}</span>
 
 </code></pre>
-<h2 id='legacy-receipt-capture' class='heading'>Legacy Receipt Capture</h2>
-
-<p><strong><em>*WARNING:</em> This is a deprecated method, which will be removed in the next version of SDK.</strong></p>
-
-<p><em>Note:</em> Please include the <a href="setup.html#required-property-list-keys">required Property List keys</a>, as explained on the linked page to give the Receipt Capture screen access the device&rsquo;s camera to capture receipts, or access the device&rsquo;s photo gallery to allow the user select an existing image of a receipt.</p>
-
-<p>Create an instance of <code><a href="Classes/SensibillCaptureNavigationController.html">SensibillCaptureNavigationController</a></code> to present the capture screen. Implement the <code><a href="Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a></code> protocol if you want to handle the dismissal of the capture screen. The capture screen provides following options:</p>
-
-<ul>
-<li>Automatic and manual capture.</li>
-<li>Selecting a receipt image from the photo gallery.</li>
-<li>Show/Hide capture tips.</li>
-<li>Turn flash on/off.</li>
-<li>Turn capture grid on/off.</li>
-<li>Add section button to join multiple receipt images if configured.</li>
-</ul>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SensibillUI</span>
-
-<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
-
-    <span class="kd">func</span> <span class="nf">presentReceiptCapture</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">controller</span> <span class="o">=</span> <span class="kt">SensibillCaptureNavigationController</span><span class="p">()</span>
-        <span class="n">controller</span><span class="o">.</span><span class="n">dismissDelegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// optional</span>
-        <span class="n">controller</span><span class="o">.</span><span class="n">modalPresentationStyle</span> <span class="o">=</span> <span class="o">.</span><span class="n">fullScreen</span> <span class="c1">// optional</span>
-        <span class="nf">present</span><span class="p">(</span><span class="n">controller</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// MARK: - SBViewControllerDelegate</span>
-
-<span class="kd">extension</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">SBViewControllerDelegate</span> <span class="p">{</span>
-
-    <span class="kd">func</span> <span class="nf">dismissSensibillViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">controller</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre>
-
-<p><em>Note:</em> Receipt Capture can also be used to link an external account transaction to a receipt. See <a href="transactions.md#transaction-linking">Transaction Linking</a> for  details.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-01-12)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
