@@ -1,68 +1,68 @@
 {
   "warnings": [
     {
-      "file": "/Users/vagrant/git/tempDocs/SBDataEvent.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SBDataEvent.h",
       "line": 36,
       "symbol": "SBDataEventType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SBReceipt.h",
       "line": 23,
       "symbol": "SBLReceiptType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SBReceipt.h",
       "line": 23,
       "symbol": "SBLReceiptType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SBReceipt.h",
       "line": 26,
       "symbol": "SBLOriginalFormat",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SBReceipt.h",
       "line": 26,
       "symbol": "SBLOriginalFormat",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SBReceipt.h",
       "line": 29,
       "symbol": "SBLReceiptExpenseType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SBReceipt.h",
       "line": 29,
       "symbol": "SBLReceiptExpenseType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SensibillCaptureNavigationController.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SensibillCaptureNavigationController.h",
       "line": 15,
       "symbol": "SBLReceiptExpenseType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/tempDocs/SensibillSDK.h",
+      "file": "/Users/stevenandrews/sensibill-ios/tempDocs/SensibillSDK.h",
       "line": 16,
       "symbol": "SBLReceiptExpenseType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/vagrant/git"
+  "source_directory": "/Users/stevenandrews/sensibill-ios"
 }
