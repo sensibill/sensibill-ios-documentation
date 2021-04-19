@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SBNotificationHandler Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SBNotificationHandler" class="dashAnchor"></a>
+    <a title="SBNotificationHandler Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SBNotificationHandler Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Documentation.html">Documentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../compatibility.html">Compatibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../setup.html">Setup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdk-lifecycle.html">SDK Lifecycle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../customization.html">Customization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../entry-points.html">Entry Points</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transaction-linking.html">Transaction Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transaction-matching.html">Transaction Matching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../application-integrations.html">Application Integrations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../troubleshooting.html">Troubleshooting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../using-objective-c.html">Using Objective-C</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../data-stored-on-device.html">Data Stored on Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../migration-guide.html">Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Authentication%20Reference.html">Authentication Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Credentials.html">Credentials</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../SDK%20Lifecycle%20Reference.html">SDK Lifecycle Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Sensibill.html">Sensibill</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Customization%20Reference.html">Customization Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationCentreConfiguration.html">SBNotificationCentreConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKColors.html">SBSDKColors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKConfiguration.html">SBSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKSearchBarSet.html">SBSDKSearchBarSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLTransaction.html">SBLTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransactionHandler.html">TransactionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBDataEvent.html">SBDataEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionEventType.html">SBTransactionEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBReceiptEventType.html">SBReceiptEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionError.html">TransactionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionStatus.html">TransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionType.html">TransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TransactionObserver.html">TransactionObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Transaction%20Matching%20Reference.html">Transaction Matching Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceipt.html">SBReceipt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Entry%20Points.html">Entry Points</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalytics.html">SBAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Entry%20Points.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTrackingEvent.html">SBTrackingEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptCaptureManager.html">ReceiptCaptureManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Application%20Integrations%20Reference.html">Application Integrations Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationHandler.html">SBNotificationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Troubleshooting%20Reference.html">Troubleshooting Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SBNotificationHandler</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SBNotificationHandler</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">UNUserNotificationCenterDelegate</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SBNotificationHandler</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">UNUserNotificationCenterDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Interacts with User Notification Center to schedule and deliver reminders as notifications</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Singleton"></a>
+                <a name="//apple_ref/swift/Section/Singleton" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Singleton"></a>
+                  <h3 class="section-name"><p>Singleton</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(cm)sharedHandler"></a>
+                    <a name="//apple_ref/swift/Method/+sharedHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(cm)sharedHandler">+sharedHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared instance of SBNotificationHandler</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">sharedHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">shared</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SBNotificationHandler</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties"></a>
+                  <h3 class="section-name"><p>Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(py)navigationControllerToUse"></a>
+                    <a name="//apple_ref/swift/Property/navigationControllerToUse" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(py)navigationControllerToUse">navigationControllerToUse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Navigation controller to push views upon</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">UINavigationController</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">navigationControllerToUse</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">navigationControllerToUse</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Notifications%20Permission"></a>
+                <a name="//apple_ref/swift/Section/Notifications Permission" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Notifications%20Permission"></a>
+                  <h3 class="section-name"><p>Notifications Permission</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)requestPermissionToScheduleNotificationsWithCompletionHandler:"></a>
+                    <a name="//apple_ref/swift/Method/-requestPermissionToScheduleNotificationsWithCompletionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)requestPermissionToScheduleNotificationsWithCompletionHandler:">-requestPermissionToScheduleNotificationsWithCompletionHandler:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to request permission to schedule notification with <code>UNAuthorizationOptionSound</code> and <code>UNAuthorizationOptionAlert</code> option.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">requestPermissionToScheduleNotificationsWithCompletionHandler</span><span class="p">:</span>
+    <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nullable</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">requestPermissionToScheduleNotifications</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Remove%20Scheduled%20Notifications"></a>
+                <a name="//apple_ref/swift/Section/Remove Scheduled Notifications" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Remove%20Scheduled%20Notifications"></a>
+                  <h3 class="section-name"><p>Remove Scheduled Notifications</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)deleteScheduledNotificationForIdentifier:"></a>
+                    <a name="//apple_ref/swift/Method/-deleteScheduledNotificationForIdentifier:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)deleteScheduledNotificationForIdentifier:">-deleteScheduledNotificationForIdentifier:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove pending notification requests for given identifier.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteScheduledNotificationForIdentifier</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deleteScheduledNotification</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)deleteScheduledNotificationForReminder:"></a>
+                    <a name="//apple_ref/swift/Method/-deleteScheduledNotificationForReminder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)deleteScheduledNotificationForReminder:">-deleteScheduledNotificationForReminder:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove pending notification requests for given <code>SBReminder</code> using <code>SBReminder.ID</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteScheduledNotificationForReminder</span><span class="p">:(</span><span class="n">SBReminder</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">reminder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deleteScheduledNotification</span><span class="p">(</span><span class="k">for</span> <span class="nv">reminder</span><span class="p">:</span> <span class="kt">SBReminder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Remove%20Delivered%20Notifications"></a>
+                <a name="//apple_ref/swift/Section/Remove Delivered Notifications" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Remove%20Delivered%20Notifications"></a>
+                  <h3 class="section-name"><p>Remove Delivered Notifications</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)deleteDeliveredNotificationForIdentifier:"></a>
+                    <a name="//apple_ref/swift/Method/-deleteDeliveredNotificationForIdentifier:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)deleteDeliveredNotificationForIdentifier:">-deleteDeliveredNotificationForIdentifier:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove delivered notification for given identifier.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteDeliveredNotificationForIdentifier</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deleteDeliveredNotification</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)deleteDeliveredNotificationForReminder:"></a>
+                    <a name="//apple_ref/swift/Method/-deleteDeliveredNotificationForReminder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)deleteDeliveredNotificationForReminder:">-deleteDeliveredNotificationForReminder:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove delivered notification for given <code>SBReminder</code> using <code>SBReminder.ID</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteDeliveredNotificationForReminder</span><span class="p">:(</span><span class="n">SBReminder</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">reminder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deleteDeliveredNotification</span><span class="p">(</span><span class="k">for</span> <span class="nv">reminder</span><span class="p">:</span> <span class="kt">SBReminder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)clearNotificationCenter"></a>
+                    <a name="//apple_ref/swift/Method/-clearNotificationCenter" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)clearNotificationCenter">-clearNotificationCenter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete the notifications that have been delivered and remain in notification center.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">clearNotificationCenter</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clearNotificationCenter</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Schedule%20Notifications"></a>
+                <a name="//apple_ref/swift/Section/Schedule Notifications" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Schedule%20Notifications"></a>
+                  <h3 class="section-name"><p>Schedule Notifications</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForReminder:"></a>
+                    <a name="//apple_ref/swift/Method/-scheduleNotificationForReminder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForReminder:">-scheduleNotificationForReminder:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Schedules a notification for provided <code>SBReminder</code> with <code>fireEarly</code> set to <code>NO</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">scheduleNotificationForReminder</span><span class="p">:(</span><span class="n">SBReminder</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">reminder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">scheduleNotification</span><span class="p">(</span><span class="k">for</span> <span class="nv">reminder</span><span class="p">:</span> <span class="kt">SBReminder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForReminder:fireEarly:"></a>
+                    <a name="//apple_ref/swift/Method/-scheduleNotificationForReminder:fireEarly:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForReminder:fireEarly:">-scheduleNotificationForReminder:<wbr>fireEarly:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Schedules a notification for provided <code>SBReminder</code>. If <code>fireEarly</code> is set to <code>YES</code>, the reminder will be triggered in 30 seconds after function call. Otherwise a notification is scheduled based on a <code>reminderDatePeriod</code> property of a reminder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">scheduleNotificationForReminder</span><span class="p">:(</span><span class="n">SBReminder</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">reminder</span>
+                              <span class="nf">fireEarly</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">fireEarly</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">scheduleNotification</span><span class="p">(</span><span class="k">for</span> <span class="nv">reminder</span><span class="p">:</span> <span class="kt">SBReminder</span><span class="p">,</span> <span class="nv">fireEarly</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForIdentifier:date:withBody:"></a>
+                    <a name="//apple_ref/swift/Method/-scheduleNotificationForIdentifier:date:withBody:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForIdentifier:date:withBody:">-scheduleNotificationForIdentifier:<wbr>date:<wbr>withBody:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Schedules a notification for a provided <code>SBReminder.ID</code> on a specified date. The parameter <code>body</code> is passed to <code>UNMutableNotificationContent</code> as a field with the same name.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">scheduleNotificationForIdentifier</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">identifier</span>
+                                     <span class="nf">date</span><span class="p">:(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">fireDate</span>
+                                 <span class="nf">withBody</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">body</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">scheduleNotification</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">date</span> <span class="nv">fireDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="n">withBody</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForIdentifier:date:withBody:userInfo:"></a>
+                    <a name="//apple_ref/swift/Method/-scheduleNotificationForIdentifier:date:withBody:userInfo:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)scheduleNotificationForIdentifier:date:withBody:userInfo:">-scheduleNotificationForIdentifier:<wbr>date:<wbr>withBody:<wbr>userInfo:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Schedules a notification for a provided <code>SBReminder.ID</code> on a specified date. Parameters <code>body</code> and <code>userInfo</code> are passed to a <code>UNMutableNotificationContent</code> object as fields with the same names.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">scheduleNotificationForIdentifier</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">identifier</span>
+                                     <span class="nf">date</span><span class="p">:(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">fireDate</span>
+                                 <span class="nf">withBody</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">body</span>
+                                 <span class="nf">userInfo</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">userInfo</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">scheduleNotification</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">date</span> <span class="nv">fireDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="n">withBody</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Handle%20Notification%20%28UNUserNotificationCenterDelegate%29"></a>
+                <a name="//apple_ref/swift/Section/Handle Notification (UNUserNotificationCenterDelegate)" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Handle%20Notification%20%28UNUserNotificationCenterDelegate%29"></a>
+                  <h3 class="section-name"><p>Handle Notification (UNUserNotificationCenterDelegate)</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SBNotificationHandler(im)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:"></a>
+                    <a name="//apple_ref/swift/Method/-userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SBNotificationHandler(im)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:">-userNotificationCenter:<wbr>didReceiveNotificationResponse:<wbr>withCompletionHandler:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handles notification received from User Notification Center</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">userNotificationCenter</span><span class="p">:(</span><span class="n">UNUserNotificationCenter</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">center</span>
+    <span class="nf">didReceiveNotificationResponse</span><span class="p">:(</span><span class="n">UNNotificationResponse</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">response</span>
+             <span class="nf">withCompletionHandler</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nullable</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="n">_</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">UNNotificationResponse</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-03-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

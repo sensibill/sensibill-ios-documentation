@@ -1,47 +1,61 @@
 {
   "warnings": [
     {
-      "file": "/Users/stevenandrews/sdk-ios-receipts/tempDocs/SBReceipt.h",
+      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
       "line": 23,
       "symbol": "SBLReceiptType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/stevenandrews/sdk-ios-receipts/tempDocs/SBReceipt.h",
+      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
       "line": 23,
       "symbol": "SBLReceiptType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/stevenandrews/sdk-ios-receipts/tempDocs/SBReceipt.h",
+      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
       "line": 26,
       "symbol": "SBLOriginalFormat",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/stevenandrews/sdk-ios-receipts/tempDocs/SBReceipt.h",
+      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
       "line": 26,
       "symbol": "SBLOriginalFormat",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/stevenandrews/sdk-ios-receipts/tempDocs/SBReceipt.h",
+      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
       "line": 29,
       "symbol": "SBLReceiptExpenseType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/stevenandrews/sdk-ios-receipts/tempDocs/SBReceipt.h",
+      "file": "/Users/vagrant/git/tempDocs/SBReceipt.h",
       "line": 29,
+      "symbol": "SBLReceiptExpenseType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/tempDocs/SBSearchReceiptsController.h",
+      "line": 14,
+      "symbol": "SBSearchReceiptsController.+pushFromController:andAllowFiltering:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/tempDocs/SensibillSDK.h",
+      "line": 15,
       "symbol": "SBLReceiptExpenseType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/stevenandrews/sdk-ios-receipts"
+  "source_directory": "/Users/vagrant/git"
 }

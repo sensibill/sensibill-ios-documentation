@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SBViewControllerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/SBViewControllerDelegate" class="dashAnchor"></a>
+    <a title="SBViewControllerDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (98% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SBViewControllerDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Documentation.html">Documentation</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../compatibility.html">Compatibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../setup.html">Setup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../authentication.html">Authentication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../sdk-lifecycle.html">SDK Lifecycle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../customization.html">Customization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../entry-points.html">Entry Points</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transaction-linking.html">Transaction Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../transaction-matching.html">Transaction Matching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../application-integrations.html">Application Integrations</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../troubleshooting.html">Troubleshooting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../using-objective-c.html">Using Objective-C</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../data-stored-on-device.html">Data Stored on Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../migration-guide.html">Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Authentication%20Reference.html">Authentication Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordAuthenticator.html">PasswordAuthenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TokenProvider.html">TokenProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Credentials.html">Credentials</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../SDK%20Lifecycle%20Reference.html">SDK Lifecycle Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Sensibill.html">Sensibill</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Customization%20Reference.html">Customization Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBBarcodeConfiguration.html">SBBarcodeConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCaptureViewConfiguration.html">SBCaptureViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBCreateFolderControllerConfiguration.html">SBCreateFolderControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBEditReceiptControllerConfiguration.html">SBEditReceiptControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExpenseTypeSelectionConfiguration.html">SBExpenseTypeSelectionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExportsConfiguration.html">SBExportsConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderCollectionViewConfiguration.html">SBFolderCollectionViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBFolderReceiptListControllerConfiguration.html">SBFolderReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLoadingViewConfiguration.html">SBLoadingViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNonReceiptEmailConfiguration.html">SBNonReceiptEmailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationCentreConfiguration.html">SBNotificationCentreConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptDetailConfiguration.html">SBReceiptDetailConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListControllerConfiguration.html">SBReceiptListControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableCellConfiguration.html">SBReceiptListTableCellConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptListTableViewConfiguration.html">SBReceiptListTableViewConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsFilterConfiguration.html">SBReceiptsFilterConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptsListSelectionControllerConfiguration.html">SBReceiptsListSelectionControllerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBRemindersConfiguration.html">SBRemindersConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKColors.html">SBSDKColors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKConfiguration.html">SBSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKFontSet.html">SBSDKFontSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKMoreMenuConfiguration.html">SBSDKMoreMenuConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSDKSearchBarSet.html">SBSDKSearchBarSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTabBarConfiguration.html">SBTabBarConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceiptEditTaxTipsControllerConfiguration.html">SBReceiptEditTaxTipsControllerConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Transactions%20Linking%20Reference.html">Transactions Linking Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/Transaction">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBLTransaction.html">SBLTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransactionHandler.html">TransactionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBDataEvent.html">SBDataEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventReceiptBlock">SBDataEventReceiptBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transactions%20Linking%20Reference.html#/c:SBDataEvent.h@T@SBDataEventTransactionBlock">SBDataEventTransactionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBTransactionEventType.html">SBTransactionEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReceiptExpenseType.html">ReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SBReceiptEventType.html">SBReceiptEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionError.html">TransactionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionStatus.html">TransactionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransactionType.html">TransactionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TransactionObserver.html">TransactionObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Transaction%20Matching%20Reference.html">Transaction Matching Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurrencyCode.html">CurrencyCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBExternalAccountTransaction.html">SBExternalAccountTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLOriginalFormat">SBLOriginalFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptExpenseType">SBLReceiptExpenseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Transaction%20Matching%20Reference.html#/c:@E@SBLReceiptType">SBLReceiptType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBReceipt.html">SBReceipt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBPrivateMetaData.html">SBPrivateMetaData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillTransactionMatcher.html">SensibillTransactionMatcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Entry%20Points.html">Entry Points</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CaptureFlowCoordinator.html">CaptureFlowCoordinator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CaptureFlowCoordinatorDelegate.html">CaptureFlowCoordinatorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptListViewController.html">ReceiptListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecentExportsViewController.html">RecentExportsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBAnalytics.html">SBAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Entry%20Points.html#/c:SBAnalytics.h@T@SBEventsListener">SBEventsListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBEventListenerInterface.html">SBEventListenerInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBLReceiptListViewControllerDataSource.html">SBLReceiptListViewControllerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBTrackingEvent.html">SBTrackingEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SBSearchReceiptsController.html">SBSearchReceiptsController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SBViewControllerDelegate.html">SBViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillReceiptViewController.html">SensibillReceiptViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensibillSDK.html">SensibillSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReceiptCaptureManager.html">ReceiptCaptureManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Application%20Integrations%20Reference.html">Application Integrations Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SBNotificationHandler.html">SBNotificationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Troubleshooting%20Reference.html">Troubleshooting Reference</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SensibillError.html">SensibillError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SBViewControllerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SBViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SBViewControllerDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>Protocol that defines the basic delegation functionality for Sensibill View Controllers</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SBViewControllerDelegate(im)dismissSensibillViewController:"></a>
+                    <a name="//apple_ref/swift/Method/-dismissSensibillViewController:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SBViewControllerDelegate(im)dismissSensibillViewController:">-dismissSensibillViewController:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate will receive this callback when the user is exiting a view controller.
+ It is important that the receiver dismisses the controller immediately before doing
+ any work to prevent any visual delays for the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">dismissSensibillViewController</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dismissSensibillViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the Sensibill View Controller being dismissed</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-03-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
